@@ -360,4 +360,4 @@ gitter:
 deploy:
   type: git
   repo: https://github.com/sirius2alpha/sirius2alpha.github.io.git # or https://gitee.com/<yourAccount>/<repo>
-  branch: master
+  branch: main
