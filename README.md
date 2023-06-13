@@ -1,57 +1,53 @@
 # Hexo-Theme-LiveMyLife
 
-> Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
+> 移植 [Hux Blog](https://github.com/Huxpro/huxpro.github.io) 的主题，感谢 [Huxpro](https://github.com/Huxpro) 设计了如此完美的主题。
 >
-> This LiveMyLife theme created by [Vincent](https://v-vincen.github.io/) modified from the original Porter [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech) , refer to the Themes of [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu), Thanks [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu).
->
+> 由 [Vincent](https://v-vincen.github.io/) 创建的 LiveMyLife 的主题修改来源 [YenYuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech)，参考主题 [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu)，感谢 [dusign](https://github.com/dusign/hexo-theme-snail)、[Utone](https://github.com/shixiaohu2206/hexo-theme-huhu)。
+>   
 
-[中文说明](/README_CN.md)
+[README](/README.md)
 
-## Repo
+## 仓库
+Github 仓库地址：https://github.com/V-Vincen/hexo-theme-livemylife
 
-Github Repo: https://github.com/V-Vincen/hexo-theme-livemylife
+Gitee 仓库地址：https://gitee.com/V_Vincen/hexo-theme-livemylife
 
-Gitee Repo: https://gitee.com/V_Vincen/hexo-theme-livemylife
-
-
-### [View LiveMyLife Blog ➾](https://v-vincen.github.io/)
-
+### [预览 LiveMyLife 博客 ➾](https://v-vincen.github.io/)
 
 ![LiveMyLife Desktop](/source/_posts/en/Hexo-Theme-LiveMyLife/livemylife-desktop.png)
 
-## Quick Start
+## 快速开始
+为了方便起见，我发布了整个项目，因此您可以按照下面的说明进行操作，然后就可以轻松自定义您自己的博客！
 
-I publish the whole project for your convenience, so you can just follow the instruction down below, then you can easily customize your own blog!
+让我们开始!!!
 
-Let's begin!!!
-
-### Install Node.js and Git
+### 安装 Node.js 和 Git
 ```shell
 #For Mac
 brew install node
 brew install git
 ```
-> Windows: Download & install Node.js. -> [Node.js](https://nodejs.org/zh-cn/download/)
+> Windows：下载 & 安装 Node.js。-> [Node.js](https://nodejs.org/zh-cn/download/)
 >
-> Windows: Download & install Git. -> [Git](https://git-scm.com/download/win)
+> Windows：下载 & 安装 Git。-> [Git](https://git-scm.com/download/win)
 
-### Install Hexo
+### 安装 Hexo
 ```shell
 $ npm install -g hexo-cli
 ```
-> What is [Hexo](https://hexo.io/docs/)?
+> 什么是 [Hexo](https://hexo.io/docs/)?
 >
-> Hexo is a fast, simple and powerful blog framework. You write posts in Markdown (or other markup languages) and Hexo generates static files with a beautiful theme in seconds.
+> Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。
 
-### Setup your blog
+### 设置你的博客
 ```shell
 $ hexo init blog
 ```
-> More Commands -> [Hexo Commands](https://hexo.io/docs/commands)
+> 更多的命令 -> [Hexo Commands](https://hexo.io/docs/commands)
 
 
-## Theme Usage
-### Init
+## 主题使用
+### 初始化
 ```shell
 cd blog
 rm -rf scaffolds source themes _config.landscape.yml _config.yml package.json yarn.lock #just keep node_modules
@@ -61,8 +57,8 @@ rm -rf hexo-theme-livemylife
 npm install
 ```
 
-### Set Theme
-Modify the value of `theme`: in `_config.yml`
+### 设置主题
+修改 `theme` 属性值，在 `_config.yml` 配置文件中。
 ```yml
 # Extensions
 ## Themes: https://hexo.io/themes/
@@ -70,19 +66,20 @@ Modify the value of `theme`: in `_config.yml`
 theme: livemylife
 ```
 
-### Start the Server
+### 启动服务
 ```shell
 hexo generate # or hexo g
 hexo server   # or hexo s
 ```
-Starts a local server. By default, this is at `http://localhost:4000/`.
-> More Commands -> [Hexo Commands](https://hexo.io/docs/commands)
+启动本地服务器。 默认访问地址 `http://localhost:4000/`。
+> 更多命令 -> [Hexo Commands](https://hexo.io/docs/commands)
 
-## Configuration
-Modify `_config.yml` file with your own info, Especially the section:
 
-### Site
-Replace the following information with your own.
+## 配置
+使用您自己的信息修改 `_config.yml` 配置文件，尤其是以下部分：
+
+### 网址信息配置
+将以下信息替换为您自己的信息。
 ```yml
 # Site
 title: Live My Life
@@ -91,8 +88,8 @@ author: Mr.Vincent
 timezone:
 ```
 
-### Internationalization (i18n)
-You can use internationalization to present your site in different languages. -> Docs：[How to Use Internationalization（i18n）](https://v-vincen.github.io/en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/)
+### 语言国际化 (i18n)
+若要让您的网站以不同语言呈现，您可使用国际化（internationalization）功能。-> 文档：[How to Use Internationalization（i18n）](https://v-vincen.github.io/en/How-to-Use-Internationalization%EF%BC%88i18n%EF%BC%89/)
 ```yml
 # Internationalization (i18n) Setting
 language: # At present, only en、cn and tw are supported. You can customize the language，refer to `languages/en.yml`.
@@ -126,17 +123,17 @@ archive_generator:
   daily: false
   order_by: -date
 ```
-*English preview:*
+*English 预览：*
 
 ![en](/source/_posts/en/Hexo-Theme-LiveMyLife/langen.png)
 
-*Chinese preview:*
+*Chinese 预览：*
 
 ![cn](/source/_posts/en/Hexo-Theme-LiveMyLife/langcn.png)
 
 
-### CDN Settings
-JsDelivr is A free CDN for Open Source fast、reliable and automated. How to use Jsdelivr? -> Docs：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.github.io/en/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
+### CDN 配置
+JsDelivr JsDelivr是一种免费，快速，可靠和自动化的CDN，可用于开源。如何使用 Jsdelivr？-> 文档：[免费 CDN 提速 Github 静态资源访问](https://v-vincen.github.io/en/Github-%E5%8A%A0%E9%80%9F%E4%BC%98%E5%8C%96/#%E5%85%8D%E8%B4%B9-CDN-%E6%8F%90%E9%80%9F-Github-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE)
 ```yml
 # CDN Setting
 # Docs: https://www.jsdelivr.com/?docs=gh
@@ -146,11 +143,10 @@ jsdelivr:
   jsdelivr_url: https://cdn.jsdelivr.net/gh/
   github_username: V-Vincen
 ```
-**Note:** The theme of Hexo-theme-livemylife has a large number of css、js and images, in order to improve access speed, the theme for all of the resource files are made JsDelivr CDN. But only for Github Pages deployment. -> Docs：[How to apply JsDelivr CDN in Hexo-theme-livemylife Theme](https://v-vincen.github.io/en/How-to-apply-JsDelivr-CDN-in-Hexo-theme-livemylife-Theme/)
+**注意：** Hexo-theme-livemylife 主题中有大量的 css、js 和 images，为了提高访问速度，主题中所有资源文件都使用了 JsDelivr CDN（内容分发）。但仅适用于 Github Pages 部署方式。-> 文档：[How to apply JsDelivr CDN in Hexo-theme-livemylife Theme](https://v-vincen.github.io/en/How-to-apply-JsDelivr-CDN-in-Hexo-theme-livemylife-Theme/)
 
-
-### Site Settings
-Put customized pictures in img directory.
+### 站点设置
+将自定义图片放在 `img` 目录中。
 ```yml
 # Site settings
 SEOTitle: JavaDev | 一如Java深似海
@@ -161,31 +157,31 @@ header-img: img/header_img/newhome_bg.jpg
 archives-img: img/header_img/archive_bg2.jpg
 ```
 
-### Favicon Settings
+### 网站图标设置
 ```yml
 favicon: img/avatar/favicon.jpg
 ```
 
-### Signature Settings
-Copy your signature image to `<root>/img/signature` and modify the `_config.yml`.
+### 签名设置
+将您的签名图片复制到 `<root>/img/signature` 并修改配置文件 `_config.yml`。
 ```yml
 signature: true   # show signature
 signature-img: img/signature/<your-signature>
 ```
-> How to create signature -> [Free Online Signature](https://fontmeme.com/signature-fonts/)
+> 如何制作签名 -> [Free Online Signature](https://fontmeme.com/signature-fonts/)
 
-### Wave Settings
+### 波浪设置
 ```yml
 # Wave settings
 wave: true
 ```
-*Example:*
+*案例：*
 
 ![wave](/source/_posts/en/Hexo-Theme-LiveMyLife/wave.png)
 
 
-### SNS Settings
-If you don’t want to display it, you can delete it directly.
+### 社交网络服务设置
+如果您不想显示它，则可以直接将其删除。
 ```yml
 # SNS settings
 # RSS: true
@@ -198,8 +194,8 @@ instagram_username: V_Vincen_
 weibo_username: WVincen
 ```
 
-### Sidebar Settings
-Copy your avatar image to `<root>/img/avatar` and modify the `_config.yml`:
+### 侧边栏设置
+将您的头像复制到 `<root>/img/avatar` 并修改配置文件 `_config.yml`。
 ```yml
 sidebar: true   # whether or not using Sidebar.
 sidebar-about-description: "I don't know where I am going ,but I am on my way..."
@@ -234,14 +230,14 @@ friends: [
 ]
 ```
 
-### Comment Settings
-Hexo-Theme-LiveMyLife temporarily supports three Comments. I use gitalk comment system.
+### 评论系统设置
+Hexo-Theme-LiveMyLife 主题暂时支持三种评论方式。我使用 gitalk 为默认评论系统。
 
 #### Gitalk
-Gitalk is a modern comment component based on GitHub Issue and Preact. See [Gitalk](https://github.com/gitalk/gitalk) for detailed configuration method.
+Gitalk 是基于 GitHub Issue 和 Preact 的现代化的评论组件。 有关详细的配置方法，请参考 [Gitalk](https://github.com/gitalk/gitalk) 官方文档。
 ```yml
 # Gitalk Settings
-# Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
+# Doc: https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 gitalk:
   owner:                          # 'GitHub repo owner'
   admin:                          # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
@@ -250,14 +246,14 @@ gitalk:
   clientSecret:                   # 'GitHub Application Client Secret'
   perPage: 10                     # Pagination size, with maximum 100.
   pagerDirection: last            # Comment sorting direction, available values are last and first.
-  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logged in user is belong to the admin users. You can create it manually by setting this option to true
+  createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
   language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
-  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token                    # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'. You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
+  proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token                         # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'.You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
 ```
 
 #### Gitment
-Gitment is a comment system based on GitHub Issues, which can be used in the frontend without any server-side implementation. See [Gitment](https://github.com/imsun/gitment) for detailed configuration method.
+Gitment 是一个基于 GitHub Issues 的评论系统，可以在前端使用它，而无需任何服务器端实现。有关详细的配置方法，请参见 [Gitment](https://github.com/imsun/gitment) 官方文档。
 ```yml
 ## Gitment Settings
 ## Doc: https://github.com/imsun/gitment
@@ -272,15 +268,15 @@ gitment:
 ```
 
 #### Disqus
-If you want use [Disqus](https://disqus.com/), you must have a circumvention (proxy, clime over the firewall) technology.
+如果你想要使用 [Disqus](https://disqus.com/) 评论系统，则必须有代理。
 ```yml
 # Disqus settings
 disqus_username: your-disqus-ID
 ```
 
 
-### Analytics Settings
-How to config Analytics? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
+### 站点分析设置
+如何配置站点分析? -> 文档：[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
 ```yml
 # Analytics settings
 # Google Analytics
@@ -290,8 +286,8 @@ ga_track_id: UA-xxxxxx-xx   # Format: UA-xxxxxx-xx
 ba_track_id: ba_track_id
 ```
 
-### Sitemap Settings
-How to config Sitemap? -> Docs:[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
+### 站点地图设置
+如何配置站点地图? -> 文档：[Analytics and Sitemap Settings](https://v-vincen.github.io/en/Analytics-and-Sitemap-Settings/)
 ```yml
 # Google sitemap
 sitemap:
@@ -304,22 +300,21 @@ baidusitemap:
 baidu_push: true
 ```
 
+### 置顶图标设置
+我使用的置顶图标是键头，你可以在 `sourcre/css/images` 目录下替换你自己想要的图标。
 
-### Go to top icon Setup
-My icon is using point, you can change to your own icon at `source/css/images`.
-
-### Post tag
-You can decide to show post tags or not.
+### 文章标签
+您可以选择是否显示博文标签。
 ```yml
 home_posts_tag: true
 ```
-*Example:*
+*案例：*
 
 ![home_posts_tag-true](/source/_posts/en/Hexo-Theme-LiveMyLife/home_posts_tag-true.png)
 
 
-### Markdown render
-My markdown render engine plugin is [hexo-renderer-markdown-it](https://github.com/celsomiranda/hexo-renderer-markdown-it).
+### Markdown 渲染器
+我使用的 markdown 渲染引擎插件是 [hexo-renderer-markdown-it](https://github.com/celsomiranda/hexo-renderer-markdown-it)。
 ```yml
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
@@ -333,14 +328,14 @@ markdown:
     quotes: '“”‘’'
 ```
 
-### Install Mathjax
-To install Mathjax, please click [How to Use Mathjax](https://v-vincen.github.io/en/How-to-Use-Mathjax/) for a detailed tutorial.
+### 安装 Mathjax（数学公式渲染器）
+要安装 Mathjax，请单击 [How to Use Mathjax](https://v-vincen.github.io/en/How-to-Use-Mathjax/)  以获取详细的教程。
 
-### Anchorjs Settings
-And if you want to change the header anchor '❡', you can go to `layout/_partial/anchorjs.ejs` to change it. How to use anchorjs, see [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) for detailed examples.
+### Anchorjs（锚点）设置
+如果你想要更改文章目录标题前部的锚点 “❡”，则可以到 `layout/_partial/anchorjs.ejs` 目录下进行更改。如何使用 anchorjs，请参阅 [AnchorJS](https://www.bryanbraun.com/anchorjs/#examples) 以获取详细示例。
 ```yml
 # Anchorjs Settings
-anchorjs: true    # if you want to customize anchor. check out line:26 of `layout/_partial/anchorjs.ejs`
+anchorjs: true    # if you want to customize anchor. check out line:26 of `anchorjs.ejs`
 ```
 
 ```javascript
@@ -355,74 +350,76 @@ async("//cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
     })
 ```
 
-### Article Top
+### 博文置顶
 ```yml
 # article top
 top: true
 ```
-Hexo-theme-livemylife has added the article top function, just add `sticky: number` configuration to your markdown notes, articles are sorted by this number.
-*Example:*
+Hexo-theme-livemylife 主题添加了文章顶部功能，只要在您的 markdown 笔记中添加属性`sticky: number` 配置，文章按此数字排序。
+*案例：*
 
 ![top](/source/_posts/en/Hexo-Theme-LiveMyLife/top.png)
 
-### WordCount Settings
-A Word Count Plugin for Hexo. See [WordCount](https://github.com/willin/hexo-wordcount) for detailed configuration method.
+### 文章字数统计设置
+WordCount 是 Hexo 的文章字数统计插件. 有关详细的配置方法，请参见 [WordCount](https://github.com/willin/hexo-wordcount) 文档。
 ```yml
 # Dependencies: https://github.com/willin/hexo-wordcount
 # Docs: https://www.npmjs.com/package/hexo-wordcount
 wordcount: true
 ```
 
-### Busuanzi Settings
-Busuanzi is a website traffic statistics plugin. How to use Busuanzi, see [Busuanzi](https://ibruce.info/2015/04/04/busuanzi/) for detailed examples.
+### Busuanzi（不蒜子）设置
+Busuanzi 是一个网站流量统计插件。如何使用 Busuanzi，有关详细示例，请参见 [Busuanzi](https://ibruce.info/2015/04/04/busuanzi/) 文档。
 ```yml
 ## Dependencies: https://busuanzi.ibruce.info/
 ## Docs: https://ibruce.info/
 busuanzi: true
 ```
 
-
-### Top scroll progress
+### 顶部滚动进度条设置
 ```yml
 # top scroll progress
 scroll: true
 ```
 
-### Tip
+### 著作权声明设置
 ```yml
 tip:
   enable: true
   copyright: Say what you think... # If the copyright is blank, the default value will be used.
 ```
 
-### Social Share Post
+### 社交分享博文设置
 ```yml
 #Docs: https://github.com/overtrue/share.js
 share: true
 ```
 
-### Viewer Config
-Viewer is a simple jQuery image viewing plugin. Let us first look at a [demo](https://fengyuanchen.github.io/viewer/). See [Viewer](https://github.com/fengyuanchen/viewer) for detailed configuration. If you want to modify the [options](https://github.com/fengyuanchen/viewerjs#options) of Viewer, you can go to `source/js/viewer/pic-viewer.js` to change it.
+### Viewer（图片预览）设置
+Viewer 是一个简单的 jQuery 图片预览插件. 让我们首先看一个 [demo](https://fengyuanchen.github.io/viewer/)。有关详细配置，请参见 [Viewer](https://github.com/fengyuanchen/viewer) 官方文档。 如果要修改 Viewer 的 [options](https://github.com/fengyuanchen/viewerjs#options) 设置，则可以到 `sourcre/js/viewer/pic-viewer.js` 目录下修改。
 ```yml
 # Viewer config
 viewer: true
 ```
 
-### Theme Color Config
-Hexo-Theme-LiveMyLife temporarily supports two themes color.
+### 主题模式设置
+Hexo-Theme-LiveMyLife 主题暂时支持两种主题模式。
 ```yml
-themecolor: true
+# ThemeColor config
+themecolor:
+  enable: true
+  mode: dark # themecolor mode light or dark, default light
 ```
-*Light theme preview:*
+*明亮主题模式预览：*
 
 ![light theme](/source/_posts/en/Hexo-Theme-LiveMyLife/light.png)
 
-*Dark theme preview:*
+*黑暗主题模式预览：*
 
 ![dark theme](/source/_posts/en/Hexo-Theme-LiveMyLife/dark.png)
 
 
-### Mouseclick Config
+### 鼠标点击效果设置
 ```yml
 # Mouseclick config
 mouseclick:
@@ -448,30 +445,30 @@ mouseclick:
     - '#66CC99'
     - '#FF0033'
 ```
-*Mouseclick preview:*
+*鼠标点击效果预览：*
 
 ![mouseclick](/source/_posts/en/Hexo-Theme-LiveMyLife/mouseclick.png)
 
 
-### Ribbon Config
+### 背景绸带效果设置
 ```yml
 ribbonDynamic: true
 ```
-*Ribbon preview:*
+*背景绸带效果预览：*
 
 ![ribbon](/source/_posts/en/Hexo-Theme-LiveMyLife/ribbon.png)
 
 
-### BgLineCanvas Config
+### 背景线画布效果设置
 ```yml
 bglinecanvas: true  # The special effects will take up a lot of cpu resorces, please open it carefully.
 ```
-*BgLineCanvas preview:*
+*背景线画布效果预览：*
 
 ![bglinecanvas](/source/_posts/en/Hexo-Theme-LiveMyLife/bglinecanvas.png)
 
 
-### Search Settings
+### 搜索设置
 ```yml
 # Dependencies: https://github.com/V-Vincen/hexo-generator-zip-search
 search:
@@ -487,8 +484,8 @@ search:
   top_n_per_article: 1
 ```
 
-### Gitter
-Gitter is a chat and network platform that helps manage, develop and connect communities through messages, content and discovery.See [Gitter](https://gitter.im/) for detailed configuration method.
+### Gitter（聊天室）
+Gitter 是一个聊天和网络平台，通过消息、内容和发现，帮助管理、发展和连接社区。 详细配置方法请查看 [Gitter](https://gitter.im/) 官方文档。
 ```yml
 ## Docs:https://gitter.im/?utm_source=left-menu-logo
 ##
@@ -496,8 +493,8 @@ gitter:
   room: your-community/your-room
 ```
 
-### Deployment
-Replace to your own repo!
+### 部署
+替换为你自己的仓库地址。
 ```yml
 deploy:
   type: git
@@ -505,10 +502,7 @@ deploy:
   branch: <your-branch>
 ```
 
-## Hexo Basics
-
-Some hexo command:
-
+## Hexo 常用命令
 ```bash
 hexo new post "<post name>"   # you can change post to another layout if you want
 hexo clean && hexo generate   # generate the static file
@@ -516,6 +510,5 @@ hexo server   # run hexo in local environment
 hexo deploy   # hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
 ```
 
-## Have fun ^\_^
-
-Please [Star](https://github.com/V-Vincen/hexo-theme-livemylife) this Project if you like it! [Follow](https://github.com/V-Vincen) would also be appreciated! Peace!
+## 有一个好的体验 ^\_^
+如果你喜欢该主题，请 [Star](https://github.com/V-Vincen/hexo-theme-livemylife)！不胜感激你的 [Follow](https://github.com/V-Vincen)！比心！
