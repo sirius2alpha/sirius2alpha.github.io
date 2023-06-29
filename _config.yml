@@ -22,7 +22,7 @@ langselect:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite-url      # Note: don't forget to modify the CNAME file to your url
 root: /
-permalink: /:lang/:title/
+permalink: :lang/:title/    # 不要乱改，会找不到文章...
 permalink_defaults:
 
 # CDN Setting
@@ -96,8 +96,8 @@ featured-condition-size: 0    # A tag will be featured if the size of it is more
 ## Friends
 friends: [
     {
-        title: "V_Vincen",
-        href: "https://v-vincen.life/"
+        # title: "V_Vincen",
+        # href: "https://v-vincen.life/"
     }
 ]
 
@@ -108,15 +108,15 @@ friends: [
 ## Doc:https://github.com/gitalk/gitalk/blob/master/readme-cn.md
 ##
 gitalk:
-  owner:                          # 'GitHub repo owner'
-  admin:                          # 'GitHub repo'
-  repo:                           # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
-  clientID:                       # 'GitHub Application Client ID'
-  clientSecret:                   # 'GitHub Application Client Secret'
+  owner:  sirius2alpha                        # 'GitHub repo owner'
+  admin:   sirius2alpha                       # 'GitHub repo'
+  repo:     https://github.com/sirius2alpha/blog-comments   # ['GitHub repo owner and collaborators, only these guys can initialize github issues']
+  clientID: a1f1388cbbba3e5e3f0a                      # 'GitHub Application Client ID'
+  clientSecret: 4e9d8b7dd48e74bfbf2f33f58efd53ab19a9eba8                  # 'GitHub Application Client Secret'
   perPage: 10                     # Pagination size, with maximum 100.
   pagerDirection: last            # Comment sorting direction, available values are last and first.
   createIssueManually: false      # By default, Gitalk will create a corresponding github issue for your every single page automatically when the logined user is belong to the admin users. You can create it manually by setting this option to true
-  language: en                    # Localization language key, en, zh-CN and zh-TW are currently available.
+  language: zh-CN                    # Localization language key, en, zh-CN and zh-TW are currently available.
   maxCommentHeight: 250           # An optional number to limit comments' max height, over which comments will be folded.Default 250.
   proxy: https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token  # GitHub oauth request reverse proxy for CORS. For example, the demo url is 'https://cors-anywhere.herokuapp.com/https://github.com/login/oauth/access_token'.You should deploy your own proxy url as in this issue https://github.com/gitalk/gitalk/issues/429.
 
@@ -236,14 +236,15 @@ archive_generator:
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
 ##
-markdown:
-  render:
-    html: true
-    xhtmlOut: false
-    breaks: true
-    linkify: true
-    typographer: true
-    quotes: '“”‘’'
+###
+#markdown:
+#  render:
+#    html: true
+#    xhtmlOut: false
+#    breaks: false
+#    linkify: true
+#   typographer: true
+#    quotes: '“”‘’'
 
 
 # Build Settings
