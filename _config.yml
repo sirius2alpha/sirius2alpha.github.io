@@ -360,5 +360,6 @@ gitter:
 ##
 deploy:
   type: git
-  repo: https://github.com/sirius2alpha/sirius2alpha.github.io.git 
+  #repo: https://github.com/sirius2alpha/sirius2alpha.github.io.git 
+  repo: git@github.com:sirius2alpha/sirius2alpha.github.io.git
   branch: main
