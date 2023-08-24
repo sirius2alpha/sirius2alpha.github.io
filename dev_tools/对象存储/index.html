@@ -139,10 +139,10 @@
   <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]-->
 
   <!-- ga & ba script hoook -->
-  <link rel="canonical" href="http://yoursite-url/tags/疑难杂症/">
+  <link rel="canonical" href="http://yoursite-url/dev_tools/对象存储/">
   <title>
     
-      Sirius&#39; Blog | 不平庸也不特别
+      关于对象存储 - Sirius&#39; Blog | 不平庸也不特别
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -337,19 +337,19 @@
     .body--light {
       /* intro-header */
       --intro-header-background-image-url-home: url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: url('');
-      --intro-header-background-image-url-page: url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: url('/img/header_img/lml_bg2.jpg');
+      --intro-header-background-image-url-page: url('//img/header_img/lml_bg2.jpg');
     }
     .body--dark {
       --intro-header-background-image-url-home: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/newhome_bg.jpg');
-      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('');
-      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/archive_bg2.jpg');
+      --intro-header-background-image-url-post: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('/img/header_img/lml_bg2.jpg');
+      --intro-header-background-image-url-page: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2)), url('//img/header_img/lml_bg2.jpg');
     }
 
     header.intro-header {
-       /*page*/
-        background-image: var(--intro-header-background-image-url-page);
-        /* background-image: url('/img/header_img/archive_bg2.jpg'); */
+       /*post*/
+        background-image: var(--intro-header-background-image-url-post);
+        /* background-image: url('/img/header_img/lml_bg2.jpg'); */
       
     }
 
@@ -371,10 +371,48 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           
-          <div class="site-heading">
-            <h1>Sirius&#39; Blog</h1>
-            <!--<hr class="small">-->
-            <span class="subheading">不平庸也不特别</span>
+          <div class="post-heading">
+            <div class="tags">
+              
+              <a class="tag" href="/tags/#开发" title="开发">开发</a>
+              
+              <a class="tag" href="/tags/#字节青训营" title="字节青训营">字节青训营</a>
+              
+              <a class="tag" href="/tags/#对象存储" title="对象存储">对象存储</a>
+              
+              <a class="tag" href="/tags/#存储" title="存储">存储</a>
+              
+            </div>
+            <h1>关于对象存储</h1>
+            <h2 class="subheading">怎么存储视频文件呢？</h2>
+            <span class="meta">
+              Posted by sirius1y on
+              2023-08-23
+            </span>
+
+
+            
+            <!-- WordCount start -->
+            <div class="blank_box"></div>
+            <span class="meta">
+              Estimated Reading Time <span class="post-count">8</span> Minutes
+            </span>
+            <div class="blank_box"></div>
+            <span class="meta">
+              Words <span class="post-count">2.5k</span> In Total
+            </span>
+            <div class="blank_box"></div>
+            <!-- WordCount end -->
+            
+            
+            <!-- 不蒜子统计 start -->
+            <span class="meta" id="busuanzi_container_page_pv">
+              Viewed <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span> Times
+            </span>
+            <!-- 不蒜子统计 end -->
+            
+
+
           </div>
           
         </div>
@@ -415,423 +453,351 @@
 	Friends Blog、
 	anchorjs、
 	) -->
-		<!-- Main Content -->
-<div class="container">
-  <div class="row">
-    
+		<!-- Modify by Yu-Hsuan Yen -->
+<!-- Post Content -->
+<article>
+  <div class="container">
+    <div class="row">
+      <!-- Post Container -->
+      <div class="col-lg-8 col-lg-offset-1 col-md-10 col-md-offset-1 post-container">
 
-    <!-- USE SIDEBAR -->
-    <!-- Post Container -->
-    <div class="
-                col-lg-8 col-lg-offset-1
-                col-md-8 col-md-offset-1
-                col-sm-12
-                col-xs-12
-                post-container
-            ">
+        <p>在做短视频项目的时候，我总是有个疑问：用户上传的视频我要存储在哪里呢？作为开发小白，目前只知道要存放数据就到DB里面去，那我想“那我的视频文件也要存储到MySQL里面去嘛？”emm，这的确是一个大难题，不过在互联网技术发达的今天，感谢各大论坛的支持，让我了解到了视频、图像这类非结构化数据最好是对象存储。</p>
+<p>在此，你一定有一些疑惑：</p>
+<ul>
+<li>为什么视频不用mysql这类数据库进行存储呢？</li>
+<li>对象存储是什么，使用它存储非结构化数据有什么好处呢？</li>
+</ul>
+<h2 id="为什么不用MySQL存储非结构化数据？">为什么不用MySQL存储非结构化数据？</h2>
+<p>首先哈，mysql人家本来就是用来存储结构化数据的，视频文件是一种非结构化数据。</p>
+<hr>
+<h4 id="结构化数据-非结构化数据-半结构化数据"><strong>结构化数据/非结构化数据/半结构化数据</strong></h4>
+<p><strong>结构化数据：</strong><br>
+结构化数据是以清晰、<strong>预定义格式</strong>存储的数据。它通常<strong>以表格、数据库或电子表格的形式存在</strong>，其中每一列都有明确的数据类型和定义，每一行代表一个记录。结构化数据<strong>非常适合使用关系型数据库管理系统（RDBMS）来存储和管理</strong>，因为数据的组织方式已经被预先定义好。例如，存储在数据库中的订单信息、员工工资表以及销售数据都属于结构化数据的示例。</p>
+<p><strong>非结构化数据：</strong><br>
+非结构化数据<strong>则没有固定的格式，它可能包含不同类型的信息</strong>，如<strong>文本、图像、音频、视频等</strong>。这种数据类型通常不适合传统的关系型数据库，因为它们缺乏统一的结构。非结构化数据的处理相对更为复杂，需要使用特定的技术和工具，如自然语言处理（NLP）技术用于处理文本数据，计算机视觉技术用于处理图像数据等。社交媒体帖子、电子邮件内容、图像文件以及语音记录都属于非结构化数据的例子。</p>
+<p><strong>半结构化数据：</strong><br>
+半结构化数据可能具有一定的格式，但不像完全结构化数据那样严格。常见的半结构化数据格式包括<strong>XML（可扩展标记语言）和JSON（JavaScript对象表示法）</strong>。这些数据通常具有一些层次结构，但字段可能不像传统数据库表中的列那样明确定义。</p>
+<hr>
+<p>MySQL是一种<strong>关系型数据库管理系统</strong>，通常用于存储和管理结构化数据，如文本、数字、日期等。虽然MySQL可以存储二进制数据，但它并不是设计用来直接存储大量大文件（如视频文件）的最佳工具。</p>
+<p>以下是为什么通常不使用MySQL存储视频文件的一些原因：</p>
+<ul>
+<li>性能问题：MySQL的查询引擎是设计用来处理字符串、数值和日期等类型的数据的，对于大文件的存储和检索并不是最有效的。当你存储大量大文件时，可能会导致数据库性能下降，尤其是当你需要从数据库中检索这些文件时。</li>
+<li>存储效率：数据库通常使用磁盘空间来存储数据，而文件系统（如NFS、HDFS等）则更高效地存储大文件。使用数据库来存储大文件可能会导致不必要的磁盘空间浪费。</li>
+<li>文件操作：视频文件通常需要进行一些文件级别的操作，如复制、移动、删除等。这些操作通常比数据级别的操作更消耗资源。如果这些操作在数据库中进行，可能会导致性能问题。</li>
+<li>扩展性：当你的视频库变得非常大时，你可能需要扩展你的存储系统。数据库的扩展性通常比文件系统要复杂得多。</li>
+</ul>
+<p>因此，对于存储和管理视频文件，通常建议使用专门的文件存储系统，如NFS、HDFS、S3等。这些系统更高效地处理大文件，并且通常提供更好的扩展性和更好的性能。如果你需要从你的视频文件中检索信息，你可以将这些信息存储在关系型数据库中，并使用数据库的功能来查询和管理这些信息。</p>
+<h2 id="关于对象存储">关于对象存储</h2>
+<p>对象存储是一种用于<strong>存储和管理大规模非结构化数据的存储架构</strong>。与传统的文件系统或块存储不同，对象存储将数据存储为&quot;对象&quot;，每个对象都包含数据本身以及与之相关的元数据（如文件名、创建日期、数据类型等）。这些对象被分布式地存储在多个服务器上，并通过唯一的标识符进行访问。</p>
+<p>对象存储的<strong>主要特点</strong>包括：</p>
+<ol>
+<li><strong>扩展性：</strong> 对象存储设计用于应对海量数据的存储需求，可以轻松地扩展以适应不断增长的数据量，而无需大规模的基础架构变更。</li>
+<li><strong>分布式架构：</strong> 对象存储系统将数据分布在多个服务器上，提高了数据的可靠性和冗余性。即使某个服务器出现故障，数据仍然可以从其他服务器中恢复。</li>
+<li><strong>元数据：</strong> 每个对象都有丰富的元数据，这些元数据描述了对象的各种属性，包括文件名、大小、创建日期、数据类型等。这些元数据使得数据管理更加灵活和智能。</li>
+<li><strong>适应非结构化数据：</strong> 对象存储适用于存储各种类型的非结构化数据，如图像、音频、视频、日志文件、备份等。它不强制要求数据遵循特定的结构，因此非常适用于大多数现代应用生成的多样化数据。</li>
+<li><strong>数据访问和检索：</strong> 对象存储通常提供强大的数据访问和检索功能。您可以使用对象标识符进行数据检索，而不需要像传统文件系统那样的层次化文件路径。</li>
+<li><strong>云集成：</strong> 许多云平台提供对象存储服务，使得在云环境中存储和管理数据变得更加简单和经济。</li>
+</ol>
+<h3 id="三种存储形态">三种存储形态</h3>
+<h4 id="块存储（Block-Storage）">块存储（Block Storage）</h4>
+<p>块存储将数据分割成固定大小的块，通常<strong>以扇区（一般为512字节或更大）为单位</strong>。这些块可以被单独管理，读取和写入。块存储通常在底层使用了虚拟化技术，将块映射到物理存储设备上。块存储<strong>适用于需要随机读写的应用</strong>，如操作系统的磁盘，数据库，虚拟机镜像等。</p>
+<p>主要特点：</p>
+<ul>
+<li>低延迟的读写操作。</li>
+<li>支持随机读写访问。</li>
+<li>通常用于需要高性能、低延迟和数据管理控制的应用。</li>
+</ul>
+<h4 id="文件存储（File-Storage）">文件存储（File Storage）</h4>
+<p>文件存储模式<strong>以文件为单位</strong>进行存储和管理。文件存储模式通常使用网络协议（如NFS或SMB）提供共享文件系统，使多台计算机能够共享相同的文件。这种模式<strong>适用于需要多台计算机访问相同文件的应用</strong>，如共享文件夹、办公文档、媒体文件等。</p>
+<p>主要特点：</p>
+<ul>
+<li>以文件为单位进行管理和访问。</li>
+<li>适用于多台计算机之间的文件共享和协作。</li>
+<li>不适合大规模、高并发的访问。</li>
+</ul>
+<h4 id="对象存储（Object-Storage）">对象存储（Object Storage）</h4>
+<p>对象存储是一种将<strong>数据以对象形式进行存储</strong>的方法。每个对象都包含数据本身、元数据（如文件名、创建日期等）以及一个唯一的标识符。对象存储通常在分布式环境中工作，可以自动扩展以适应大规模的数据。它<strong>适用于大规模的非结构化数据</strong>，如图像、音频、视频文件，以及需要长期保留和高可用性的数据。</p>
+<p>主要特点：</p>
+<ul>
+<li>以对象为单位存储，每个对象都有唯一的标识符。</li>
+<li>可以存储海量非结构化数据。</li>
+<li>高可扩展性和可用性。</li>
+<li>适合数据归档、备份和云存储等场景。</li>
+</ul>
+<h4 id="区别">区别</h4>
+<ul>
+<li>
+<p>块存储以固定大小的块为单位进行读写，适用于随机读写的应用；</p>
+<p>文件存储以文件为单位共享，适用于多台计算机之间的文件共享和协作；</p>
+<p>对象存储以对象为单位存储，适用于海量非结构化数据的存储。</p>
+</li>
+<li>
+<p>块存储和文件存储通常在操作系统级别进行管理，而对象存储在应用程序级别进行管理。</p>
+</li>
+<li>
+<p>对象存储通常具有更高的可扩展性和冗余性，适合大规模和长期数据存储。</p>
+</li>
+<li>
+<p>块存储和文件存储在访问控制和数据管理方面更加灵活，而对象存储强调数据的元数据和可扩展性。</p>
+</li>
+</ul>
+<h2 id="常见的云平台的对象对象服务">常见的云平台的对象对象服务</h2>
+<ul>
+<li>腾讯云：对象存储 COS</li>
+<li>阿里云：对象存储 OSS</li>
+<li>火山引擎：对象存储TOS</li>
+<li>Azure：Azure Blob 存储</li>
+</ul>
+<p>国内的各大云厂商的对象存储服务文档对他们的产品都介绍的挺详细的，我看了火山引擎TOS和Azure的存储服务，Azure的冗余服务在TOS中叫做多AZ冗余服务，大同小异，没有实际自己用过。国内云厂商对于学生的支持感觉还是不够，想要用还是得要自己掏钱，希望未来各大厂商还是能支持以下学生发展，积累一些企业口碑。</p>
 
-      <!-- Main Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-lg-offset-0 col-md-10 col-md-offset-1">
-      <!-- 归档列表 -->
 
-      
-
-      <!-- 归档列表 -->
-      
-      <div class="one-tag-list">
-        <span class="fa fa-calendar-times-o listing-seperator" id="2023">
-          <span class="tag-text">2023</span>
-        </span>
-        <ul>
+        <hr>
+        <!-- Pager -->
+        <ul class="pager">
           
-          <li>
-            08-25
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/dev_tools/【实践】使用 GORM连接数据库/" style="color: #0085a1">
-              <span>
-                使用GORM连接MySQL实现数据增删查改
-                
-                -- dev_tools
-                
-              </span>
-            </a>
+          <li class="previous">
+            <a href="/dev_tools/Kafka消息队列/" data-toggle="tooltip" data-placement="top" title="Kafka消息队列">&larr; Previous Post</a>
           </li>
           
-          <li>
-            08-24
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/dev_tools/Kafka消息队列/" style="color: #0085a1">
-              <span>
-                Kafka消息队列
-                
-                -- dev_tools
-                
-              </span>
-            </a>
-          </li>
           
-          <li>
-            08-23
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/dev_tools/对象存储/" style="color: #0085a1">
-              <span>
-                关于对象存储
-                
-                -- dev_tools
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            08-03
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/dev_tools/Redis/" style="color: #0085a1">
-              <span>
-                Redis常用指令
-                
-                -- dev_tools
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            08-01
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/dev_tools/团队git协作/" style="color: #0085a1">
-              <span>
-                Git正确打开方式
-                
-                -- dev_tools
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            07-30
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/Problems/ping github.com/" style="color: #0085a1">
-              <span>
-                ping github.com
-                
-                -- Problems
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            06-29
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/coding/暴力枚举/" style="color: #0085a1">
-              <span>
-                暴力枚举和高精度 刷题记录
-                
-                -- coding
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-21
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/security/csrf/csrf-attack/" style="color: #0085a1">
-              <span>
-                CSRF攻击
-                
-                -- security
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            05-05
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/security/stack_overflow-attack/stack_overflow-attack/" style="color: #0085a1">
-              <span>
-                栈溢出攻击
-                
-                -- security
-                
-              </span>
-            </a>
-          </li>
-          
-          <li>
-            04-12
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/security/Encryption-authentication/Encryption-authentication/" style="color: #0085a1">
-              <span>
-                加密与认证
-                
-                -- security
-                
-              </span>
-            </a>
+          <li class="next">
+            <a href="/dev_tools/Redis/" data-toggle="tooltip" data-placement="top" title="Redis常用指令">Next Post &rarr;</a>
           </li>
           
         </ul>
-      </div>
-      
-    </div>
-  </div>
+
+        
+        <!-- tip start -->
+        <!-- tip -->
+<!-- tip start -->
+<div class="tip">
+  <p>
+    
+      如果您喜欢此博客或发现它对您有用，则欢迎对此发表评论。 也欢迎您共享此博客，以便更多人可以参与。 如果博客中使用的图像侵犯了您的版权，请与作者联系以将其删除。 谢谢 ！
+    
+  </p>
 </div>
+<!-- tip end -->
 
+        <!-- tip end -->
+        
 
-      <!-- 如果开启评论功能 -->
-      
-    </div>
+        
+        <!-- Sharing Srtart -->
+        <!-- Social Social Share Post -->
+<!-- Docs:https://github.com/overtrue/share.js -->
 
-    <!-- Sidebar Container -->
-<div class="
-    col-lg-3 col-lg-offset-0
-    col-md-3 col-md-offset-0
-    col-sm-12
-    col-xs-12
-    sidebar-container
-">
-    
-        <!-- Visitors -->
-<h5><a href="/">来访者</a></h5>
-
-<div class="widget">
-  <span>
-    Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
-  </span>
-  <br />
-  <span>
-    <b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
-  </span>
-</div>
-
-
-        <hr>
-    
-        <!-- Featured Tags -->
-
-<section>
-  <h5><a href="/tags/">特色标签</a></h5>
-  <div class="tags">
-    
-    
-    <a href="/tags/#疑难杂症" title="疑难杂症" rel="2">疑难杂症</a>
-    
-    
-    
-    <a href="/tags/#Github" title="Github" rel="1">Github</a>
-    
-    
-    
-    <a href="/tags/#Git" title="Git" rel="2">Git</a>
-    
-    
-    
-    <a href="/tags/#coding" title="coding" rel="1">coding</a>
-    
-    
-    
-    <a href="/tags/#暴力枚举" title="暴力枚举" rel="1">暴力枚举</a>
-    
-    
-    
-    <a href="/tags/#高精度" title="高精度" rel="1">高精度</a>
-    
-    
-    
-    <a href="/tags/#模拟" title="模拟" rel="1">模拟</a>
-    
-    
-    
-    <a href="/tags/#开发" title="开发" rel="5">开发</a>
-    
-    
-    
-    <a href="/tags/#Kafka" title="Kafka" rel="1">Kafka</a>
-    
-    
-    
-    <a href="/tags/#消息队列" title="消息队列" rel="1">消息队列</a>
-    
-    
-    
-    <a href="/tags/#字节青训营" title="字节青训营" rel="5">字节青训营</a>
-    
-    
-    
-    <a href="/tags/#Redis" title="Redis" rel="1">Redis</a>
-    
-    
-    
-    <a href="/tags/#MySQL" title="MySQL" rel="2">MySQL</a>
-    
-    
-    
-    <a href="/tags/#DB" title="DB" rel="1">DB</a>
-    
-    
-    
-    <a href="/tags/#GORM" title="GORM" rel="1">GORM</a>
-    
-    
-    
-    <a href="/tags/#ORM" title="ORM" rel="1">ORM</a>
-    
-    
-    
-    <a href="/tags/#团队" title="团队" rel="1">团队</a>
-    
-    
-    
-    <a href="/tags/#对象存储" title="对象存储" rel="1">对象存储</a>
-    
-    
-    
-    <a href="/tags/#存储" title="存储" rel="1">存储</a>
-    
-    
-    
-    <a href="/tags/#information security" title="information security" rel="3">information security</a>
-    
-    
-    
-    <a href="/tags/#OpenSSL" title="OpenSSL" rel="1">OpenSSL</a>
-    
-    
-    
-    <a href="/tags/#CSRF" title="CSRF" rel="1">CSRF</a>
-    
-    
-    
-    <a href="/tags/#attack" title="attack" rel="2">attack</a>
-    
-    
-    
-    <a href="/tags/#ollydbg" title="ollydbg" rel="1">ollydbg</a>
-    
-    
-  </div>
-</section>
-
-
-        <hr>
-    
-        <!-- Short About -->
-<section class="visible-md visible-lg">
-  <h5><a href="/about/">关于自己</a></h5>
-  <div class="short-about">
-
-    
-
-    
-
-    <!-- SNS Link -->
-    <ul class="list-inline">
-      
-
-      
-      <li>
-        <a target="_blank" href="https://github.com/sirius2alpha">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-      <li>
-        <a target="_blank" href="https://www.instagram.com/siriustuyeahh">
-          <span class="fa-stack fa-lg">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-          </span>
-        </a>
-      </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-    </ul>
-  </div>
-</section>
-
-        <hr>
-    
-        <!-- RECENT POSTS -->
-
-<h5><a href="/">最近博文</a></h5>
-<div class="widget">
-  <ul>
-    
-    <a href="../../dev_tools/%E3%80%90%E5%AE%9E%E8%B7%B5%E3%80%91%E4%BD%BF%E7%94%A8%20GORM%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/">
-      <li>使用GORM连接MySQL实现数据增删查改</li>
-    </a>
-    
-    <a href="../../dev_tools/Kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
-      <li>Kafka消息队列</li>
-    </a>
-    
-    <a href="../../dev_tools/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/">
-      <li>关于对象存储</li>
-    </a>
-    
-    <a href="../../dev_tools/Redis/">
-      <li>Redis常用指令</li>
-    </a>
-    
-    <a href="../../dev_tools/%E5%9B%A2%E9%98%9Fgit%E5%8D%8F%E4%BD%9C/">
-      <li>Git正确打开方式</li>
-    </a>
-    
+<div class="social-share" data-initialized="true" data-disabled="tencent ,douban ,qzone ,linkedin ,facebook ,google ,diandian" data-wechat-qrcode-helper="" align="center">
+  <ul class="list-inline text-center social-share-ul">
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-twitter">
+        <i class="fa fa-twitter fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a class="social-share-icon icon-wechat">
+        <i class="fa fa-weixin fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-weibo">
+        <i class="fa fa-weibo fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon icon-qq">
+        <i class="fa fa-qq fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
+    <li class="social-share-li">
+      <a target="_blank" class="social-share-icon" href="mailto:?subject=关于对象存储&body=Hi,I found this website and thought you might like it http://yoursite-url/dev_tools/对象存储/">
+        <i class="fa fa-envelope fa-1x" aria-hidden="true"></i>
+      </a>
+    </li>
   </ul>
 </div>
 
+<!-- css & js -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css"> -->
+<script defer="defer" async="true" src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
 
+        <!-- Sharing End -->
+        
         <hr>
+
+        <!-- comments start -->
+        <!-- 1. gitalk comment -->
+
+  <!-- gitalk start -->
+  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
+
+  <div id="gitalk-container"></div>
+
+  
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
+    <script src="/js/comment/gitalk.js"></script>
+  
+
+  <script>
+    var gitalk = new Gitalk({
+      clientID: 'a1f1388cbbba3e5e3f0a',
+      clientSecret: '4e9d8b7dd48e74bfbf2f33f58efd53ab19a9eba8',
+      repo: 'https://github.com/sirius2alpha/blog-comments',
+      owner: 'sirius2alpha',
+      admin: 'sirius2alpha',
+      id: 'Wed Aug 23 2023 00:00:00 GMT+0800', // Ensure uniqueness and length less than 50
+      distractionFreeMode: false, // Facebook-like distraction free mode
+      perPage: 10,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      language: 'zh-CN',
+      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
+    });
+    gitalk.render('gitalk-container');
+
+    var gtFolded = () => {
+      setTimeout(function () {
+        let markdownBody = document.getElementsByClassName("markdown-body");
+        let list = Array.from(markdownBody);
+        list.forEach(item => {
+          if (item.clientHeight > 250) {
+            item.classList.add('gt-comment-body-folded');
+            item.style.maxHeight = '250px';
+            item.title = 'Click to Expand';
+            item.onclick = function () {
+              item.classList.remove('gt-comment-body-folded');
+              item.style.maxHeight = '';
+              item.title = '';
+              item.onclick = null;
+            };
+          }
+        })
+      }, 800);
+    }
+  </script>
+
+  <!-- gitalk end -->
+
+
+<!-- 2. gitment comment -->
+
+
+<!-- 3. disqus comment -->
+
+
+        <!-- comments end -->
+        <hr>
+
+      </div>
+
+      <!-- Catalog: Tabe of Content -->
+      <!-- Table of Contents -->
+
     
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">目录</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E7%94%A8MySQL%E5%AD%98%E5%82%A8%E9%9D%9E%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE%EF%BC%9F"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">为什么不用MySQL存储非结构化数据？</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE-%E9%9D%9E%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE-%E5%8D%8A%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE"><span class="toc-nav-number">1.0.1.</span> <span class="toc-nav-text">结构化数据&#x2F;非结构化数据&#x2F;半结构化数据</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%85%B3%E4%BA%8E%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">关于对象存储</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#%E4%B8%89%E7%A7%8D%E5%AD%98%E5%82%A8%E5%BD%A2%E6%80%81"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">三种存储形态</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%9D%97%E5%AD%98%E5%82%A8%EF%BC%88Block-Storage%EF%BC%89"><span class="toc-nav-number">2.1.1.</span> <span class="toc-nav-text">块存储（Block Storage）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%EF%BC%88File-Storage%EF%BC%89"><span class="toc-nav-number">2.1.2.</span> <span class="toc-nav-text">文件存储（File Storage）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%EF%BC%88Object-Storage%EF%BC%89"><span class="toc-nav-number">2.1.3.</span> <span class="toc-nav-text">对象存储（Object Storage）</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#%E5%8C%BA%E5%88%AB"><span class="toc-nav-number">2.1.4.</span> <span class="toc-nav-text">区别</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E4%BA%91%E5%B9%B3%E5%8F%B0%E7%9A%84%E5%AF%B9%E8%B1%A1%E5%AF%B9%E8%B1%A1%E6%9C%8D%E5%8A%A1"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">常见的云平台的对象对象服务</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+
+
+      <!-- Sidebar Container -->
+      <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+        <!-- Featured Tags -->
+        
+        <section>
+          <!-- no hr -->
+          <h5>
+            <a href="/tags/">特色标签</a>
+          </h5>
+          <div class="tags">
+            
+            <a class="tag" href="/tags/#开发" title="开发">开发</a>
+            
+            <a class="tag" href="/tags/#字节青训营" title="字节青训营">字节青训营</a>
+            
+            <a class="tag" href="/tags/#对象存储" title="对象存储">对象存储</a>
+            
+            <a class="tag" href="/tags/#存储" title="存储">存储</a>
+            
+          </div>
+        </section>
+        
+
         <!-- Friends Blog -->
-
-<h5><a href="/">链友</a></h5>
-<ul class="list-inline">
-  
-  <li><a href="" target="_blank"></a></li>
-  
-</ul>
-
-
+        
         <hr>
-    
-        <!-- Archives -->
+        <h5>链友</h5>
+        <ul class="list-inline">
 
-<h5><a href="/archives/">archives</a></h5>
-<div class="widget">
-  <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/08/">August 2023</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/07/">July 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/06/">June 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/05/">May 2023</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="../../archives/2023/04/">April 2023</a><span class="archive-list-count">1</span></li></ul>
-</div>
-
-
-        <hr>
-    
-</div>
-
-
-    
+          
+          <li>
+            <a href="undefined" target="_blank">undefined</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
   </div>
-</div>
+</article>
+
+
+
+<!-- anchorjs start -->
+<!-- async load function -->
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script type="text/javascript">
+  // async load function
+  function async (u, c) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener('load', function(e) {
+        c(null, e);
+      }, false);
+    }
+    s.parentNode.insertBefore(o, s);
+  };
+</script>
+<script type="text/javascript">
+  //anchor-js, Doc:http://bryanbraun.github.io/anchorjs/
+  async ("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js", function() {
+    anchors.options = {
+      visible: 'hover',
+      placement: 'left',
+      // icon: 'ℬ'
+      icon: '❡'
+    };
+    anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+  });
+</script>
+<style>
+  /* place left on bigger screen */
+  @media all and (min-width: 800px) {
+    .anchorjs-link {
+      position: absolute;
+      left: -0.75em;
+      font-size: 1.1em;
+      margin-top: -0.1em;
+    }
+  }
+</style>
+
+<!-- anchorjs end -->
+
 
 
 		<!-- Footer (contains ThemeColor、viewer) -->
