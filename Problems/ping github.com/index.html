@@ -118,11 +118,6 @@
     
 
     
-      <!-- gitalk start -->
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> -->
-      <link rel="stylesheet" href="/css/gitalk.css"/>
-      <!-- gitalk end -->
-    
   
 
   <!-- Custom Fonts -->
@@ -142,7 +137,7 @@
   <link rel="canonical" href="http://yoursite-url/Problems/ping github.com/">
   <title>
     
-      ping github.com - Sirius&#39; Blog | 不平庸也不特别
+      ping github.com - Sirius&#39; Blog
     
   </title>
 <meta name="generator" content="Hexo 5.4.2"></head>
@@ -354,10 +349,6 @@
     }
 
     
-      #signature {/*signature*/
-        background-image: url('/img/signature/sirius1y-white.png');
-      }
-    
   </style>
 
 
@@ -559,56 +550,6 @@
         <!-- comments start -->
         <!-- 1. gitalk comment -->
 
-  <!-- gitalk start -->
-  <!-- Docs:https://github.com/gitalk/gitalk/blob/master/readme-cn.md -->
-
-  <div id="gitalk-container"></div>
-
-  
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.js"></script> -->
-    <script src="/js/comment/gitalk.js"></script>
-  
-
-  <script>
-    var gitalk = new Gitalk({
-      clientID: 'a1f1388cbbba3e5e3f0a',
-      clientSecret: '4e9d8b7dd48e74bfbf2f33f58efd53ab19a9eba8',
-      repo: 'https://github.com/sirius2alpha/blog-comments',
-      owner: 'sirius2alpha',
-      admin: 'sirius2alpha',
-      id: 'Sun Jul 30 2023 00:00:00 GMT+0800', // Ensure uniqueness and length less than 50
-      distractionFreeMode: false, // Facebook-like distraction free mode
-      perPage: 10,
-      pagerDirection: 'last',
-      createIssueManually: false,
-      language: 'zh-CN',
-      proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token'
-    });
-    gitalk.render('gitalk-container');
-
-    var gtFolded = () => {
-      setTimeout(function () {
-        let markdownBody = document.getElementsByClassName("markdown-body");
-        let list = Array.from(markdownBody);
-        list.forEach(item => {
-          if (item.clientHeight > 250) {
-            item.classList.add('gt-comment-body-folded');
-            item.style.maxHeight = '250px';
-            item.title = 'Click to Expand';
-            item.onclick = function () {
-              item.classList.remove('gt-comment-body-folded');
-              item.style.maxHeight = '';
-              item.title = '';
-              item.onclick = null;
-            };
-          }
-        })
-      }, 800);
-    }
-  </script>
-
-  <!-- gitalk end -->
-
 
 <!-- 2. gitment comment -->
 
@@ -670,7 +611,7 @@
 
           
           <li>
-            <a href="undefined" target="_blank">undefined</a>
+            <a href="https://v-vincen.life/" target="_blank">猫猫晨</a>
           </li>
           
         </ul>
