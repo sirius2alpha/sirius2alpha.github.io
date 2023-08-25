@@ -1,3 +1,4 @@
+---
 title: Git正确打开方式
 catalog: true
 date: 2023-08-01
