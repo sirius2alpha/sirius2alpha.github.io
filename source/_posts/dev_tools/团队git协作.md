@@ -1,4 +1,3 @@
----
 title: Git正确打开方式
 catalog: true
 date: 2023-08-01
@@ -6,12 +5,15 @@ subtitle: Git工作流程图、Git常用命令
 lang: cn
 header-img: /img/header_img/lml_bg2.jpg
 tags:
+
 - 疑难杂症
 - 开发
 - Git
 - 团队
 - 字节青训营
+
 ---
+
 # Git正确使用姿势
 
 ## Git工作区域和流程
@@ -119,7 +121,7 @@ git fetch <远程仓库名称>
 
 
 
-<img src="/home/sirius/桌面/cover" alt="两个分支"  />
+![两个分支](https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692964880.png)
 
 #### **merge**
 
@@ -138,7 +140,7 @@ git merge master feature
 
 feature 分支中新的合并提交（merge commit）将两个分支的历史连在了一起。你会得到下面这样的分支结构：
 
-![merge之后](https://img-blog.csdnimg.cn/35ae727249b04e1daad0715129467dc3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQWRlbmlhbHp6,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![b96eb877e38c4ab55242b7068cd8a8c6](https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692965624.png)
 
 
 
@@ -155,7 +157,7 @@ git rebase master
 
 **关于git rebase的黄金法则就是永远不要在公共分支上使用它。**
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/67c657754829426bb226c1f0df7604f5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQWRlbmlhbHp6,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![755e949c6c111fae02b4c178545e619a](https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692964942.png)
 
 rebase最大的好处是你的项目历史会非常整洁。首先，它不像 `git merge` 那样引入不必要的合并提交。其次，如上图所示，rebase 导致最后的项目历史呈现出完美的线性——你可以从项目终点到起点浏览而不需要任何的 fork。这让你更容易使用 `git log`、`git bisect` 和 `gitk` 来查看项目历史。
 
@@ -192,7 +194,7 @@ pick 5c67e61 Message for commit #3
 
 保存后关闭文件，Git 会根据你的指令来执行 rebase，项目历史看上去会是这样：
 
-![交互式rebase](https://img-blog.csdnimg.cn/67c657754829426bb226c1f0df7604f5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQWRlbmlhbHp6,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center)
+![755e949c6c111fae02b4c178545e619a](https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692964942.png)
 
 忽略不重要的提交会让你的 feature 分支的历史更清晰易读。这是 `git merge` 做不到的。
 
