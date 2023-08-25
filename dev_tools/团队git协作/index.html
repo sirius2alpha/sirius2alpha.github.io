@@ -501,20 +501,20 @@
 <h4 id=""></h4>
 <p>关于git merge和git rebase的区别在这里引用了另外一个博主的文章进行介绍。</p>
 <p>文章原链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/kevinxxw/article/details/123980372">https://blog.csdn.net/kevinxxw/article/details/123980372</a></p>
-<img src="/home/sirius/桌面/cover" alt="两个分支"  />
+<p><img src="https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692964880.png" alt="两个分支"></p>
 <h4 id="merge"><strong>merge</strong></h4>
 <p>将 master 分支合并到 feature 分支最简单的办法就是用下面这些命令：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature</span><br><span class="line">git merge master</span><br></pre></td></tr></table></figure>
 <p>也可以把它们压缩在一行里。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge master feature</span><br></pre></td></tr></table></figure>
 <p>feature 分支中新的合并提交（merge commit）将两个分支的历史连在了一起。你会得到下面这样的分支结构：</p>
-<p><img src="https://img-blog.csdnimg.cn/35ae727249b04e1daad0715129467dc3.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQWRlbmlhbHp6,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="merge之后"></p>
+<p><img src="https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692965624.png" alt="b96eb877e38c4ab55242b7068cd8a8c6"></p>
 <h4 id="rebase"><strong>rebase</strong></h4>
 <p>作为 merge 的替代选择，你可以像下面这样将 feature 分支并入 master 分支：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature</span><br><span class="line">git rebase master</span><br></pre></td></tr></table></figure>
 <p>它会把整个 feature 分支移动到 master 分支的后面，有效地把所有 master 分支上新的提交并入过来。但是，rebase 为原分支上每一个提交创建一个新的提交，重写了项目历史，并且不会带来合并提交。</p>
 <p><strong>关于git rebase的黄金法则就是永远不要在公共分支上使用它。</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/67c657754829426bb226c1f0df7604f5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQWRlbmlhbHp6,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692964942.png" alt="755e949c6c111fae02b4c178545e619a"></p>
 <p>rebase最大的好处是你的项目历史会非常整洁。首先，它不像 <code>git merge</code> 那样引入不必要的合并提交。其次，如上图所示，rebase 导致最后的项目历史呈现出完美的线性——你可以从项目终点到起点浏览而不需要任何的 fork。这让你更容易使用 <code>git log</code>、<code>git bisect</code> 和 <code>gitk</code> 来查看项目历史。</p>
 <p>不过，这种简单的提交历史会带来两个后果：安全性和可跟踪性。如果你违反了 rebase 黄金法则，重写项目历史可能会给你的协作工作流带来灾难性的影响。此外，rebase 不会有合并提交中附带的信息——你看不到 feature 分支中并入了上游的哪些更改。</p>
 <h4 id="交互式rebase"><strong>交互式rebase</strong></h4>
@@ -526,7 +526,7 @@
 <p>这个列表定义了 rebase 将被执行后分支会是什么样的。更改 <code>pick</code> 命令或者重新排序，这个分支的历史就能如你所愿了。比如说，如果第二个提交修复了第一个提交中的小问题，你可以用 <code>fixup</code> 命令把它们合到一个提交中：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pick 33d5b7a Message for commit #1</span><br><span class="line">fixup 9480b3d Message for commit #2</span><br><span class="line">pick 5c67e61 Message for commit #3</span><br></pre></td></tr></table></figure>
 <p>保存后关闭文件，Git 会根据你的指令来执行 rebase，项目历史看上去会是这样：</p>
-<p><img src="https://img-blog.csdnimg.cn/67c657754829426bb226c1f0df7604f5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAQWRlbmlhbHp6,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="交互式rebase"></p>
+<p><img src="https://raw.githubusercontent.com/sirius2alpha/Typora-pics/master/2023/08/upgit_20230825_1692964942.png" alt="755e949c6c111fae02b4c178545e619a"></p>
 <p>忽略不重要的提交会让你的 feature 分支的历史更清晰易读。这是 <code>git merge</code> 做不到的。</p>
 <h3 id="分支管理">分支管理</h3>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> git branch 命令用于查看、创建和管理分支</span></span><br><span class="line"></span><br><span class="line">git branch 					# 查看本地所有分支</span><br><span class="line">git branch -a				# 查看本地和远程的分支</span><br><span class="line">git branch &lt;新分支名称&gt;		# 创建一个新分支</span><br><span class="line">git branch -d &lt;分支名称&gt;	# 删除一个分支</span><br><span class="line">git branch -D &lt;分支名称&gt; 	# 强制删除一个分支</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> git checkout 用于在Git中切换分支、查看文件的不同版本或还原文件到之前的状态</span></span><br><span class="line">关于git rebase的黄金法则就是永远不要在公共分支上使用它。</span><br><span class="line">git checkout &lt;分支名称&gt;						 # 切换到其他分支上</span><br><span class="line">											 # 新版本git中采用git switch &lt;分支名称&gt; 切换分支</span><br><span class="line">git checkout &lt;commit哈希值&gt; &lt;文件名&gt;			# 查看文件的不同版本</span><br><span class="line">git checkout &lt;commit哈希值&gt; -- &lt;文件名&gt;		# 还原文件到之前的状态</span><br></pre></td></tr></table></figure>
