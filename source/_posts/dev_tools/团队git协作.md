@@ -6,13 +6,11 @@ subtitle: Git工作流程图、Git常用命令
 lang: cn
 header-img: /img/header_img/lml_bg2.jpg
 tags:
-
 - 疑难杂症
 - 开发
 - Git
 - 团队
 - 字节青训营
-
 ---
 
 # Git正确使用姿势
