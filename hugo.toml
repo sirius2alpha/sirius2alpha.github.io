@@ -1,0 +1,153 @@
+# 网站基本配置
+baseURL = 'https://example.org/'          # 网站的基础URL
+languageCode = 'en-us'                    # 网站使用的语言代码
+title = "Sirius' Blog"                    # 网站的标题
+theme = "PaperMod"                        # 使用的主题名称
+
+# 网站功能设置
+paginate = 5                              # 每页显示的文章数
+enableRobotsTXT = true                    # 是否启用robots.txt文件
+buildDrafts = false                       # 是否构建草稿状态的文章
+buildFuture = false                       # 是否构建未来发布的文章
+buildExpired = false                      # 是否构建已过期的文章
+# googleAnalytics = "UA-123-45"           # Google Analytics跟踪ID（此行已注释）
+pygmentsUseClasses = true                 # 是否使用Pygments进行代码高亮
+
+# 最小化配置
+[minify]
+disableXML = true                         # 禁用XML文件的最小化
+minifyOutput = true                       # 启用输出的最小化
+
+# 网站参数设置
+[params]
+env = "production"                        # 环境模式（如"production"）
+title = "ExampleSite"                     # 网站标题（重写全局设置）
+description = "ExampleSite description"  # 网站描述
+keywords = [ "Blog", "Portfolio", "PaperMod" ]  # 网站关键词
+author = "sirius1y"                             # 文章作者名称
+images = [ "<link or path of image for opengraph, twitter-cards>" ]  # 社交媒体图像链接
+DateFormat = "January 2, 2006"            # 日期格式
+defaultTheme = "auto"                     # 默认主题（如"auto"）
+disableThemeToggle = false                # 是否禁用主题切换按钮
+ShowReadingTime = true                    # 是否显示阅读时间
+ShowShareButtons = true                   # 是否显示分享按钮
+ShowPostNavLinks = true                   # 是否显示文章导航链接
+ShowBreadCrumbs = true                    # 是否显示面包屑导航
+ShowCodeCopyButtons = true                # 是否显示代码复制按钮
+ShowWordCount = true                      # 是否显示字数统计
+ShowRssButtonInSectionTermList = true     # 是否在部分术语列表中显示RSS按钮
+UseHugoToc = true                         # 是否使用Hugo的目录
+disableSpecial1stPost = false             # 是否禁用特殊的第一篇文章展示
+disableScrollToTop = false                # 是否禁用滚动到顶部按钮
+comments = true                           # 是否启用评论功能
+hidemeta = false                          # 是否隐藏元数据
+hideSummary = false                       # 是否隐藏摘要
+showtoc = true                           # 是否显示目录
+tocopen = false                           # 目录是否默认展开
+
+# 静态资源配置
+[params.assets]
+favicon = "/images/icon.png"              # 网站图标链接
+favicon16x16 = "/images/icon.png"         # 16x16像素的网站图标链接
+favicon32x32 = "/images/icon.png"         # 32x32像素的网站图标链接
+apple_touch_icon = "<link / abs url>"     # Apple触摸图标链接
+safari_pinned_tab = "<link / abs url>"    # Safari固定标签图标链接
+
+# 标签配置
+[params.label]
+text = "Home"                             # 标签文本
+icon = "/apple-touch-icon.png"            # 标签图标路径
+iconHeight = 35                           # 标签图标高度
+
+# 个人简介模式配置
+[params.profileMode]
+enabled = true                           # 是否启用个人简介模式
+title = "Sirius' Blog"                     # 简介标题
+subtitle = "How can we fly when we are too afraid to leave the ground?"             # 简介副标题
+imageUrl = "/images/halloween.jpg"               # 简介图片链接
+imageWidth = 120                          # 图片宽度
+imageHeight = 120                         # 图片高度
+imageTitle = "Hi, it's me"                   # 图片标题
+
+  # 个人简介下的按钮配置
+  [[params.profileMode.buttons]]
+  name = "Posts"                          # 按钮名称
+  url = "posts"                           # 按钮链接
+
+  [[params.profileMode.buttons]]
+  name = "Tags"                           # 另一个按钮名称
+  url = "tags"                            # 另一个按钮链接
+
+# 主页信息配置
+[params.homeInfoParams]
+Title = "Hi there 👋"                     # 主页标题
+Content = "Welcome to my blog"            # 主页内容
+
+# 社交图标配置
+[[params.socialIcons]]
+name = "x"
+url = "https://twitter.com/"
+
+[[params.socialIcons]]
+name = "stackoverflow"
+url = "https://stackoverflow.com"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/sirius2alpha"
+
+# 各种分析工具的站点验证标签
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
+
+[params.analytics.bing]
+SiteVerificationTag = "XYZabc"
+
+[params.analytics.yandex]
+SiteVerificationTag = "XYZabc"
+
+# 封面配置
+[params.cover]
+hidden = true                            # 是否隐藏封面
+hiddenInList = true                      # 是否在列表中隐藏封面
+hiddenInSingle = true                    # 是否在单篇文章中隐藏封面
+
+# 文章编辑链接配置
+[params.editPost]
+URL = "https://github.com/<path_to_repo>/content"  # 编辑链接
+Text = "Suggest Changes"                 # 链接文本
+appendFilePath = true                    # 是否附加文件路径
+
+# 搜索选项配置
+[params.fuseOpts]
+isCaseSensitive = false                  # 搜索是否区分大小写
+shouldSort = true                        # 搜索结果是否排序
+location = 0                             # 搜索位置
+distance = 1_000                         # 搜索距离
+threshold = 0.4                          # 匹配阈值
+minMatchCharLength = 0                   # 最小匹配字符长度
+keys = [ "title", "permalink", "summary", "content" ]  # 搜索关键字
+
+# 主菜单配置
+[[menu.main]]
+identifier = "posts"
+name = "posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+identifier = "categories"
+name = "categories"
+url = "/categories/"
+weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+
+
+# 代码高亮设置
+[markup.highlight]
+noClasses = false                        # 是否取消代码高亮样式类
