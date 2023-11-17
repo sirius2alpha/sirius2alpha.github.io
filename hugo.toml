@@ -43,7 +43,7 @@ comments = true                           # 是否启用评论功能
 hidemeta = false                          # 是否隐藏元数据
 hideSummary = false                       # 是否隐藏摘要
 showtoc = true                           # 是否显示目录
-tocopen = false                           # 目录是否默认展开
+tocopen = true                           # 目录是否默认展开
 
 # 静态资源配置
 [params.assets]
@@ -85,16 +85,16 @@ Content = "Welcome to my blog"            # 主页内容
 
 # 社交图标配置
 [[params.socialIcons]]
-name = "x"
-url = "https://twitter.com/"
-
-[[params.socialIcons]]
-name = "stackoverflow"
-url = "https://stackoverflow.com"
-
-[[params.socialIcons]]
 name = "github"
 url = "https://github.com/sirius2alpha"
+
+[[params.socialIcons]]
+name = "instagram"
+url = "https://www.instagram.com/siriustuyeahh/"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:sirius1y@outlook.com"
 
 # 各种分析工具的站点验证标签
 [params.analytics.google]
