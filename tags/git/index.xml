@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>git on Sirius&#39; Blog</title>
+    <link>http://sirius2alpha.github.io/tags/git/</link>
+    <description>Recent content in git on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mysql用户被锁定</title>
+      <link>http://sirius2alpha.github.io/posts/notes/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%9B%86%E5%90%88/mysql%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81%E5%AE%9A/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>http://sirius2alpha.github.io/posts/notes/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%9B%86%E5%90%88/mysql%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81%E5%AE%9A/</guid>
+      <description>突然发现root账户莫名其妙登不上去</description>
+    </item>
+    
+    <item>
+      <title>Git正确使用姿势</title>
+      <link>http://sirius2alpha.github.io/posts/notes/%E5%AE%9E%E8%B7%B5/%E5%AE%9E%E8%B7%B5%E5%9B%A2%E9%98%9Fgit%E5%8D%8F%E4%BD%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://sirius2alpha.github.io/posts/notes/%E5%AE%9E%E8%B7%B5/%E5%AE%9E%E8%B7%B5%E5%9B%A2%E9%98%9Fgit%E5%8D%8F%E4%BD%9C/</guid>
+      <description>记录使用git的常用命令，以及对git的工作模式进行简单讲解</description>
+    </item>
+    
+  </channel>
+</rss>
