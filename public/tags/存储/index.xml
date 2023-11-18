@@ -14,10 +14,10 @@
     <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/%E5%AD%98%E5%82%A8/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于对象存储</title>
-      <link>http://sirius2alpha.github.io/posts/notes/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0%E5%AE%9E%E8%B7%B5/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/bytedance-notes/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0%E5%AE%9E%E8%B7%B5/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/bytedance-notes/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid>
       <description>在做短视频项目的时候，我总是有个疑问：用户上传的视频我要存储在哪里呢？作为开发小白，目前只知道要存放数据就到DB里面去，那我想“那我的视频文件也要存储到MySQL里面去嘛？”emm，这的确是一个大难题，不过在互联网技术发达的今天，感谢各大论坛的支持，让我了解到了视频、图像这类非结构化数据最好是对象存储。
 在此，你一定有一些疑惑：
 为什么视频不用mysql这类数据库进行存储呢？ 对象存储是什么，使用它存储非结构化数据有什么好处呢？ 为什么不用MySQL存储非结构化数据？ 首先哈，mysql人家本来就是用来存储结构化数据的，视频文件是一种非结构化数据。

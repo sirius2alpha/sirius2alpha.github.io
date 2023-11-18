@@ -14,19 +14,19 @@
     <lastBuildDate>Tue, 10 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>mysql用户被锁定</title>
-      <link>http://sirius2alpha.github.io/posts/notes/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%9B%86%E5%90%88/mysql%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81%E5%AE%9A/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/problems/mysql-user-was-blocked/</link>
       <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%9B%86%E5%90%88/mysql%E7%94%A8%E6%88%B7%E8%A2%AB%E9%94%81%E5%AE%9A/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/problems/mysql-user-was-blocked/</guid>
       <description>突然发现root账户莫名其妙登不上去</description>
     </item>
     
     <item>
       <title>ping github.com</title>
-      <link>http://sirius2alpha.github.io/posts/notes/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%9B%86%E5%90%88/ping-github.com/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/problems/ping-github.com/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87%E9%9B%86%E5%90%88/ping-github.com/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/problems/ping-github.com/</guid>
       <description>问题初现 在Windows上，挂了Clash，平时网页版的GitHub还是能正常跑的，因为平时开发主要是在Ubuntu上，所以git工具在Windows上用的不多。这次突发奇想，想把Windows和Ubuntu上的笔记整合到一个GitHub仓库上，并实现更新文件后自动拉取推送的功能，所以我现在Ubuntu上推送了一部分笔记到仓库中，再计划将Windows上的笔记也弄上去。
 然后在配置Windows上的笔记文件夹Git环境，发现git老是报错ssh22端口连接超时。
 我检查了：
