@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>host on Sirius&#39; Blog</title>
-    <link>http://sirius2alpha.github.io/tags/host/</link>
+    <link>https://sirius2alpha.github.io/tags/host/</link>
     <description>Recent content in host on Sirius&#39; Blog</description>
     <image>
       <title>Sirius&#39; Blog</title>
-      <url>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/host/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 30 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/host/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ping github.com</title>
-      <link>http://sirius2alpha.github.io/posts/notes/problems/ping-github.com/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/problems/ping-github.com/</link>
       <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/problems/ping-github.com/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/problems/ping-github.com/</guid>
       <description>问题初现 在Windows上，挂了Clash，平时网页版的GitHub还是能正常跑的，因为平时开发主要是在Ubuntu上，所以git工具在Windows上用的不多。这次突发奇想，想把Windows和Ubuntu上的笔记整合到一个GitHub仓库上，并实现更新文件后自动拉取推送的功能，所以我现在Ubuntu上推送了一部分笔记到仓库中，再计划将Windows上的笔记也弄上去。
 然后在配置Windows上的笔记文件夹Git环境，发现git老是报错ssh22端口连接超时。
 我检查了：

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>网络攻击 on Sirius&#39; Blog</title>
-    <link>http://sirius2alpha.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/</link>
+    <link>https://sirius2alpha.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/</link>
     <description>Recent content in 网络攻击 on Sirius&#39; Blog</description>
     <image>
       <title>Sirius&#39; Blog</title>
-      <url>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/%E7%BD%91%E7%BB%9C%E6%94%BB%E5%87%BB/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSRF攻击</title>
-      <link>http://sirius2alpha.github.io/posts/notes/security/csrf/csrf-attack/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/security/csrf/csrf-attack/</link>
       <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/security/csrf/csrf-attack/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/security/csrf/csrf-attack/</guid>
       <description>简介 ​CSRF攻击利用了受害者已经通过身份验证并且在一个网站上建立的有效会话，来执行未经授权的操作。当受害者在一个网站上登录并获得一个会话（例如通过使用用户名和密码进行身份验证），该网站会为其分配一个令牌或会话ID，以便在后续的请求中验证用户的身份。
 ​CSRF攻击者会通过诱使受害者访问一个恶意网站或点击恶意链接，来利用受害者的已验证会话。由于受害者在浏览器中仍然保持着有效会话，攻击者可以构造特制的请求，以利用该会话来执行恶意操作，而这些操作是受害者并不知情或未经授权的。
 ​例如，假设受害者在银行网站上登录并建立了一个有效的会话。攻击者可以通过电子邮件或社交媒体发送一个包含恶意链接的消息给受害者。如果受害者点击了该链接，他们的浏览器将自动向银行网站发送一个请求，而这个请求中包含了受害者的有效会话信息。银行网站在验证会话时会认为这个请求是合法的，因为会话是有效的，所以它执行了该请求所代表的操作，如转账、修改账户信息等，而受害者是毫不知情的。
