@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>科普 on Sirius&#39; Blog</title>
-    <link>http://sirius2alpha.github.io/categories/%E7%A7%91%E6%99%AE/</link>
+    <link>https://sirius2alpha.github.io/categories/%E7%A7%91%E6%99%AE/</link>
     <description>Recent content in 科普 on Sirius&#39; Blog</description>
     <image>
       <title>Sirius&#39; Blog</title>
-      <url>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>http://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/categories/%E7%A7%91%E6%99%AE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E7%A7%91%E6%99%AE/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kafka消息队列</title>
-      <link>http://sirius2alpha.github.io/posts/notes/bytedance-notes/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/bytedance-notes/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</link>
       <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/bytedance-notes/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/bytedance-notes/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</guid>
       <description>消息队列的特性 卡夫卡(Kafka)作为消息队列的一种，拥有异步、削峰、解耦三种特性，并依靠这些特性，他经常在搜索、直播、订单和支付服务。
 **异步：**不同于同步通信的需要等待接收方响应，异步通信的发送方在发送消息到消息队列后，不等待接收方响应，而是继续进行其他操作。接收方仅需要从消息队列中拉取消息即可。 异步操作减少了流程长度，提高消息的吞吐量和效率。 **削峰：**对于突发的消息高峰，消息队列起到了存储请求的作用，使后台能以稳定的速率处理消息，从而减少了服务器的高峰负担，提高系统的稳定性。 解耦：解耦合即降低各个组件之间的依赖。使用消息队列，发送者和接收者各种把自己的消息发送给消息队列，从而实现解耦，方便各自开发部署，避免一方接口发生错误而影响多方，实现错误隔离。 卡夫卡的基本概念 **逻辑队列(Topic)：**可以建立不同的逻辑队列，存储于物理集群中。 **物理集群(Cluster)：**可建立多个逻辑队列。 **生产者(Producer)：**发送消息到逻辑队列。 **消费者(Consumer)&amp;amp;消费者组(Consumer Group)：**消费逻辑队列内的消息，各个消费者组互不干扰。 **Offset：**记录消息在有序序列Partition中的相对位置，每个Topic可分为多个Partition。Offset是消息的唯一ID，并在序列中严格递增。搜索Offset采用二分查找找到小于目标Offset的最大索引位置（时间戳索引类似）。 **Replica：**相当于副本，保证集群中节点上的 Partition 数据不因故障丢失。每个Partition有一个Replica-Leader，用于写入，同时拥有多个Follower用于记录Leader。如果Follower数据与Leader差距过大则踢出ISR。Replica又以log日志文件存储。 卡夫卡的消费模式 卡夫卡消息队列有两种最常见的消费模式。
 **一对一：**生产者将消息发送到消息队列后，由消费者从队列中拉取并消费，然后信息会被删除。
@@ -29,10 +29,10 @@
     
     <item>
       <title>关于对象存储</title>
-      <link>http://sirius2alpha.github.io/posts/notes/bytedance-notes/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/bytedance-notes/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/bytedance-notes/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/bytedance-notes/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</guid>
       <description>在做短视频项目的时候，我总是有个疑问：用户上传的视频我要存储在哪里呢？作为开发小白，目前只知道要存放数据就到DB里面去，那我想“那我的视频文件也要存储到MySQL里面去嘛？”emm，这的确是一个大难题，不过在互联网技术发达的今天，感谢各大论坛的支持，让我了解到了视频、图像这类非结构化数据最好是对象存储。
 在此，你一定有一些疑惑：
 为什么视频不用mysql这类数据库进行存储呢？ 对象存储是什么，使用它存储非结构化数据有什么好处呢？ 为什么不用MySQL存储非结构化数据？ 首先哈，mysql人家本来就是用来存储结构化数据的，视频文件是一种非结构化数据。
@@ -61,10 +61,10 @@ MySQL是一种关系型数据库管理系统，通常用于存储和管理结构
     
     <item>
       <title>Redis常用指令</title>
-      <link>http://sirius2alpha.github.io/posts/notes/bytedance-notes/redis/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/bytedance-notes/redis/</link>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/bytedance-notes/redis/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/bytedance-notes/redis/</guid>
       <description>快速了解Redis Redis是什么？为什么要使用Redis？他有什么好处和优势？他的弊端又有哪些呢？他的基本模型和技术有哪些？
 Redis是什么？ Redis（Remote Dictionary Server）是一种开源的内存数据存储系统，它可以用作数据库、缓存和消息代理。它被设计用于快速访问、存储和分析数据，以及支持各种数据结构，如字符串、哈希表、列表、集合、有序集合等。Redis支持持久化，可以将数据保存在磁盘上，以便在重启后恢复数据。
 为什么要使用Redis？ Redis有许多优点，使其成为广泛使用的数据存储和缓存解决方案：
