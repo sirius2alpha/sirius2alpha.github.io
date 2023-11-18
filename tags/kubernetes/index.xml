@@ -14,10 +14,10 @@
     <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes学习和实践</title>
-      <link>http://sirius2alpha.github.io/posts/notes/%E5%AE%9E%E8%B7%B5/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/practices/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/%E5%AE%9E%E8%B7%B5/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/practices/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
       <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
     </item>
     

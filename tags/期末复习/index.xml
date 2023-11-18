@@ -14,10 +14,10 @@
     <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/%E6%9C%9F%E6%9C%AB%E5%A4%8D%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学长的计算机网络复习</title>
-      <link>http://sirius2alpha.github.io/posts/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/network/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/</guid>
       <description>https://www.yuque.com/docs/share/a0aff20d-44da-46c6-a65a-67e69dd0c6f3?# 《基于cch的计网复习》划了上次考点
 题型：判断 选择 填空 计算题
 复习课 拍照 中英文 英文缩写 英文全称 中文 TDM Time Division Multiplexing 时分复用 CDMA Code Division Multiple Access 码分多址 CSMA/CD Carrier Sense Multiple Access with Collision Detection 载波监听 多点接入 / 碰撞检测 MAC Medium Access Control 媒体接入控制 RTT Round Trip Time 往返时间 ARP Address Resolution Protocol 地址解析协议 IP Internet Protocol 网际协议 ICMP Internet Control Message Protocol 网际控制报文协议 TCP Transmission Control Protocol 传输控制协议 UDP User Datagram Protocol 用户数据报协议 RIP Routing Information Protocol 路由信息协议 BGP Border Gateway Protocol 边界网关协议 OSPF Open Shortest Path First 开放最短路径优先 VLAN Virtual Local Area Network 虚拟局域网 DNS Domain Name System 域名系统 知识点 语雀知识点链接：https://www.</description>

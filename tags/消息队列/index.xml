@@ -14,10 +14,10 @@
     <lastBuildDate>Thu, 24 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kafka消息队列</title>
-      <link>http://sirius2alpha.github.io/posts/notes/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0%E5%AE%9E%E8%B7%B5/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/bytedance-notes/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</link>
       <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0%E5%AE%9E%E8%B7%B5/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/bytedance-notes/kafka%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/</guid>
       <description>消息队列的特性 卡夫卡(Kafka)作为消息队列的一种，拥有异步、削峰、解耦三种特性，并依靠这些特性，他经常在搜索、直播、订单和支付服务。
 **异步：**不同于同步通信的需要等待接收方响应，异步通信的发送方在发送消息到消息队列后，不等待接收方响应，而是继续进行其他操作。接收方仅需要从消息队列中拉取消息即可。 异步操作减少了流程长度，提高消息的吞吐量和效率。 **削峰：**对于突发的消息高峰，消息队列起到了存储请求的作用，使后台能以稳定的速率处理消息，从而减少了服务器的高峰负担，提高系统的稳定性。 解耦：解耦合即降低各个组件之间的依赖。使用消息队列，发送者和接收者各种把自己的消息发送给消息队列，从而实现解耦，方便各自开发部署，避免一方接口发生错误而影响多方，实现错误隔离。 卡夫卡的基本概念 **逻辑队列(Topic)：**可以建立不同的逻辑队列，存储于物理集群中。 **物理集群(Cluster)：**可建立多个逻辑队列。 **生产者(Producer)：**发送消息到逻辑队列。 **消费者(Consumer)&amp;amp;消费者组(Consumer Group)：**消费逻辑队列内的消息，各个消费者组互不干扰。 **Offset：**记录消息在有序序列Partition中的相对位置，每个Topic可分为多个Partition。Offset是消息的唯一ID，并在序列中严格递增。搜索Offset采用二分查找找到小于目标Offset的最大索引位置（时间戳索引类似）。 **Replica：**相当于副本，保证集群中节点上的 Partition 数据不因故障丢失。每个Partition有一个Replica-Leader，用于写入，同时拥有多个Follower用于记录Leader。如果Follower数据与Leader差距过大则踢出ISR。Replica又以log日志文件存储。 卡夫卡的消费模式 卡夫卡消息队列有两种最常见的消费模式。
 **一对一：**生产者将消息发送到消息队列后，由消费者从队列中拉取并消费，然后信息会被删除。

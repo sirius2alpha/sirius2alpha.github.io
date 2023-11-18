@@ -14,10 +14,10 @@
     <lastBuildDate>Thu, 03 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://sirius2alpha.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Redis常用指令</title>
-      <link>http://sirius2alpha.github.io/posts/notes/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0%E5%AE%9E%E8%B7%B5/redis/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/bytedance-notes/redis/</link>
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5%E7%AC%94%E8%AE%B0%E5%AE%9E%E8%B7%B5/redis/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/bytedance-notes/redis/</guid>
       <description>快速了解Redis Redis是什么？为什么要使用Redis？他有什么好处和优势？他的弊端又有哪些呢？他的基本模型和技术有哪些？
 Redis是什么？ Redis（Remote Dictionary Server）是一种开源的内存数据存储系统，它可以用作数据库、缓存和消息代理。它被设计用于快速访问、存储和分析数据，以及支持各种数据结构，如字符串、哈希表、列表、集合、有序集合等。Redis支持持久化，可以将数据保存在磁盘上，以便在重启后恢复数据。
 为什么要使用Redis？ Redis有许多优点，使其成为广泛使用的数据存储和缓存解决方案：
