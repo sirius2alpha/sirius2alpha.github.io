@@ -13,10 +13,10 @@
     <language>en-us</language><atom:link href="http://sirius2alpha.github.io/tags/%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>常用的网络命令</title>
-      <link>http://sirius2alpha.github.io/posts/notes/network/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4/</link>
+      <link>http://sirius2alpha.github.io/posts/notes/network/network-commands/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://sirius2alpha.github.io/posts/notes/network/%E5%B8%B8%E7%94%A8%E7%9A%84%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4/</guid>
+      <guid>http://sirius2alpha.github.io/posts/notes/network/network-commands/</guid>
       <description>ipconfig, ifconfig, ip ipconfig是windows中的命令，linux上是ifconfig，但ip命令比ifconfig更强大，旨在取代ifconfig命令。
 ping ping命令是DOS命令，一般用于检测网络是否通畅以及网络连接速度，结果只越大，说明速度越慢。它使用网络层的ICMP协议。
 ping [参数选项] [主机名或IP地址] linux 参数 含义 -c 设置完成要求回应的次数 -i 指定收发信息的间隔时间 -s 设置数据包的大小 -w 在设定的秒后退出 windows 参数 含义 -t 连续对IP地址执行ping命令，直到用户以&amp;lt;control+c&amp;gt;键强制中断 -l 指定ping命令的数据长度 -n 执行特定次数的ping命令 netstat netstat 用来查看当前操作系统的网络连接状态、路由表、接口统计等信息，来自于 net-tools 工具包，ss 是 netstat 的升级版。
