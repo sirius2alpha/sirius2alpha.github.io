@@ -50,8 +50,8 @@ tocopen = true                           # 目录是否默认展开
 favicon = "/images/icon.png"              # 网站图标链接
 favicon16x16 = "/images/icon.png"         # 16x16像素的网站图标链接
 favicon32x32 = "/images/icon.png"         # 32x32像素的网站图标链接
-apple_touch_icon = "<link / abs url>"     # Apple触摸图标链接
-safari_pinned_tab = "<link / abs url>"    # Safari固定标签图标链接
+apple_touch_icon =  "/images/icon.png"     # Apple触摸图标链接
+safari_pinned_tab = "/images/icon.png"    # Safari固定标签图标链接
 
 # 标签配置
 [params.label]
