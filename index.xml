@@ -11,7 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter开发</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</guid>
+      <description>使用flutter开发一个规划吃饭日常的APP</description>
+    </item>
+    
     <item>
       <title>第一次全栈开发记录</title>
       <link>https://sirius2alpha.github.io/posts/notes/practices/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</link>

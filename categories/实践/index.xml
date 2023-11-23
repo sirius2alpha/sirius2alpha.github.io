@@ -11,7 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter开发</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</guid>
+      <description>使用flutter开发一个规划吃饭日常的APP</description>
+    </item>
+    
     <item>
       <title>GNS3&#43;RIP/OSRF</title>
       <link>https://sirius2alpha.github.io/posts/notes/practices/gns3&#43;cisco-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/</link>
