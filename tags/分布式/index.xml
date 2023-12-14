@@ -30,5 +30,14 @@
       <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
     </item>
     
+    <item>
+      <title>pytorch实战</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</guid>
+      <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
+    </item>
+    
   </channel>
 </rss>
