@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>pytorch on Sirius&#39; Blog</title>
-    <link>https://sirius2alpha.github.io/tags/pytorch/</link>
-    <description>Recent content in pytorch on Sirius&#39; Blog</description>
+    <title>神经网络 on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 神经网络 on Sirius&#39; Blog</description>
     <image>
       <title>Sirius&#39; Blog</title>
       <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://sirius2alpha.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://sirius2alpha.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pytorch实战</title>
       <link>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</link>
