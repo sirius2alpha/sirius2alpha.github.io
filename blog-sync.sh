@@ -5,14 +5,21 @@ FILES=$(cd /home/yoho/projects/blogs/hugo/content/posts/Notes && git status --po
 cd /home/yoho/projects/blogs/hugo/content/posts/Notes
 git pull
 git add .
-git commit -m "update: $FILES" # 自动列出更改的文件
+git commit -m "update: $FILES"
+git push
+
+# sync dev-hugo branch
+cd /home/yoho/projects/blogs/hugo
+git pull
+git add .
+git commit -m "update: $FILES"
 git push
 
 # build
 cd ~/projects/blogs/hugo
 hugo
 
-# 切换到博客仓库根目录
+# master branch
 cd ~/projects/blogs/hugo/public
 git pull
 git add .
