@@ -21,7 +21,6 @@ hugo
 
 # master branch
 cd ~/projects/blogs/hugo/public
-git pull
 git add .
 git commit -m "feat: $FILES"
 git push origin master
