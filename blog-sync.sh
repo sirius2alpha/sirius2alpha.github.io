@@ -4,18 +4,18 @@ FILES=$(cd /home/yoho/projects/blogs/hugo/content/posts/Notes && git status --po
 # 同步笔记到sirius2alpha/Notes
 echo start---同步笔记到sirius2alpha/Notes------------------------
 cd /home/yoho/projects/blogs/hugo/content/posts/Notes
-git pull
 git add .
 git commit -m "update: $FILES"
+git pull
 git push
 echo end---同步笔记到sirius2alpha/Notes------------------------
 
-# sync dev-hugo branch
+# sync dev-hugo branch 
 echo start---sync dev-hugo branch------------------------------
 cd /home/yoho/projects/blogs/hugo
-git pull
 git add .
 git commit -m "update: $FILES"
+git pull
 git push
 echo end---sync dev-hugo branch------------------------------
 
@@ -24,7 +24,7 @@ echo end---sync dev-hugo branch------------------------------
 cd ~/projects/blogs/hugo
 hugo
 
-# master branch
+# master branch only push
 echo start---master branch-------------------------------------
 cd ~/projects/blogs/hugo/public
 git add .
