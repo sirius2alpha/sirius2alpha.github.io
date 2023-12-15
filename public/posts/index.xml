@@ -11,7 +11,25 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hadoop部署</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/hadoop%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/hadoop%E9%83%A8%E7%BD%B2/</guid>
+      <description>这篇文章记录了在三台云服务器上部署hadoop的过程</description>
+    </item>
+    
+    <item>
+      <title>Flutter开发</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</guid>
+      <description>使用flutter开发一个规划吃饭日常的APP</description>
+    </item>
+    
     <item>
       <title>第一次全栈开发记录</title>
       <link>https://sirius2alpha.github.io/posts/notes/practices/%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%85%A8%E6%A0%88%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</link>
@@ -218,6 +236,15 @@ Hash函数的值称为作为自变量的消息的“散列值”或“消息摘�
       
       <guid>https://sirius2alpha.github.io/posts/notes/practices/%E5%AE%9E%E8%B7%B5%E5%9B%A2%E9%98%9Fgit%E5%8D%8F%E4%BD%9C/</guid>
       <description>记录使用git的常用命令，以及对git的工作模式进行简单讲解</description>
+    </item>
+    
+    <item>
+      <title>pytorch实战</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</guid>
+      <description>这篇文章记录了ASC竞赛。主要负责pytorch和神经网络部分的学习和比赛</description>
     </item>
     
     <item>

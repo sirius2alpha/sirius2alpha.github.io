@@ -11,7 +11,25 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hadoop部署</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/hadoop%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/hadoop%E9%83%A8%E7%BD%B2/</guid>
+      <description>这篇文章记录了在三台云服务器上部署hadoop的过程</description>
+    </item>
+    
+    <item>
+      <title>Flutter开发</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/flutter%E5%BC%80%E5%8F%91/</guid>
+      <description>使用flutter开发一个规划吃饭日常的APP</description>
+    </item>
+    
     <item>
       <title>GNS3&#43;RIP/OSRF</title>
       <link>https://sirius2alpha.github.io/posts/notes/practices/gns3&#43;cisco-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/</link>
@@ -88,6 +106,15 @@ Hash函数的值称为作为自变量的消息的“散列值”或“消息摘�
       
       <guid>https://sirius2alpha.github.io/posts/notes/practices/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
       <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
+    </item>
+    
+    <item>
+      <title>pytorch实战</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</guid>
+      <description>这篇文章记录了ASC竞赛。主要负责pytorch和神经网络部分的学习和比赛</description>
     </item>
     
     <item>
