@@ -33,7 +33,7 @@ git push origin master
 echo ------------------------end---master branch-------------------------------------
 
 
-# 部署到 Nginx 服务器
+# 部署到 Nginx 服务器，和/etc/nginx/sites-available/mysite中的root一致
 NGINX_SERVER_PATH="/var/www/mysites"
 
 # 使用 rsync 同步 public 目录到 Nginx 服务器的相应目录
