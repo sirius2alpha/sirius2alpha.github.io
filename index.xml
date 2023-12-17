@@ -11,7 +11,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>把blog部署到华为云nginx</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91ubuntu/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91ubuntu/</guid>
+      <description>这篇文章记录了把本地的博客部署到华为云ubuntu的nginx</description>
+    </item>
+    
     <item>
       <title>hadoop部署</title>
       <link>https://sirius2alpha.github.io/posts/notes/practices/hadoop%E9%83%A8%E7%BD%B2/</link>
