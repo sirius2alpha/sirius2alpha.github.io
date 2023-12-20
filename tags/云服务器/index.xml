@@ -21,5 +21,14 @@
       <description>这篇文章记录了把本地的博客部署到华为云ubuntu的nginx</description>
     </item>
     
+    <item>
+      <title>在云服务器上部署mysql</title>
+      <link>https://sirius2alpha.github.io/posts/notes/practices/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysqsl/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/practices/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysqsl/</guid>
+      <description>这篇文章记录了在两台主机上部署mysql</description>
+    </item>
+    
   </channel>
 </rss>
