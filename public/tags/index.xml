@@ -11,7 +11,70 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>frp</title>
+      <link>https://sirius2alpha.github.io/tags/frp/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/frp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>https://sirius2alpha.github.io/tags/network/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>内网穿透</title>
+      <link>https://sirius2alpha.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>花生壳</title>
+      <link>https://sirius2alpha.github.io/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ibus</title>
+      <link>https://sirius2alpha.github.io/tags/ibus/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/ibus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>input</title>
+      <link>https://sirius2alpha.github.io/tags/input/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/input/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RIME</title>
+      <link>https://sirius2alpha.github.io/tags/rime/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/rime/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>blog</title>
       <link>https://sirius2alpha.github.io/tags/blog/</link>
@@ -72,6 +135,24 @@
       <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://sirius2alpha.github.io/tags/%E5%AE%9E%E9%AA%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据库原理</title>
+      <link>https://sirius2alpha.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MySQL</title>
+      <link>https://sirius2alpha.github.io/tags/mysql/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/tags/mysql/</guid>
       <description></description>
     </item>
     
@@ -270,15 +351,6 @@
       <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://sirius2alpha.github.io/tags/db/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>MySQL</title>
-      <link>https://sirius2alpha.github.io/tags/mysql/</link>
-      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://sirius2alpha.github.io/tags/mysql/</guid>
       <description></description>
     </item>
     

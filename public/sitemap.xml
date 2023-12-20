@@ -2,31 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://sirius2alpha.github.io/categories/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/frp/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/network/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/categories/network/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/posts/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/posts/notes/practices/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/ibus/</loc>
+    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/input/</loc>
+    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/rime/</loc>
+    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/categories/ubuntu/</loc>
+    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/posts/notes/practices/%E8%BE%93%E5%85%A5%E6%B3%95rime%E4%B8%AD%E5%B7%9E%E9%9F%B5%E9%85%8D%E7%BD%AEibus-rime/</loc>
+    <lastmod>2023-12-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://sirius2alpha.github.io/tags/blog/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://sirius2alpha.github.io/categories/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://sirius2alpha.github.io/tags/nginx/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sirius2alpha.github.io/posts/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sirius2alpha.github.io/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sirius2alpha.github.io/tags/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/web%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</loc>
-    <lastmod>2023-12-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/posts/notes/practices/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91ubuntu/</loc>
@@ -46,6 +79,15 @@
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/%E5%AE%9E%E9%AA%8C/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2023-12-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/tags/mysql/</loc>
+    <lastmod>2023-11-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/posts/notes/practices/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysqsl/</loc>
+    <lastmod>2023-11-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/flutter/</loc>
     <lastmod>2023-11-21T00:00:00+00:00</lastmod>
@@ -156,9 +198,6 @@
     <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/db/</loc>
-    <lastmod>2023-08-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://sirius2alpha.github.io/tags/mysql/</loc>
     <lastmod>2023-08-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/redis/</loc>
