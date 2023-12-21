@@ -23,6 +23,12 @@
     <loc>https://sirius2alpha.github.io/tags/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://sirius2alpha.github.io/tags/ubuntu/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/posts/notes/os/%E4%B8%80%E4%BA%9B%E5%9C%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E4%BC%9A%E7%94%A8%E5%88%B0%E7%9A%84%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://sirius2alpha.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -30,6 +36,9 @@
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/</loc>
+    <lastmod>2023-12-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/categories/%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2023-12-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</loc>
@@ -251,9 +260,6 @@
     <loc>https://sirius2alpha.github.io/posts/notes/practices/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</loc>
     <lastmod>2022-10-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://sirius2alpha.github.io/categories/%E6%8C%87%E5%8D%97/</loc>
-    <lastmod>2022-10-30T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://sirius2alpha.github.io/posts/notes/practices/%E5%AE%9E%E8%B7%B5%E5%9B%A2%E9%98%9Fgit%E5%8D%8F%E4%BD%9C/</loc>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/gorm/</loc>
@@ -263,8 +269,6 @@
     <loc>https://sirius2alpha.github.io/tags/pytorch/</loc>
   </url><url>
     <loc>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</loc>
-  </url><url>
-    <loc>https://sirius2alpha.github.io/tags/ubuntu/</loc>
   </url><url>
     <loc>https://sirius2alpha.github.io/posts/notes/os/ubuntu-tips/</loc>
   </url><url>
