@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>数据库原理 on Sirius&#39; Blog</title>
-    <link>https://sirius2alpha.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/</link>
-    <description>Recent content in 数据库原理 on Sirius&#39; Blog</description>
+    <title>hive on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/tags/hive/</link>
+    <description>Recent content in hive on Sirius&#39; Blog</description>
     <image>
       <title>Sirius&#39; Blog</title>
       <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -11,7 +11,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/hive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hadoop部署</title>
       <link>https://sirius2alpha.github.io/posts/notes/practices/hadoophive%E9%83%A8%E7%BD%B2/</link>
@@ -19,15 +19,6 @@
       
       <guid>https://sirius2alpha.github.io/posts/notes/practices/hadoophive%E9%83%A8%E7%BD%B2/</guid>
       <description>这篇文章记录了在三台云服务器上部署hadoop的过程</description>
-    </item>
-    
-    <item>
-      <title>在云服务器上部署mysql</title>
-      <link>https://sirius2alpha.github.io/posts/notes/practices/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysqsl/</link>
-      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://sirius2alpha.github.io/posts/notes/practices/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysqsl/</guid>
-      <description>这篇文章记录了在两台主机上部署mysql</description>
     </item>
     
   </channel>
