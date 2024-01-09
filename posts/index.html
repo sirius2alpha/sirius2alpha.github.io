@@ -21,12 +21,13 @@ notes 宿舍内都是局域网，连接到的校园网wifi或者宽带分配的I
 等到他变成ONLINE之后，在检查花生壳网站上的最右上角的头像，鼠标悬浮就能看到有一个状态，状态若是离线，但是phddns又是ONLINE，就退出重新登录一下就好了。
 同时可以看看左边边栏上有一个设备管理。
 frp实现 访问frp的github仓库releases页面：https://github.com/fatedier/frp/releases
+frp的官方文档：https://gofrp.org/zh-cn/docs/overview/
 通过 SSH 访问内网机器
 步骤 在具有公网 IP 的机器上部署 frps
 部署 frps 并编辑 frps.toml 文件。以下是简化的配置，其中设置了 frp 服务器用于接收客户端连接的端口：
 bindPort = 7000 log_file = /var/log/frps.log 在frps中添加上日志文件的位置/var/log/frps.log，方便查看。
 这里还支持dashboard，prometheus监控等功能。 参考配置：https://cloud.tencent.com/developer/article/1837482
-[common] # frp监听的端口，默认是7000，可以改成其他的 bind_port = 7000 # 授权码，请改成更复杂的 token = 52010 # 这个token之后在客户端会用到 # frp管理后台端口，请按自己需求更改 dashboard_port = 7500 # frp管理后台用户名和密码，请改成自己的 dashboard_user = admin dashboard_pwd = admin enable_prometheus = true # frp日志配置 log_file = /var/log/frps....</p></div><footer class=entry-footer><span title='2023-12-20 00:00:00 +0000 UTC'>December 20, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;255 words&nbsp;·&nbsp;sirius1y</footer><a class=entry-link aria-label="post link to 内网穿透——frp和花生壳实现从外部网络访问家中主机" href=https://sirius2alpha.github.io/posts/notes/practices/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/></a></article><article class=post-entry><header class=entry-header><h2>ubuntu输入法RIME中州韵配置ibus-rime</h2></header><div class=entry-content><p>参考文章：https://www.cnblogs.com/keatonlao/p/12983158.html
+[common] # frp监听的端口，默认是7000，可以改成其他的 bind_port = 7000 # 授权码，请改成更复杂的 token = 52010 # 这个token之后在客户端会用到 # frp管理后台端口，请按自己需求更改 dashboard_port = 7500 # frp管理后台用户名和密码，请改成自己的 dashboard_user = admin dashboard_pwd = admin enable_prometheus = true # frp日志配置 log_file = /var/log/frps....</p></div><footer class=entry-footer><span title='2023-12-20 00:00:00 +0000 UTC'>December 20, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;256 words&nbsp;·&nbsp;sirius1y</footer><a class=entry-link aria-label="post link to 内网穿透——frp和花生壳实现从外部网络访问家中主机" href=https://sirius2alpha.github.io/posts/notes/practices/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/></a></article><article class=post-entry><header class=entry-header><h2>ubuntu输入法RIME中州韵配置ibus-rime</h2></header><div class=entry-content><p>参考文章：https://www.cnblogs.com/keatonlao/p/12983158.html
 安装ibus-rime sudo apt-get install ibus-rime 然后在这个窗口选择ibus框架，选择应用。
 在设置->键盘中添加RIME输入法
 配置中州韵 用户资料夹： ~/.config/ibus/rime/ 共享资料夹： /usr/share/rime-data/ 修改配置 在「用户资料夹」下创建 .yaml 定制文档；比如
