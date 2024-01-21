@@ -14,10 +14,10 @@
     <lastBuildDate>Wed, 20 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/network/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>内网穿透——frp和花生壳实现从外部网络访问家中主机</title>
-      <link>https://sirius2alpha.github.io/posts/notes/practices/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/network/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
       <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://sirius2alpha.github.io/posts/notes/practices/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/network/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
       <description>记录分别使用花生壳和frp实现内网穿透</description>
     </item>
     

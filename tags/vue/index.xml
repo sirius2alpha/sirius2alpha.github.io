@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vue on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/tags/vue/</link>
+    <description>Recent content in vue on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://sirius2alpha.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>点击排行榜scoreboard</title>
+      <link>https://sirius2alpha.github.io/posts/notes/dev/dev-%E7%82%B9%E5%87%BB%E6%8E%92%E8%A1%8C%E6%A6%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/dev/dev-%E7%82%B9%E5%87%BB%E6%8E%92%E8%A1%8C%E6%A6%9C/</guid>
+      <description>本文记录使用vue&#43;gin&#43;redis搭建了一个简单的点击排行榜，虽然有点无聊，但是两个幼稚鬼玩好好笑hhh</description>
+    </item>
+    
+  </channel>
+</rss>

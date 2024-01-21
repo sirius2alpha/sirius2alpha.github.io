@@ -14,10 +14,10 @@
     <lastBuildDate>Fri, 05 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/ollydbg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>栈溢出攻击</title>
-      <link>https://sirius2alpha.github.io/posts/notes/security/stack_overflow-attack/stack_overflow-attack/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/security/stack_overflow-attack/</link>
       <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://sirius2alpha.github.io/posts/notes/security/stack_overflow-attack/stack_overflow-attack/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/security/stack_overflow-attack/</guid>
       <description>实验程序源代码：
 #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;windows.h&amp;gt; #include &amp;lt;string.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #define PASSWORD &amp;#34;1234567&amp;#34; int verify_password(char *password) { int authenticated; char buffer[44]; authenticated = strcmp(password, PASSWORD); strcpy(buffer, password); // over flowed here! return authenticated; } int main() { int valid_flag = 0; char password[1024];l FILE *fp; LoadLibrary(&amp;#34;user32.dll&amp;#34;); // prepare for messagebox if (!(fp = fopen(&amp;#34;password.txt&amp;#34;, &amp;#34;rw+&amp;#34;))) { exit(0); } fscanf(fp, &amp;#34;%s&amp;#34;, password); valid_flag = verify_password(password); if (valid_flag) { printf(&amp;#34;incorrect password!\n&amp;#34;); } else { printf(&amp;#34;Congratulation!</description>
     </item>

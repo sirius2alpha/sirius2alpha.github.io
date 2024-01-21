@@ -14,11 +14,20 @@
     <lastBuildDate>Sat, 16 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>把blog部署到华为云nginx</title>
-      <link>https://sirius2alpha.github.io/posts/notes/practices/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91ubuntu/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/dev/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91/</link>
       <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://sirius2alpha.github.io/posts/notes/practices/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91ubuntu/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/dev/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91/</guid>
       <description>这篇文章记录了把本地的博客部署到华为云ubuntu的nginx</description>
+    </item>
+    
+    <item>
+      <title>点击排行榜scoreboard</title>
+      <link>https://sirius2alpha.github.io/posts/notes/dev/dev-%E7%82%B9%E5%87%BB%E6%8E%92%E8%A1%8C%E6%A6%9C/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/dev/dev-%E7%82%B9%E5%87%BB%E6%8E%92%E8%A1%8C%E6%A6%9C/</guid>
+      <description>本文记录使用vue&#43;gin&#43;redis搭建了一个简单的点击排行榜，虽然有点无聊，但是两个幼稚鬼玩好好笑hhh</description>
     </item>
     
   </channel>
