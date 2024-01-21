@@ -10,11 +10,12 @@
       <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://sirius2alpha.github.io/tags/%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/%E7%BD%91%E7%BB%9C%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>常用的网络命令</title>
       <link>https://sirius2alpha.github.io/posts/notes/network/network-commands/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://sirius2alpha.github.io/posts/notes/network/network-commands/</guid>
       <description>ipconfig, ifconfig, ip ipconfig是windows中的命令，linux上是ifconfig，但ip命令比ifconfig更强大，旨在取代ifconfig命令。

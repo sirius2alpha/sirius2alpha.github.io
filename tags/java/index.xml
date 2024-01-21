@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>java on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/tags/java/</link>
+    <description>Recent content in java on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记</title>
+      <link>https://sirius2alpha.github.io/posts/notes/languages/java-notes/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/languages/java-notes/</guid>
+      <description>一、IDEA使用 1、运行和调试 运行Shift+F10：直接运行程序得到结果，遇到断点不会停止哦
+调试Shift+F9：
+遇到断点会停止执行，并给出此时变量的值，在调试过程中如果是按下Shift+F9/F10，是让程序重新运行；
+按下F9是让程序继续运行，直到下一个断点或者是程序结束；
+按F8：单步向下，不进入方法
+F7：步入，单步向下，遇到用户自己写的方法，会进入执行
+2、断点的类型 IDE 中通常会提供四种类型的断点：
+行断点：可作用在任何一行代码上，图标为红色圆形。当程序执行到设置断点的行时将会被触发。 方法断点：当断点被标记在方法的定义上时生效，图标为红色菱形，在方法的进入和退出时将被触发。（方法断点需要在断点处右键，勾选功能才能生效）
+变量断点：只能作用在变量的定义上，图标为红色眼睛。当程序读取或者写入被标记的变量时，断点均会触发。 异常断点：当程序抛出相对应的异常时将会触发，作用范围为全局，图标为红色闪电。
+3、断点的状态 IDE中的断点状态通常分为八种，分别对应不同的情景。
+常规状态：默认（原始）状态。 禁用状态：断点暂时处于禁用状态，不会被执行。 已验证状态：编译器会检查断点的设置是否合理。如果是，则将断点标记为已验证。 静音状态：断点暂时处于静音状态，不会被执行；其与禁用状态功能类似，不同点在于使用场景。 依赖状态：当一个断点的触发依赖于另一个断点时，显示为依赖状态。 挂起状态：挂起状态有两种类型，第一种是挂起全部线程，第二种是只挂起当前线程。当断点状态设置成了第二种方式后，只有当前线程会被堵塞，其他线程（程序）会正常执行，这在Spring Boot程序的测试中十分有用。 无效状态：断点的设置不是合理的，被标记的代码永远不可能被执行到。 警告状态： 如果断点的设置是合理的，但是存在其他问题，则编译器会向您发出警告。例如当被标记的方法可能不会被执行到时。 ———————————————— 版权声明：本文为CSDN博主「ThinkStu」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/qq_35760825/article/details/125542220
+二、Java的不同点 int值和布尔值(boolean)之间不能相互转换
+声明和定义没有区别
+可以不用在数学方法和常量前面加上前缀“Math”，只用在源文件的最上面加上：
+import static java.long.Math*
+【编译过程】 一个源文件（.java)只能有一个公共类，但可以有任意数量的非公共类，文件名必须与public类的名字相同
+在编译源代码的过程中，编译器会在目录中创建类文件(.class)
+启动程序，为字节码解释器提供陈序中包含main方法的那个类的类名
+在多个源文件编译的过程中，一种是使用通配符调用Java编译器：
+javac Employee*.java
+另一种方法：
+javac EmployeeTest.java
+第二种方法没有显式的编译Employee.java，不过当Java编译器发现Employee.java中使用了Employee类时，他会首先查找Employee.class，如果没有发现，则会查找Employee.java并编译这个文件。另外，当Employee.java的版本较已有的Employee.class文件版本更新，Java编译器会自动地重新编译这个文件。
+【版本迭代】 从Java10开始，局部变量要是可以从赋值推出类型，就可以直接用var来声明
+只能用于局部变量，而参数和字段的类型必须声明
+JDK 14:
+switch语句是在Java14中引入的
+记录record record是一种特殊形式的类（class），其状态不可变，而且公共可读
+record Point(double x,double y){ }
+其结果有以下实例字段（被称为 组件）：
+private final double x;
+private final double y;</description>
+    </item>
+    
+  </channel>
+</rss>
