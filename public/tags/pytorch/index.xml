@@ -13,10 +13,10 @@
     <language>en-us</language><atom:link href="https://sirius2alpha.github.io/tags/pytorch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pytorch实战</title>
-      <link>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/mechine-learning/pytorch%E5%AE%9E%E6%88%98/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sirius2alpha.github.io/posts/notes/practices/pytorch%E5%AE%9E%E6%88%98/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/mechine-learning/pytorch%E5%AE%9E%E6%88%98/</guid>
       <description>这篇文章记录了ASC竞赛。主要负责pytorch和神经网络部分的学习和比赛</description>
     </item>
     

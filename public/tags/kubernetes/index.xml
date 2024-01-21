@@ -14,19 +14,19 @@
     <lastBuildDate>Sun, 30 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes学习和实践</title>
-      <link>https://sirius2alpha.github.io/posts/notes/practices/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/cloud-native/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
       <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://sirius2alpha.github.io/posts/notes/practices/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/cloud-native/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
       <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
     </item>
     
     <item>
       <title>在docker中安装redis</title>
-      <link>https://sirius2alpha.github.io/posts/notes/practices/%E5%9C%A8docker%E4%B8%AD%E9%83%A8%E7%BD%B2redis/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/database/%E5%9C%A8docker%E4%B8%AD%E9%83%A8%E7%BD%B2redis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://sirius2alpha.github.io/posts/notes/practices/%E5%9C%A8docker%E4%B8%AD%E9%83%A8%E7%BD%B2redis/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/database/%E5%9C%A8docker%E4%B8%AD%E9%83%A8%E7%BD%B2redis/</guid>
       <description>记录部署在docker中部署redis的过程，并使用k8s进行容器编排管理</description>
     </item>
     

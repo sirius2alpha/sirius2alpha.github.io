@@ -14,10 +14,10 @@
     <lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/tags/openssl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>加密与认证</title>
-      <link>https://sirius2alpha.github.io/posts/notes/security/encryption-authentication/encryption-authentication/</link>
+      <link>https://sirius2alpha.github.io/posts/notes/security/encryption-authentication/</link>
       <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://sirius2alpha.github.io/posts/notes/security/encryption-authentication/encryption-authentication/</guid>
+      <guid>https://sirius2alpha.github.io/posts/notes/security/encryption-authentication/</guid>
       <description>任务 采用Java/Python语言编写一个较为完整的加密与认证程序，要求具有：
 具有较完整的图形化界面； 使用MD5、SHA系列算法，实现消息摘要，确保消息的完整性； 使用DES、AES等算法实现对称加密，确保消息的机密性； 使用RSA算法，实现公钥加密，且用私钥解密，比较不对称加密和对称加密的性能； 实现基于数字证书的数字签名和验证（含证书的生成和创建）； 消息摘要 消息摘要的作用 在网络安全目标中，要求信息在生成、存储或传输过程中保证不被偶然或蓄意地删除、修改、伪造、乱序、重放、插入等破坏和丢失，因此需要一个较为安全的标准和算法，以保证数据的完整性。
 常见的消息摘要算法有： Ron Rivest设计的MD（Standard For Message Digest，消息摘要标准）算法 NIST设计的SHA（Secure Hash Algorithm，安全散列算法）
