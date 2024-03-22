@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>使用LaTex制作中文简历</title>
+      <link>https://sirius2alpha.github.io/posts/notes/tools/latex_resume/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/tools/latex_resume/</guid>
+      <description>这篇文章记录了简单的LaTex语法，以及我修改模板的过程</description>
+    </item>
+    
+    <item>
       <title>使用Selenium库爬取网易云音乐和携程旅行评论</title>
       <link>https://sirius2alpha.github.io/posts/notes/data-analysis/spider/</link>
       <pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate>
