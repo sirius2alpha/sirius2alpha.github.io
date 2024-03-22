@@ -11,9 +11,27 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>点击排行榜scoreboard</title>
+      <title>全国大学生市场调研大赛-数据分析</title>
+      <link>https://sirius2alpha.github.io/posts/notes/data-analysis/wumengtrip/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/data-analysis/wumengtrip/</guid>
+      <description>记录在正大杯中使用到的一些数据分析思路方法</description>
+    </item>
+    
+    <item>
+      <title>使用Selenium库爬取网易云音乐和携程旅行评论</title>
+      <link>https://sirius2alpha.github.io/posts/notes/data-analysis/spider/</link>
+      <pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/data-analysis/spider/</guid>
+      <description>记录使用Selenium爬取网易云和携程旅行评论的过程</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://sirius2alpha.github.io/posts/notes/dev/dev-%E7%82%B9%E5%87%BB%E6%8E%92%E8%A1%8C%E6%A6%9C/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
       
