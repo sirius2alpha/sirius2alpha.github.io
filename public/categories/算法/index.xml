@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>算法 on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang打开leetcode热门100题目</title>
+      <link>https://sirius2alpha.github.io/posts/notes/algorithms/golang%E6%89%93%E5%BC%80leetcode%E7%83%AD%E9%97%A8100%E9%A2%98/</link>
+      <pubDate>Sat, 03 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/posts/notes/algorithms/golang%E6%89%93%E5%BC%80leetcode%E7%83%AD%E9%97%A8100%E9%A2%98/</guid>
+      <description>这篇文章记录了2024寒假期间用go刷leetcode热门100的题解</description>
+    </item>
+    
+  </channel>
+</rss>
