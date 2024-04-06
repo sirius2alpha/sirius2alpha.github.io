@@ -11,7 +11,34 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://sirius2alpha.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基础知识</title>
+      <link>https://sirius2alpha.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>笔试</title>
+      <link>https://sirius2alpha.github.io/categories/%E7%AC%94%E8%AF%95/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/categories/%E7%AC%94%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://sirius2alpha.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>实践</title>
       <link>https://sirius2alpha.github.io/categories/%E5%AE%9E%E8%B7%B5/</link>
@@ -171,6 +198,15 @@
       <pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://sirius2alpha.github.io/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>packages</title>
+      <link>https://sirius2alpha.github.io/categories/packages/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sirius2alpha.github.io/categories/packages/</guid>
       <description></description>
     </item>
     

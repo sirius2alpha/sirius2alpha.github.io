@@ -103,15 +103,6 @@
     </item>
     
     <item>
-      <title>pytorch实战</title>
-      <link>https://sirius2alpha.github.io/posts/notes/mechine-learning/pytorch%E5%AE%9E%E6%88%98/</link>
-      <pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://sirius2alpha.github.io/posts/notes/mechine-learning/pytorch%E5%AE%9E%E6%88%98/</guid>
-      <description>这篇文章记录了ASC竞赛。主要负责pytorch和神经网络部分的学习和比赛</description>
-    </item>
-    
-    <item>
       <title>在云服务器上部署mysql</title>
       <link>https://sirius2alpha.github.io/posts/notes/database/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysql/</link>
       <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
