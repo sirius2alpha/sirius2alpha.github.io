@@ -116,10 +116,10 @@
     <loc>https://sirius2alpha.github.io/posts/notes/network/clash-for-linux%E9%A3%9F%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2024-01-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://sirius2alpha.github.io/tags/docker/</loc>
+    <loc>https://sirius2alpha.github.io/categories/docker/</loc>
     <lastmod>2024-01-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://sirius2alpha.github.io/categories/docker/</loc>
+    <loc>https://sirius2alpha.github.io/tags/docker/</loc>
     <lastmod>2024-01-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/kubernetes/</loc>
@@ -178,6 +178,9 @@
   </url><url>
     <loc>https://sirius2alpha.github.io/posts/notes/dev/%E5%8D%9A%E5%AE%A2nginx%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%8E%E4%B8%BA%E4%BA%91/</loc>
     <lastmod>2023-12-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sirius2alpha.github.io/posts/notes/cloud-native/docker%E5%92%8Ck8s%E9%83%A8%E7%BD%B2/</loc>
+    <lastmod>2023-12-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://sirius2alpha.github.io/tags/hadoop/</loc>
     <lastmod>2023-12-14T00:00:00+00:00</lastmod>
