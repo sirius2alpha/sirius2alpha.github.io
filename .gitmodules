@@ -1,6 +1,6 @@
 [submodule "content/posts/Notes"]
     path = content/posts/Notes
-    url = https://github.com/sirius2alpha/Notes.git
+    url = git@github.com:sirius2alpha/Notes.git
 
 [submodule "themes/PaperMod"]
     path = themes/PaperMod
