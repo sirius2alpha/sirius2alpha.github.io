@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+          ssh-key: ${{ secrets.SSH_KEY }}
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
