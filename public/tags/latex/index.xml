@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LaTex on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/latex/</link>
+    <description>Recent content in LaTex on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/latex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用LaTex制作中文简历</title>
+      <link>//localhost:1313/posts/notes/tools/latex_resume/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/tools/latex_resume/</guid>
+      <description>这篇文章记录了简单的LaTex语法，以及我修改模板的过程</description>
+    </item>
+  </channel>
+</rss>

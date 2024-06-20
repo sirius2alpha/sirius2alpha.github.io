@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>RIP on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/rip/</link>
+    <description>Recent content in RIP on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GNS3&#43;RIP/OSRF</title>
+      <link>//localhost:1313/posts/notes/network/gns3&#43;cisco-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/network/gns3&#43;cisco-%E5%8A%A8%E6%80%81%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/</guid>
+      <description>这篇文章记录了使用GNS3软件进行动态路由实验。</description>
+    </item>
+  </channel>
+</rss>

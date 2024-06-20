@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>分布式 on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/%E5%88%86%E5%B8%83%E5%BC%8F/</link>
+    <description>Recent content in 分布式 on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/%E5%88%86%E5%B8%83%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker和K8S部署</title>
+      <link>//localhost:1313/posts/notes/cloud-native/docker%E5%92%8Ck8s%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/cloud-native/docker%E5%92%8Ck8s%E9%83%A8%E7%BD%B2/</guid>
+      <description>这篇文章部署K8S的过程</description>
+    </item>
+    <item>
+      <title>hadoop部署</title>
+      <link>//localhost:1313/posts/notes/cloud-native/hadoophive%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/cloud-native/hadoophive%E9%83%A8%E7%BD%B2/</guid>
+      <description>这篇文章记录了在三台云服务器上部署hadoop的过程</description>
+    </item>
+    <item>
+      <title>Kubernetes学习和实践</title>
+      <link>//localhost:1313/posts/notes/cloud-native/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/cloud-native/kubernetes%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%AE%9E%E8%B7%B5/</guid>
+      <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
+    </item>
+  </channel>
+</rss>

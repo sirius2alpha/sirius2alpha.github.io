@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mysql on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/mysql/</link>
+    <description>Recent content in Mysql on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在云服务器上部署mysql</title>
+      <link>//localhost:1313/posts/notes/database/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysql/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/database/%E5%9C%A8%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E9%83%A8%E7%BD%B2mysql/</guid>
+      <description>这篇文章记录了在两台主机上部署mysql</description>
+    </item>
+    <item>
+      <title>Redis常用指令</title>
+      <link>//localhost:1313/posts/notes/bytedance-notes/redis/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/bytedance-notes/redis/</guid>
+      <description>快速了解Redis Redis是什么？为什么要使用Redis？他有什么好处和优势？他的弊端又有哪些呢？他的基本模型和技术有哪些？
+Redis是什么？ Redis（Remote Dictionary Server）是一种开源的内存数据存储系统，它可以用作数据库、缓存和消息代理。它被设计用于快速访问、存储和分析数据，以及支持各种数据结构，如字符串、哈希表、列表、集合、有序集合等。Redis支持持久化，可以将数据保存在磁盘上，以便在重启后恢复数据。
+为什么要使用Redis？ Redis有许多优点，使其成为广泛使用的数据存储和缓存解决方案：
+优势 快速访问： Redis数据存储在内存中，因此具有非常快速的读写性能，适合用作缓存层，加速数据访问。 丰富的数据结构： Redis不仅支持简单的键值存储，还支持多种数据结构，如列表、集合、有序集合等，这使得它适用于更多不同类型的应用场景。 持久化： Redis支持数据的持久化，可以将数据保存在磁盘上，以便在服务器重启后恢复数据。 分布式架构： Redis支持分布式集群，可以将数据分散在多个节点上，提高数据的可用性和性能。 发布/订阅： Redis具有消息代理功能，可以用于发布和订阅消息，支持实时数据推送和通知。 事务支持： Redis支持事务，允许一系列操作以原子方式执行，保证数据的一致性。 弊端 内存消耗： Redis的数据存储在内存中，因此对于大规模数据集可能会占用大量内存。尽管有持久化选项，但内存仍然是其主要的存储介质。 单线程： Redis在单个进程中使用单线程处理所有的命令请求。这在某些高并发情况下可能成为性能瓶颈。 基本模型和技术 键值存储： Redis的基本模型是键值存储，您可以使用键来检索存储在Redis中的数据。 数据结构： Redis支持字符串、哈希表、列表、集合、有序集合等多种数据结构，使其非常灵活。 持久化： Redis支持两种持久化方式，分别是快照（snapshotting）和日志（append-only file）。 发布/订阅： Redis支持发布/订阅模式，允许客户端订阅特定的频道并接收实时消息。 分布式： Redis可以通过分片或复制来构建分布式架构，提高可用性和扩展性。 Redis vs. MySQL 性能比较 读写性能： Redis在内存中存储数据，因此具有非常快速的读写性能，尤其适合高并发读取和写入场景。与此相比，MySQL可能受到磁盘IO和索引的影响，其读写性能相对较低。 数据结构： Redis支持多种数据结构，使其适合用于更复杂的数据模型，如实时计数、排行榜、分布式锁等。MySQL虽然也支持多种数据类型，但通常用于结构化数据的存储。 缓存： Redis非常适合用作缓存层，可以减轻数据库的负载，提高数据访问速度。MySQL也可以用作缓存，但Redis的读取速度更快。 事务和持久化： Redis支持事务，但它的事务模型不如MySQL严格。MySQL提供强大的事务支持和多种持久化选项。 适用领域和场景 Redis适合场景 实时数据：例如实时计数、统计信息和分析。 缓存：用作高速缓存，提高数据访问速度。 实时消息：发布/订阅模式用于实时消息传递。 会话存储：存储用户会话数据，适用于分布式系统。 分布式锁：实现分布式锁以协调多个系统的并发操作。 MySQL适合场景 结构化数据：适用于关系型、事务性的结构化数据。 复杂查询：支持复杂的查询和连接操作。 大规模数据存储：适合大规模数据存储和管理。 强大事务：需要强大的事务支持和ACID特性。 Redis和MySQL有各自独特的优势和用途，它们并不是直接替代关系。Redis可以在某些情况下用来增强项目性能，或者作为辅助数据库来存储特定类型的数据，例如缓存、会话、排行榜等。然而，对于需要复杂查询、关联性和事务的应用，Redis并不是MySQL的替代品。对于大部分应用，两者可以共同使用，以发挥各自的优势，构建更高效的系统。
+Redis基本命令 现在很多大公司的后端服务都是基础存储服务+Redis缓存的形式，使用Redis进行缓存很大程度上提高了服务的效率，当然也存在缓存穿透、缓存雪崩的问题，但是在此之前还是要从Redis的基础命令开始学习掌握，所以在这里整理了Redis常用的命令。
+字符串 在Redis中，字符串可以存储以下3中类型的值：字节串（byte string），整数，浮点数。
+自增自减命令 INCR key-name：将键存储的值加上1</description>
+    </item>
+  </channel>
+</rss>

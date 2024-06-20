@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rpc on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/rpc/</link>
+    <description>Recent content in Rpc on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>proto接口和RPC使用记录</title>
+      <link>//localhost:1313/posts/notes/dev/proto%E6%8E%A5%E5%8F%A3%E5%92%8Crpc%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/dev/proto%E6%8E%A5%E5%8F%A3%E5%92%8Crpc%E4%BD%BF%E7%94%A8%E8%AE%B0%E5%BD%95/</guid>
+      <description>引入刷新令牌机制</description>
+    </item>
+  </channel>
+</rss>

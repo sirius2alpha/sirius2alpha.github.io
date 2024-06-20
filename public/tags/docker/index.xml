@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docker on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/docker/</link>
+    <description>Recent content in Docker on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在docker中安装redis</title>
+      <link>//localhost:1313/posts/notes/database/%E5%9C%A8docker%E4%B8%AD%E9%83%A8%E7%BD%B2redis/</link>
+      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/database/%E5%9C%A8docker%E4%B8%AD%E9%83%A8%E7%BD%B2redis/</guid>
+      <description>记录部署在docker中部署redis的过程，并使用k8s进行容器编排管理</description>
+    </item>
+    <item>
+      <title>Docker和K8S部署</title>
+      <link>//localhost:1313/posts/notes/cloud-native/docker%E5%92%8Ck8s%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/cloud-native/docker%E5%92%8Ck8s%E9%83%A8%E7%BD%B2/</guid>
+      <description>这篇文章部署K8S的过程</description>
+    </item>
+  </channel>
+</rss>

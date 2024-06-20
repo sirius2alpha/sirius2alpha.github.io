@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>学习笔记 on Sirius&#39; Blog</title>
+    <link>//localhost:1313/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 学习笔记 on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>操作系统学习笔记</title>
+      <link>//localhost:1313/posts/notes/professional-classes/operating_system/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/professional-classes/operating_system/</guid>
+      <description>操作系统 第一章 计算机系统概述 1.1 操作系统 1.1.1 操作系统的概念和功能 概念 操作系统（Operating System， OS）是指控制和管理整个计算机系统的硬件和软件资源，并合理地组织调度计算机的工作和资源的分配；以提供给用户和其他软件方便的接口和环境；它是计算机系统中最基本的系统软件。
+功能和目标 ①操作系统是系统资源的管理者 ②向上层提供方便易用的服务 封装思想：操作系统把一些丑陋的硬件功能封装成简单易用的服务，使用户能更方便地使用计算机，用户无需关心底层硬件的原理，只需要对操作系统发出命令即可。
+GUI：图形化用户接口（Graphical User Interface） 用户可以使用形象的图形界面进行操作，而不再需要记忆复杂的命令、参数。 例子：在Windows 操作系统中，删除一个文件只需要把文件“拖拽”到回收站即可。
+联机命令接口=交互式命令接口：用户说一句，系统跟着做一句
+脱机命令接口=批处理命令接口：用户说一堆，系统跟着做一堆
+程序接口：可以在程序中进行系统调用来使用程序接口。普通用户不能直接使用程序接口，只能通过程序代码间接使用。
+如：写C语言“Hello world”程序时，在printf 函数的底层就使用到了操作系统提供的显式相关的“系统调用”
+③是最接近硬件的一层软件 需要实现对硬件机器的拓展 没有任何软件支持的计算机称为裸机。在裸机上安装的操作系统， 可以提供资源管理功能和方便用户的服务功能，将裸机改造成功能 更强、使用更方便的机器 通常把覆盖了软件的机器成为扩充机器，又称之为虚拟机
+1.1.2 操作系统的特征 基本特征 并发、共享、虚拟、异步
+并发 两个或者多个事件在同一时间间隔内发生
+使得系统具有处理和调度多个程序同时执行的能力
+操作系统的并发是通过分时实现的
+注意：并发是指在一个时间段并行是指在同一个时刻并行是指系统具有同时执行或操作（硬件支持：多流水线或者多处理机）
+重要考点
+单核CPU同一时刻只能执行一个程序，各个程序只能并发地执行
+多核CPU同一时刻可以同时执行多个程序，多个程序可以并行地执行
+共享 互斥共享方式
+例如打印机、磁带，同一时刻只能供一个进程对资源进行访问
+这种资源称作：临界资源或者独占资源
+同时访问方式
+一段时间内允许多个进程对资源进行访问
+典型代表：磁盘设备重入码编写的文件
+虚拟 一个物理上的实体变为若干逻辑上的对应物，这种技术也被称为虚拟技术
+虚拟处理器：采用多道程序并发的方式，让每个终端用户感觉到有多个处理器 时分复用技术
+虚拟存储器：将物理存储变为虚拟存储器，逻辑上扩充存储器用 空分复用技术
+也可以将一台IO设备虚拟为多台逻辑上的IO设备，并允许每个用户占用一台逻辑上的IO设备
+异步 在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，
+多道程序走走停停，进程以不可预知的速度向前进
+并发和共享的关系 并发性指计算机系统中同时存在着多个运行着的程序。 共享性是指系统中的资源可供内存中多个并发执行的进程共同使用。
+互为存在条件
+并发和虚拟的关系 如果失去了并发性，则一个时间段内系统中只需运行一道程序，那么就失去了实现虚拟性的意义了。因此，没有并发性，就谈不上虚拟性
+并发和异步的关系 只有系统拥有并发性，才有可能导致异步性。</description>
+    </item>
+    <item>
+      <title>SQL学习笔记</title>
+      <link>//localhost:1313/posts/notes/database/sql/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/database/sql/</guid>
+      <description>导出数据库为sql文件，在命令行中执行：
+mysqldump -u root -p course-system &amp;gt; course-system.sql DDL(Data Definition Language)数据定义语言 操作库 -- 创建库 create database db1; -- 创建库是否存在，不存在则创建 create database if not exists db1; -- 查看所有数据库 show databases; -- 查看某个数据库的定义信息 show create database db1; -- 修改数据库字符信息 alter database db1 character set utf8; -- 删除数据库 drop database db1; -- 使用某一数据库 use db1; 操作表 -- 创建表 create table student( id int, name varchar(32), age int , score double(4,1), birthday date, insert_time timestamp ); -- 查看表结构 desc 表名; -- 查看创建表的SQL语句 show create table 表名; -- 修改表名 alter table 表名 rename to 新的表名; -- 添加一列 alter table 表名 add 列名 数据类型; -- 删除列 alter table 表名 drop 列名; -- 删除表 drop table 表名; drop table if exists 表名 ; DML(Data Manipulation Language)数据操作语言 增加 insert into -- 写全所有列名 insert into 表名(列名1,列名2,.</description>
+    </item>
+    <item>
+      <title>Go log库，encoding/json</title>
+      <link>//localhost:1313/posts/notes/languages/go-stdlib-notes/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/languages/go-stdlib-notes/</guid>
+      <description>log Go语言内置的log包实现了简单的日志服务。本文介绍了标准库log的基本使用。
+Go内置的log库功能有限，例如无法满足记录不同级别日志的情况，我们在实际的项目中根据自己的需要选择使用第三方的日志库，如logrus、zap等。
+使用Logger log包定义了Logger类型，该类型提供了一些格式化输出的方法。本包也提供了一个预定义的“标准”logger，可以通过调用函数Print系列(Print|Printf|Println）、Fatal系列（Fatal|Fatalf|Fatalln）、和Panic系列（Panic|Panicf|Panicln）来使用，比自行创建一个logger对象更容易使用。
+例如，我们可以像下面的代码一样直接通过log包来调用上面提到的方法，默认它们会将日志信息打印到终端界面：
+package main import ( &amp;amp;quot;log&amp;amp;quot; ) func main() { log.Println(&amp;amp;quot;这是一条很普通的日志。&amp;amp;quot;) v := &amp;amp;quot;很普通的&amp;amp;quot; log.Printf(&amp;amp;quot;这是一条%s日志。\n&amp;amp;quot;, v) log.Fatalln(&amp;amp;quot;这是一条会触发fatal的日志。&amp;amp;quot;) log.Panicln(&amp;amp;quot;这是一条会触发panic的日志。&amp;amp;quot;) } 编译并执行上面的代码会得到如下输出：
+2017/06/19 14:04:17 这是一条很普通的日志。 2017/06/19 14:04:17 这是一条很普通的日志。 2017/06/19 14:04:17 这是一条会触发fatal的日志。 logger会打印每条日志信息的日期、时间，默认输出到系统的标准错误。Fatal系列函数会在写入日志信息后调用os.Exit(1)。Panic系列函数会在写入日志信息后panic。
+配置logger 标准logger的配置 默认情况下的logger只会提供日志的时间信息，但是很多情况下我们希望得到更多信息，比如记录该日志的文件名和行号等。log标准库中为我们提供了定制这些设置的方法。
+log标准库中的Flags函数会返回标准logger的输出配置，而SetFlags函数用来设置标准logger的输出配置。
+func Flags() int func SetFlags(flag int) flag选项 log标准库提供了如下的flag选项，它们是一系列定义好的常量。
+const ( // 控制输出日志信息的细节，不能控制输出的顺序和格式。 // 输出的日志在每一项后会有一个冒号分隔：例如2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message Ldate = 1 &amp;lt;&amp;lt; iota // 日期：2009/01/23 Ltime // 时间：01:23:23 Lmicroseconds // 微秒级别的时间：01:23:23.123123（用于增强Ltime位） Llongfile // 文件全路径名+行号： /a/b/c/d.</description>
+    </item>
+    <item>
+      <title>Go学习笔记</title>
+      <link>//localhost:1313/posts/notes/languages/go-notes/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/languages/go-notes/</guid>
+      <description>配置 Go 工作区 继续之前，请务必仔细阅读此部分。
+Go 在组织项目文件方面与其他编程语言不同。 首先，Go 是在工作区的概念下工作的。 工作区就是应用程序源代码所在的位置。 所有 Go 项目共享同一个工作区。 不过，从版本 1.11 开始，Go 已开始更改此方法。 你尚且不必担心，因为我们将在下一个模块中介绍工作区。 现在，Go 工作区位于 $HOME/go，但如果需要，可以为所有项目设置其他位置。
+若要将工作区设置为其他位置，可以使用 $GOPATH 环境变量。 在处理更复杂的项目时，此环境变量有助于避免将来出现问题。
+Go 工作区文件夹 每个 Go 工作区都包含三个基本文件夹：
+bin：包含应用程序中的可执行文件。 src：包括位于工作站中的所有应用程序源代码。 pkg：包含可用库的已编译版本。 编译器可以链接这些库，而无需重新编译它们。 例如，工作站文件夹结构树可能与下面的示例类似：
+bin/ hello coolapp pkg/ github.com/gorilla/ mux.a src/ github.com/golang/example/ .git/ hello/ hello.go
+Go实战经验 在命令行中输入&amp;rsquo;code . &amp;lsquo;会唤起VS code编辑当前目录
+源码规范 可执行文件都要包含在package main中 import的包必须都要使用，否则报错不进行编译；vs code中保存文件就会自动调整文件格式，并且删除未使用的import 整个package main中只能有一个func main() 变量的声明和初始化 Go是强类型语言，声明的每个变量都绑定到特定的数据类型，并且只接受与此类型匹配的值。
+变量声明的方式有很多，格式和其他语言不太一样
+最普通的方式：var 变量名称 变量类型 Go也可以像Python那样自动推断变量的类型，有些时候可以不用加类型名称 最常用的方式（只适用于在函数内，声明并初始化一个新的变量）：使用冒号等号 age := 32 注意，在函数体外还是只能用var的方式声明和初始化变量 // 变量声明 // 变量声明了必须要使用，否则编译不通过 var first string var second, third string var age int = 1 var ( fisrtly int = 1 secondly string = 2 thirdly = &amp;#34;123&amp;#34; ) var firstName, secondName, agenumber = &amp;#34;123&amp;#34;, &amp;#34;456&amp;#34;, 32 // 最常见的声明方式 冒号等于号 := 用于声明并初始化变量，不能用于常量的声明 firstName_, secondName_, age_ := &amp;#34;123&amp;#34;, &amp;#34;456&amp;#34;, 32 // 常量声明f const HTTPstatusOK = 200 const ( StatusOK = 0 StatusConnectionReset = 1 StatusOtherError = 2 ) 数据类型 基本类型：数字、字符串、布尔值 聚合类型：数组、结构体 引用类型：指针、切片、映射、函数、通道 接口类型：接口 基本类型 在 Go 中，如果你不对变量初始化，所有数据类型都有默认值。</description>
+    </item>
+    <item>
+      <title>数据结构学习笔记</title>
+      <link>//localhost:1313/posts/notes/professional-classes/data_structure/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/professional-classes/data_structure/</guid>
+      <description>一、绪论 数据（data）是信息的载体，是描述客观事物的数、字符、图形、图像、声音以及所有能输入计算机中并被计算机程序识别和处理的符号的集合。
+数据的最小单位的是数据项；
+数据的基本单位是数据元素，一个数据元素可由若干个数据项组成。
+数据结构分为两大类：线性结构和非线性结构
+两类结构通常分为四类基本结构：
+1）集合：结构中的数据元素之间同属于一个集合，此外没有其他关系；
+2）线性结构：结构中的数据元素之间存在一种线性关系，一对一的关系；
+3）树形结构：一对多的关系；
+4）图形结构或网状结构：多对多的关系。
+根据视点的不同又可分为：逻辑结构和物理结构：
+逻辑结构：面向问题，描述数据元素之间的逻辑关系；
+物理结构：又称存储结构，面向计算机，是数据结构在计算机中的表示（映像）
+算法的特性：输入性、输出性、确定性、有穷性、有效性（可行性）
+算法的标准：正确性（满足所要求界的问题的需求，最重要最基本）、可用性（便于用户使用，良好的界面、完备的用户文档）、可读性（易于理解）、效率（存储单元的开销和运行时间的耗费）、健壮性（对于非法数据的处理）
+算法复杂度：（渐进）时间复杂度和空间复杂度
+二、线性结构 1、线性表 1.1	顺序表示：顺序表 用顺序结构存储的线性表为顺序表（sequential list）。
+顺序表一般用数组进行存储
+类模板定义：T* elems，int length，int maxLength
+1.2	链表表示 1)	单链表 分为带头结点和不带头结点的单链表；
+带头结点的单链表相对不带头结点的单链表在涉及会更改头节点的任务时，操作会更加统一。
+类模板定义：
+（结点）T data，Node* next
+（单链表）Node* head，int length
+2)	双向循环链表 类模板定义：
+（结点）T data，Node* prior，Node* next
+（双向循环链表）Node* head，int length
+*带头结点的双向循环列表只有一个元素结点的条件：head-&amp;gt;next!=head &amp;amp;&amp;amp; head-&amp;gt;next-&amp;gt;next==head
+3)	静态链表 利用数组来模拟存储空间实现链表。
+类模板定义：
+（结点）T data，Node* next
+（静态链表）Node* head，Node* avail
+设数组a放置了一个静态链表，当链表未使用的时候，其中所有的结点都是形成了一个链表，用avail进行管理，代表未使用的结点。
+当进行插入操作的时候，就从avail中取出一个头节点，进行赋值，再放入head链表之中。
+在完成每一步操作之后，记得要将next域中更改
+插入元素操作：
+i=avail; avail=a[avail].next; a[i].next=a[head],next; a[head]。next=i; 当需要释放由j所指向的结点时，只需要把结点j放到avail表的最前端，并让avail指向它即可。</description>
+    </item>
+    <item>
+      <title>CPP学习笔记</title>
+      <link>//localhost:1313/posts/notes/languages/cpp-notes/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/languages/cpp-notes/</guid>
+      <description>C++学习笔记 hello
+现在主流的编译型语言包括C、C++、Go、Rust等，它们的编译过程中需要将代码转换成机器语言，因此可以获得更高的执行效率和更好的性能。
+而主流的解释型语言包括Python、Ruby、JavaScript等，这些语言需要解释器将代码转换成机器语言并运行，因此相对于编译型语言，它们的执行效率和性能可能会稍低，但是它们通常具有更高的开发效率和更强的灵活性，因为它们可以在运行时动态修改代码。
+另外，还有一些语言是即时编译型语言（JIT），例如Java、C#和LuaJIT等，这些语言的编译器会在运行时将代码编译成机器语言，因此它们的执行效率和性能通常比解释型语言要高一些，但比编译型语言略低一些。
+函数的声明和定义中，
+不能重复定义一个参数的值；
+带有默认值的形式参数必须放在参数列表的最右侧;
+一、cin 函数的用法 使用cin从标准输入读取数据时，通常用到的方法有cin&amp;raquo;，cin.get，cin.getline。
+1.1 cin&amp;raquo;的用法 （1）cin&amp;raquo;等价于cin.operator&amp;raquo;()，即调用成员函数operator&amp;raquo;()进行读取数据。 （2）当cin&amp;raquo;从缓冲区中读取数据时，若缓冲区中第一个字符是空格、tab或换行这些分隔符时，cin&amp;raquo;会将其忽略并清除，继续读取下一个字符，若缓冲区为空，则继续等待。但是如果读取成功，字符后面的分隔符是残留在缓冲区的，cin&amp;raquo;不做处理。 （3）不想略过空白字符，那就使用 noskipws 流控制。比如cin&amp;raquo;noskipws&amp;raquo;input;
+1.2 cin.get的用法 1.2.1 cin.get读取一个字符 读取一个字符，可以使用cin.get或者cin.get(var)，示例代码如下：
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { char a; char b; a=cin.get(); cin.get(b); cout&amp;lt;&amp;lt;a&amp;lt;&amp;lt;b&amp;lt;&amp;lt;endl; system(&amp;#34;pause&amp;#34;); return 0; } 输入：e[回车]，输出： 注意： （1）从结果可以看出，cin.get()从输入缓冲区读取单个字符时不忽略分隔符，直接将其读取，就出现了如上情况，将换行符读入变量b，输出时打印两次。
+（2）cin.get()的返回值是int类型，成功：读取字符的ASCII码值，遇到文件结束符时，返回EOF，即-1，Windows下标准输入输入文件结束符为Ctrl+z，Linux为Ctrl+d。cin.get(char var)如果成功返回的是cin对象，因此可以支持链式操作，如cin.get(b).get(c)。
+1.2.2 cin.get读取一行 读取一行可以使用istream&amp;amp; get ( char* s, streamsize n )或者istream&amp;amp; get ( char* s, size_t n, streamsize delim )。二者的区别是前者默认以换行符结束，后者可指定结束符。n表示目标空间的大小。示例代码如下：
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { char a; char array[20]={NULL}; cin.</description>
+    </item>
+    <item>
+      <title>学长的计算机网络笔记</title>
+      <link>//localhost:1313/posts/notes/network/network-notes-by-prefect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/network/network-notes-by-prefect/</guid>
+      <description>概述 互联网：专有名词
+互连网：通用网络
+互联网的组成 边缘部分 由所有连接在互联网上的主机组成。这部分是用户直接使用的，用来进行通信（传送数据、音频或视频）和资源共享。
+端系统之间的两种通信方式 客户-服务器方式（C/S）
+客户是服务的请求方，服务器是服务的提供方
+客户软件的特点 被用户调用后运行，在打算通信时主动向远地服务器发起通信（请求服务）。因此，客户程序必须知道服务器程序的地址 不需要特殊的硬件和很复杂的操作系统 服务器软件的特点 一种专门用来提供某种服务的程序，可同时处理多个远地或本地客户的请求 系统启动后即自动调用并一直不断地运行着，被动地等待并接受来自各地的客户的通信请求。因此，服务器程序不需要知道客户程序的地址 一般需要强大的硬件和高级的操作系统支持 对等方式（P2P）
+不区分客户和服务器。
+核心部分 由大量网络和连接这些网络的路由器组成。这部分是为边缘部分提供服务的（提供连通性和交换）
+在网络核心部分起特殊作用的是路由器 (router)。 at Shanghai University
+路由器是实现分组交换 (packet switching) 的关键构件，其任务是转发收到的分组，这是网络核心部分最重要的功能。
+分组交换是网络核心部分最重要的功能
+电路交换 $$N$$ 部电话机两两直接相连，需 $$N(N – 1)/2$$ 对电线。这种直接连接方法所需要的电线对的数量与电话机数量的平方（ $$N^2$$ ）成正比。
+当电话机的数量增多时，就要使用交换机来完成全网的分组任务，这就是电路交换
+特点 电路交换必定是面向连接的 电路交换分为三个阶段： 建立连接：建立一条专用的物理通路，以保证双方通话时所需的通信资源在通信时不会被其他用户占用； 通话：主叫和被叫双方一直占用通信资源； 释放连接：释放刚才使用的这条专用的物理通路（释放刚才占用的所有通信资源） 总结 电路交换用于电话通信系统，两个用户要通信之前需要建立一条专用的物理链路，并且在整个通信过程中始终占用该链路。由于通信的过程中不可能一直在使用传输线路，因此电路交换对线路的利用率很低，往往不到 10%
+分组交换 分组交换采用存储转发技术
+步骤 在发送端，先把较长的报文划分成较短的、固定长度的数据段 每一个数据段前面添加上首部构成分组 (packet) 分组交换网以“分组”（也称为“包”，首部也可称为“包头”）作为数据传输单元，依次把各分组发送到接收端（假定接收端在左边） 接收端收到分组后剥去首部还原成报文 最后，在接收端把收到的数据恢复成为原来的报文。 首部的重要性 每一个分组的首部都含有地址（诸如目的地址和源地址）等控制信息。 分组交换网中的结点交换机根据收到的分组首部中的地址信息，把分组转发到下一个结点交换机。 每个分组在互联网中独立地选择传输路径。（通过路由器） 用这样的存储转发方式，最后分组就能到达最终目的地。 路由器的作用 在路由器中的输入和输出端口之间没有直接连线。 路由器处理分组的过程是： 把收到的分组先放入缓存（暂时存储）； 查找转发表，找出到某个目的地址应从哪个端口转发； 把分组送到适当的端口转发出去。 优点 高效：在分组传输的过程中动态分配传输带宽，对通信链路是逐段占用 灵活：为每一个分组独立地选择最合适的转发路由 迅速：以分组作为传送单位，可以不先建立连接就能向其他主机发送分组。 可靠：保证可靠性的网络协议；分布式多路由的分组交换网，使网络有很好的生存性 缺点 分组在各结点存储转发时需要排队，这就会造成一定的时延。 分组必须携带的首部（里面有必不可少的控制信息）也造成了一定的开销 总结 每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。</description>
+    </item>
+  </channel>
+</rss>

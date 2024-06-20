@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>OpenSSL on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/openssl/</link>
+    <description>Recent content in OpenSSL on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/openssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>加密与认证</title>
+      <link>//localhost:1313/posts/notes/security/encryption-authentication/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/security/encryption-authentication/</guid>
+      <description>任务 采用Java/Python语言编写一个较为完整的加密与认证程序，要求具有：
+具有较完整的图形化界面； 使用MD5、SHA系列算法，实现消息摘要，确保消息的完整性； 使用DES、AES等算法实现对称加密，确保消息的机密性； 使用RSA算法，实现公钥加密，且用私钥解密，比较不对称加密和对称加密的性能； 实现基于数字证书的数字签名和验证（含证书的生成和创建）； 消息摘要 消息摘要的作用 在网络安全目标中，要求信息在生成、存储或传输过程中保证不被偶然或蓄意地删除、修改、伪造、乱序、重放、插入等破坏和丢失，因此需要一个较为安全的标准和算法，以保证数据的完整性。
+常见的消息摘要算法有： Ron Rivest设计的MD（Standard For Message Digest，消息摘要标准）算法 NIST设计的SHA（Secure Hash Algorithm，安全散列算法）
+单向散列函数 特点 不定长的输入和定长的输出；
+对于及其微小的变化，如1bit的变化，器哈希函数所产生的值也差异巨大；
+对于不同的原像都有不同的映像，从散列值不可能推导出消息M ，也很难通过伪造消息M’来生成相同的散列值。
+Hash函数的值称为作为自变量的消息的“散列值”或“消息摘要”、“数字指纹”
+哈希函数的分类 根据安全水平 弱无碰撞 强无碰撞 ​	注：强无碰撞自然含弱无碰撞！
+根据是否使用密钥 带秘密密钥的Hash函数：消息的散列值由只有通信双方知道的秘密密钥K来控制，此时散列值称作MAC(Message Authentication Code) 不带秘密密钥的Hash函数：消息的散列值的产生无需使用密钥，此时散列值称作MDC(Message Detection Code) 哈希函数的应用 由Hash函数产生消息的散列值 以消息的散列值来判别消息的完整性 用加密消息的散列值来产生数字签名 用口令的散列值来安全存储口令（认证系统中的口令列表中仅存储口令的Hash函数值，以避免口令被窃取。认证时用输入口令的Hash函数值与其比较） 安全哈希函数的实现 输入数据分成L个长度固定为r的分组：M=(M1,M2,…,ML) 末组附加消息的长度值并通过填充凑足r位 压缩函数 f使用n位的链接变量Hi ,其初值H0=IV可任意指定 压缩函数 f的最后n位输出HL取作散列值 哈希函数：生日攻击 当哈希函数的输入位数太短的时候，就容易产生哈希碰撞，即出现两个原像对应用一个映像的问题。
+生日问题 一个教室中至少有几个学生才能使有两个学生生日相同的概率不小于1/2； 等价于“球匣问题” 设J个球随机扔进N个匣子，存在一个匣子中至少有两个球的概率为p，则可以推导出: J2≈-2Nln(1-p)或 p≈ 1-e-J2/2/N 答案 将365个生日看作N=365个匣子，将学生看作球，p=0.5，则由上式可算出J≈23，即23个学生中有两个学生生日相同的概率不小于1/2；
+生日攻击实例：
+​	假设张三承诺支付李四100万，约定由李四负责起草合同，并通过8位的散列码H(M)实施信息认证。聪明而无德的李四先起草一个100万的版本，并通过变化其中3个无关紧要之处以得到23=8个不同的消息明文并计算它们的H(M)，形成集合A；然后再起草一个200万的版本，用同样方法又得到23=8 个不同的消息明文及其H(M)，形成集合B。 ​	由生日问题知：24个8位比特串中发生碰撞的概率不小于1/2，故在A和B共24 =16个H(M)中有可能存在相同的一对，并极有可能一个在A中而另一个在B中。假设与它们对应的明文为MA （100万版） 和MB （200万版） 。于是李四用MA让张三签署并公证，而在传送时偷偷地用MB替代MA 。由于H(MA)= H(MB)，故张三确信签署的文件未被篡改。当李四要求张三支付200万时，法院根据MB判李四胜诉，而张三因此损失100万。</description>
+    </item>
+  </channel>
+</rss>

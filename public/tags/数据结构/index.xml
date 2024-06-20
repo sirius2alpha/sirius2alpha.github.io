@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数据结构 on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <description>Recent content in 数据结构 on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数据结构学习笔记</title>
+      <link>//localhost:1313/posts/notes/professional-classes/data_structure/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/professional-classes/data_structure/</guid>
+      <description>一、绪论 数据（data）是信息的载体，是描述客观事物的数、字符、图形、图像、声音以及所有能输入计算机中并被计算机程序识别和处理的符号的集合。
+数据的最小单位的是数据项；
+数据的基本单位是数据元素，一个数据元素可由若干个数据项组成。
+数据结构分为两大类：线性结构和非线性结构
+两类结构通常分为四类基本结构：
+1）集合：结构中的数据元素之间同属于一个集合，此外没有其他关系；
+2）线性结构：结构中的数据元素之间存在一种线性关系，一对一的关系；
+3）树形结构：一对多的关系；
+4）图形结构或网状结构：多对多的关系。
+根据视点的不同又可分为：逻辑结构和物理结构：
+逻辑结构：面向问题，描述数据元素之间的逻辑关系；
+物理结构：又称存储结构，面向计算机，是数据结构在计算机中的表示（映像）
+算法的特性：输入性、输出性、确定性、有穷性、有效性（可行性）
+算法的标准：正确性（满足所要求界的问题的需求，最重要最基本）、可用性（便于用户使用，良好的界面、完备的用户文档）、可读性（易于理解）、效率（存储单元的开销和运行时间的耗费）、健壮性（对于非法数据的处理）
+算法复杂度：（渐进）时间复杂度和空间复杂度
+二、线性结构 1、线性表 1.1	顺序表示：顺序表 用顺序结构存储的线性表为顺序表（sequential list）。
+顺序表一般用数组进行存储
+类模板定义：T* elems，int length，int maxLength
+1.2	链表表示 1)	单链表 分为带头结点和不带头结点的单链表；
+带头结点的单链表相对不带头结点的单链表在涉及会更改头节点的任务时，操作会更加统一。
+类模板定义：
+（结点）T data，Node* next
+（单链表）Node* head，int length
+2)	双向循环链表 类模板定义：
+（结点）T data，Node* prior，Node* next
+（双向循环链表）Node* head，int length
+*带头结点的双向循环列表只有一个元素结点的条件：head-&amp;gt;next!=head &amp;amp;&amp;amp; head-&amp;gt;next-&amp;gt;next==head
+3)	静态链表 利用数组来模拟存储空间实现链表。
+类模板定义：
+（结点）T data，Node* next
+（静态链表）Node* head，Node* avail
+设数组a放置了一个静态链表，当链表未使用的时候，其中所有的结点都是形成了一个链表，用avail进行管理，代表未使用的结点。
+当进行插入操作的时候，就从avail中取出一个头节点，进行赋值，再放入head链表之中。
+在完成每一步操作之后，记得要将next域中更改
+插入元素操作：
+i=avail; avail=a[avail].next; a[i].next=a[head],next; a[head]。next=i; 当需要释放由j所指向的结点时，只需要把结点j放到avail表的最前端，并让avail指向它即可。</description>
+    </item>
+  </channel>
+</rss>

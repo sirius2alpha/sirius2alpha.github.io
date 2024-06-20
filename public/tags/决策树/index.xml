@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>决策树 on Sirius&#39; Blog</title>
+    <link>//localhost:1313/tags/%E5%86%B3%E7%AD%96%E6%A0%91/</link>
+    <description>Recent content in 决策树 on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>//localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/%E5%86%B3%E7%AD%96%E6%A0%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>全国大学生市场调研大赛-数据分析</title>
+      <link>//localhost:1313/posts/notes/data-analysis/wumengtrip/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/notes/data-analysis/wumengtrip/</guid>
+      <description>记录在正大杯中使用到的一些数据分析思路方法</description>
+    </item>
+  </channel>
+</rss>

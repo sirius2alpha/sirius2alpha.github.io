@@ -1,0 +1,149 @@
+# 网站基本配置
+baseURL = '127.0.0.1'  # 网站的基础URL
+languageCode = 'en-us' # 网站使用的语言代码
+title = "Sirius' Blog" # 网站的标题
+theme = "PaperMod"     # 使用的主题名称
+
+# 网站功能设置
+paginate = 5           # 每页显示的文章数
+enableRobotsTXT = true # 是否启用robots.txt文件
+buildDrafts = false    # 是否构建草稿状态的文章
+buildFuture = false    # 是否构建未来发布的文章
+buildExpired = false   # 是否构建已过期的文章
+# googleAnalytics = "UA-123-45"           # Google Analytics跟踪ID（此行已注释）
+pygmentsUseClasses = true # 是否使用Pygments进行代码高亮
+
+# 最小化配置
+[minify]
+disableXML = true   # 禁用XML文件的最小化
+minifyOutput = true # 启用输出的最小化
+
+# 网站参数设置
+[params]
+env = "production"                                                # 环境模式（如"production"）
+title = "Sirius' Blog"                                            # 网站标题（重写全局设置）
+description = "Regret is the enemy."                              # 网站描述
+keywords = ["Blog", "Portfolio", "PaperMod"]                      # 网站关键词
+author = "sirius1y"                                               # 文章作者名称
+images = ["<link or path of image for opengraph, twitter-cards>"] # 社交媒体图像链接
+DateFormat = "January 2, 2006"                                    # 日期格式
+defaultTheme = "auto"                                             # 默认主题（如"auto"）
+disableThemeToggle = false                                        # 是否禁用主题切换按钮
+ShowReadingTime = true                                            # 是否显示阅读时间
+ShowPostNavLinks = true                                           # 是否显示文章导航链接
+ShowBreadCrumbs = true                                            # 是否显示面包屑导航
+ShowCodeCopyButtons = true                                        # 是否显示代码复制按钮
+ShowWordCount = true                                              # 是否显示字数统计
+ShowRssButtonInSectionTermList = true                             # 是否在部分术语列表中显示RSS按钮
+UseHugoToc = true                                                 # 是否使用Hugo的目录
+disableSpecial1stPost = true                                      # 是否禁用特殊的第一篇文章展示
+disableScrollToTop = false                                        # 是否禁用滚动到顶部按钮
+comments = true                                                   # 是否启用评论功能
+hidemeta = false                                                  # 是否隐藏元数据
+hideSummary = false                                               # 是否隐藏摘要
+showtoc = true                                                    # 是否显示目录
+tocopen = true                                                    # 目录是否默认展开
+# ShowShareButtons = true                                           # 是否显示分享按钮
+
+# 静态资源配置
+[params.assets]
+favicon = "/images/icon.png" # 网站图标链接
+
+# 标签配置
+[params.label]
+text = "Home"                  # 标签文本
+icon = "/apple-touch-icon.png" # 标签图标路径
+iconHeight = 35                # 标签图标高度
+
+# 个人简介模式配置
+[params.profileMode]
+enabled = true                                                          # 是否启用个人简介模式
+title = "Sirius' Blog"                                                  # 简介标题
+subtitle = "How can we fly when we are too afraid to leave the ground?" # 简介副标题
+imageUrl = "/images/avatar.png"                                         # 简介图片链接
+imageWidth = 120                                                        # 图片宽度
+imageHeight = 120                                                       # 图片高度
+imageTitle = " "                                                        # 图片标题
+
+# 个人简介下的按钮配置
+[[params.profileMode.buttons]]
+name = "Posts" # 按钮名称
+url = "posts"    # 按钮链接
+
+[[params.profileMode.buttons]]
+name = "Archives"
+url = "archives"
+
+
+# 社交图标配置
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/sirius2alpha"
+
+[[params.socialIcons]]
+name = "instagram"
+url = "https://www.instagram.com/siriustuyeahh/"
+
+[[params.socialIcons]]
+name = "email"
+url = "mailto:sirius1y@outlook.com"
+
+# 各种分析工具的站点验证标签
+# [params.analytics.google]
+# SiteVerificationTag = "XYZabc"
+
+# [params.analytics.bing]
+# SiteVerificationTag = "XYZabc"
+
+# [params.analytics.yandex]
+# SiteVerificationTag = "XYZabc"
+
+# 搜索选项配置
+[params.fuseOpts]
+isCaseSensitive = false                             # 搜索是否区分大小写
+shouldSort = true                                   # 搜索结果是否排序
+location = 0                                        # 搜索位置
+distance = 1_000                                    # 搜索距离
+threshold = 0.4                                     # 匹配阈值
+minMatchCharLength = 0                              # 最小匹配字符长度
+keys = ["title", "permalink", "summary", "content"] # 搜索关键字
+
+# 主菜单配置
+[[menu.main]]
+identifier = "Archives"
+name = "Archives"
+url = "/archives/"
+
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+
+[[menu.main]]
+identifier = "categories"
+name = "Categories"
+url = "/categories/"
+
+[[menu.main]]
+identifier = "search"
+name = "Search"
+url = "/search/"
+
+# 代码高亮设置
+[markup.highlight]
+noClasses = true # 是否取消代码高亮样式类
+
+# 搜索的设置
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# giscus评论系统设置
+[params.page.comment]
+enable = true
+[params.page.comment.giscus]
+enable = true
+repo = "sirius2alpha/sirius2alpha.github.io"
+repoId = "R_kgDOJuz_dw"
+category = "Announcements"
+categoryId = "DIC_kwDOJuz_d84CgNpJ"
+mapping = "pathname"
