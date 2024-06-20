@@ -1,0 +1,17 @@
+# Hugo 生成的静态文件
+public/
+resources/_gen/
+
+# 编辑器和操作系统生成的文件
+*.log
+*.DS_Store
+*.swp
+*~
+
+# 依赖管理文件
+/themes/*/node_modules/
+/themes/*/package-lock.json
+/themes/*/yarn.lock
+
+# 其他临时文件和缓存文件
+.hugo_build.lock
