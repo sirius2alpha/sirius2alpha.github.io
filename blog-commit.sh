@@ -10,7 +10,7 @@ git pull
 git push
 echo ------------------------end---同步笔记到sirius2alpha/Notes------------------------
 
-# sync dev-hugo branch 
+# sync dev-hugo branch
 echo ------------------------start---sync master branch------------------------------
 cd /home/yoho/blog/sirius-blog
 git add .
