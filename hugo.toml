@@ -1,5 +1,5 @@
 # 网站基本配置
-baseURL = 'http://sirius1y.top'  # 网站的基础URL
+baseURL = 'https://sirius1y.top'  # 网站的基础URL
 languageCode = 'en-us' # 网站使用的语言代码
 title = "Sirius' Blog" # 网站的标题
 theme = "PaperMod"     # 使用的主题名称
