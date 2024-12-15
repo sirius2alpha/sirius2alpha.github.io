@@ -38,16 +38,6 @@ jobs:
         with:
           name: public
           path: ./public
-
-      - name: Debug SSH Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-keygen -lf ~/.ssh/deploy_key
-          ssh-keygen -y -f ~/.ssh/deploy_key > ~/.ssh/deploy_key.pub
-          echo "Public key:"
-          cat ~/.ssh/deploy_key.pub
         
       - name: Deploy to Server via SSH
         uses: easingthemes/ssh-deploy@v2
