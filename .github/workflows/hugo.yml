@@ -48,3 +48,6 @@ jobs:
           REMOTE_HOST: ${{ secrets.SERVER_HOST }}
           REMOTE_USER: ${{ secrets.SERVER_USER }}
           TARGET: "/var/www/blog"
+          SSH_CONFIG: |
+            StrictHostKeyChecking=no
+            UserKnownHostsFile=/dev/null
