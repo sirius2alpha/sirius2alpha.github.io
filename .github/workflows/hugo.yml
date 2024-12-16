@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: 'recursive'
-          ssh-key: ${{ secrets.NOTES_PRIVATE_SSH_KEY }}
+          ssh-key: ${{ secrets.NOTES_PRIVATE_SSH_KEY }} # 笔记 private repo 的私钥，存放于个人中心的密钥
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -38,7 +38,23 @@ jobs:
         with:
           name: public
           path: ./public
-        
+
+      # 配置 SSH 环境
+      - name: Setup SSH environment
+        run: |
+          command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client wget gnupg -y )
+          wget -qO- https://get.docker.com/gpg | apt-key add -
+          eval $(ssh-agent -s)
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+          mkdir -p ~/.ssh
+          touch ~/.ssh/config
+          touch ~/.ssh/known_hosts
+          chmod -R 400 ~/.ssh
+          ssh-keyscan ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+          [[ -f /.dockerinit ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+
       - name: Deploy to Server via SSH
         uses: easingthemes/ssh-deploy@v2
         env:
