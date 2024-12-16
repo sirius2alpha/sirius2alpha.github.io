@@ -16,3 +16,5 @@ resources/_gen/
 # 其他临时文件和缓存文件
 .hugo_build.lock
 
+# Ignore configuration file
+config.sh
