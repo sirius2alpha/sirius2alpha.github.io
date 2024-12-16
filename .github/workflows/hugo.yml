@@ -47,7 +47,6 @@ jobs:
           mkdir -p ~/.ssh
           touch ~/.ssh/config
           touch ~/.ssh/known_hosts
-          chmod -R 400 ~/.ssh
           ssh-keyscan ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
         env:
