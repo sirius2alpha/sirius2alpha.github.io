@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Thunderbird on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/thunderbird/</link>
+    <description>Recent content in Thunderbird on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/thunderbird/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Thunderbird 同步 iCloud 日历与联系人</title>
+      <link>https://sirius1y.top/posts/notes/tools/thunderbird-icloud/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/tools/thunderbird-icloud/</guid>
+      <description>记录在Thunderbird上同步icloud日历与联系人</description>
+    </item>
+  </channel>
+</rss>

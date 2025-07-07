@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>K8s on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/k8s/</link>
+    <description>Recent content in K8s on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在docker中安装redis</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-redis-ondocker/</link>
+      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-redis-ondocker/</guid>
+      <description>记录部署在docker中部署redis的过程，并使用k8s进行容器编排管理</description>
+    </item>
+    <item>
+      <title>k8s学习和实践:腾讯云轻量级服务器上搭建网站</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</guid>
+      <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
+    </item>
+  </channel>
+</rss>

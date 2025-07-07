@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Dev on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/categories/dev/</link>
+    <description>Recent content in Dev on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/categories/dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gRPC调用坎坷历程记录</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-grpc/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-grpc/</guid>
+      <description>protoc代码生成了哪些东西？RPC和RESTful有什么不同？</description>
+    </item>
+    <item>
+      <title>Auth微服务开发记录</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-auth/</link>
+      <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-auth/</guid>
+      <description>引入刷新令牌机制</description>
+    </item>
+    <item>
+      <title>Protobuf与gRPC初次使用</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-protorpc/</link>
+      <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-protorpc/</guid>
+      <description>protoc代码生成了哪些东西？RPC和RESTful有什么不同？</description>
+    </item>
+    <item>
+      <title>Flutter开发</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-flutter/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-flutter/</guid>
+      <description>记录使用Flutter开发Aorb应用前端的过程</description>
+    </item>
+    <item>
+      <title>点击排行榜scoreboard</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-scoreboard/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-scoreboard/</guid>
+      <description>本文记录使用vue&#43;gin&#43;redis搭建了一个简单的点击排行榜，虽然有点无聊，但是两个幼稚鬼玩好好笑hhh</description>
+    </item>
+    <item>
+      <title>第一次全栈开发记录</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-coursesystem/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-coursesystem/</guid>
+      <description>记录第一次全栈开发，主要记录了前端部分所遇到的问题</description>
+    </item>
+    <item>
+      <title>k8s学习和实践:腾讯云轻量级服务器上搭建网站</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</guid>
+      <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
+    </item>
+  </channel>
+</rss>

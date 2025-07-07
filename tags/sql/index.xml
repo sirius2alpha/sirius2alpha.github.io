@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SQL on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/sql/</link>
+    <description>Recent content in SQL on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/database/use-sql/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/database/use-sql/</guid>
+      <description>导出数据库为sql文件，在命令行中执行：
+mysqldump -u root -p course-system &amp;gt; course-system.sql DDL(Data Definition Language)数据定义语言 操作库 -- 创建库 create database db1; -- 创建库是否存在，不存在则创建 create database if not exists db1; -- 查看所有数据库 show databases; -- 查看某个数据库的定义信息 show create database db1; -- 修改数据库字符信息 alter database db1 character set utf8; -- 删除数据库 drop database db1; -- 使用某一数据库 use db1; 操作表 -- 创建表 create table student( id int, name varchar(32), age int , score double(4,1), birthday date, insert_time timestamp ); -- 查看表结构 desc 表名; -- 查看创建表的SQL语句 show create table 表名; -- 修改表名 alter table 表名 rename to 新的表名; -- 添加一列 alter table 表名 add 列名 数据类型; -- 删除列 alter table 表名 drop 列名; -- 删除表 drop table 表名; drop table if exists 表名 ; DML(Data Manipulation Language)数据操作语言 增加 insert into -- 写全所有列名 insert into 表名(列名1,列名2,.</description>
+    </item>
+  </channel>
+</rss>

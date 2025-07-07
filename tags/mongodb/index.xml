@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MongoDB on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/mongodb/</link>
+    <description>Recent content in MongoDB on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 06 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB快速上手</title>
+      <link>https://sirius1y.top/posts/notes/database/use-mongodb/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/database/use-mongodb/</guid>
+      <description>MongoDB安装 MongoDB官方的安装指南
+Navicat客户端使用 可以在navicat上连上本地的mongodb使用，直观简单
+Easy use (Terminal) 在终端中启动mongodb终端：
+mongosh 以下是一些 MongoDB 的简单常用命令，可以帮助你快速上手并管理 MongoDB 数据库：
+启动 MongoDB shell mongo 基本数据库操作 列出所有数据库 show dbs 切换到指定数据库（如果数据库不存在则创建新数据库） use mydatabase 显示当前数据库 db 删除当前数据库 db.dropDatabase() 集合操作 创建集合 db.createCollection(&amp;#39;mycollection&amp;#39;) 列出所有集合 show collections 删除集合 db.mycollection.drop() 文档操作 插入文档 db.mycollection.insertOne({name: &amp;#34;John&amp;#34;, age: 30}) db.mycollection.insertMany([{name: &amp;#34;Alice&amp;#34;, age: 25}, {name: &amp;#34;Bob&amp;#34;, age: 27}]) 查找文档 db.mycollection.find() db.mycollection.find({name: &amp;#34;John&amp;#34;}) 查找并格式化输出 db.mycollection.find().pretty() 更新文档 db.mycollection.updateOne({name: &amp;#34;John&amp;#34;}, {$set: {age: 31}}) db.mycollection.updateMany({name: &amp;#34;Alice&amp;#34;}, {$set: {age: 26}}) 替换文档 db.mycollection.replaceOne({name: &amp;#34;John&amp;#34;}, {name: &amp;#34;John&amp;#34;, age: 32, city: &amp;#34;New York&amp;#34;}) 删除文档 db.</description>
+    </item>
+  </channel>
+</rss>

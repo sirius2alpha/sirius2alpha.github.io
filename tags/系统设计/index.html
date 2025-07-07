@@ -1,0 +1,47 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>系统设计 | Sirius' Blog</title>
+<meta name=keywords content><meta name=description content="Regret is the enemy."><meta name=author content="sirius1y"><link rel=canonical href=https://sirius1y.top/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/><link crossorigin=anonymous href=/assets/css/stylesheet.3551607c8eb1ef998f0b6c81d22f9f03dd2c3b8ecaf983e42c023e8d41e39f66.css integrity="sha256-NVFgfI6x75mPC2yB0i+fA90sO47K+YPkLAI+jUHjn2Y=" rel="preload stylesheet" as=style><link rel=icon href=https://sirius1y.top/images/icon.png><link rel=icon type=image/png sizes=16x16 href=https://sirius1y.top/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://sirius1y.top/favicon-32x32.png><link rel=apple-touch-icon href=https://sirius1y.top/apple-touch-icon.png><link rel=mask-icon href=https://sirius1y.top/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate type=application/rss+xml href=https://sirius1y.top/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.xml><link rel=alternate hreflang=en href=https://sirius1y.top/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="系统设计"><meta property="og:description" content="Regret is the enemy."><meta property="og:type" content="website"><meta property="og:url" content="https://sirius1y.top/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"><meta property="og:image" content="https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="og:site_name" content="Sirius' Blog"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="系统设计"><meta name=twitter:description content="Regret is the enemy."></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://sirius1y.top/ accesskey=h title="Home (Alt + H)"><img src=https://sirius1y.top/apple-touch-icon.png alt aria-label=logo height=35>Home</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://sirius1y.top/archives/ title=Archives><span>Archives</span></a></li><li><a href=https://sirius1y.top/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://sirius1y.top/posts/ title=Posts><span>Posts</span></a></li><li><a href=https://sirius1y.top/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://sirius1y.top/>Home</a>&nbsp;»&nbsp;<a href=https://sirius1y.top/tags/>Tags</a></div><h1>系统设计
+<a href=/tags/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.xml title=RSS aria-label=RSS><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" height="23"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></a></h1></header><article class="post-entry tag-entry"><header class=entry-header><h2 class=entry-hint-parent>计算机基础知识</h2></header><div class=entry-content><p>计算机网络 TCP TCP为什么要进行三次握手？ 三次握手是建立网络连接的过程，确保双方能够正确地进行数据传输。
+第一次握手SYN：客户端向服务端发送SYN请求同步信号，并初始化客户端序列号；
+第二次握手SYN+ACK：服务端收到了客户端发送的SYN信号后回复ACK确认收到，同时也发送SYN，指定自己的初始序列号；
+第三次握手ACK：客户端收到服务端的ACK+SYN后，回复一个ACK，表示已经收到服务端的ACK+SYN。这个包的序列会加一，表示客户端已经准备好和服务端进行数据传输了。
+为什么是三次握手？不是两次或者四次 原因1：阻止重复的历史连接初始化
+如果是两次握手的话，因网络堵塞的问题，客户端发送了两次SYN给服务端，服务端收到了第一个SYN的时候，就回复SYN+ACK给客户端，并进入了ESTABLISHED状态。而客户端这边收到了服务端旧的ACK+SYN，会认为这是历史连接从而发送RST报文，使服务端断开连接。
+原因2：同步双方的序列号
+TCP协议的双方都必须要维护一个序列号。两次握手只能保证一方的序列号被接收。
+原因3：避免资源浪费
+如果是两次握手，那么服务端在收到SYN后回复ACK的时候就要主动建立连接，要是网络堵塞，对面发了好多个SYN来，那完蛋了，建立了好多个TCP连接，造成了资源浪费。
+TCP的四次挥手 四次挥手是指在TCP断开连接的过程中发生的，一般是由客户端发起，服务端完成最后的断开。
+因为TCP是全双工通信，所以需要两边都要通知对方停止数据传输，故需要四次挥手保证断开连接。
+具体流程：（刚开始双方都处于ESTABLISHED状态）
+1.客户端向服务端发起FIN报文，表示客户端不再发送数据；（客户端进入FIN_WAIT_1中状态）
+2.服务端收到FIN报文后，回复一个ACK表示收到；（服务端进入CLOSED_WAIT状态，客户端收到ACK后进入FIN_WAIT_2状态）
+3.服务端向客户端发起FIIN报文，表示服务端也不再发送数据；（服务端进入LAST_ACK状态）
+4.客户端收到服务端的FIN报文后，也回复一个ACK。（客户端进入TIME_WAIT状态）
+发送端在最后会进入到TIME_WAIT的状态，
+为什么有TIME_WAIT状态？ 原因1：保证历史连接中的数据不会干扰下一次连接。
+原因2：保证被动关闭连接。如果服务端没有TIME_WAIT状态直接close的话，要是服务端没有收到客户端最后一次发送的ACK会重发FIN，如果服务器已经处于CLOSE状态，就会返回RST报文，RST报文会被服务端认定为错误。
+为什么TIME_WAIT的时间是2MSL？ MSL是报文的最大生存时间，超过这个时间的报文都会被丢弃。两个MSL时间可以保证客户端发送的ACK报文可以到达服务端+服务端要是在第一个MSL中没有收到ACK可以重发一次FIN到客户端，并保证能够到达客户端。
+HTTP GET方法和POST方法有什么区别？ 用途：GET方法一般用于请求服务器上的数据；POST方法用于向服务器提交数据。
+请求参数：GET方法的请求参数一般放在URL中，POST的请求参数一般放在请求体中。
+幂等：多次执行相同的操作，结果都相同。
+幂等行：GET方法是安全幂等的，POST不是幂等的。
+缓存机制：GET请求会被浏览器主动cache，如果下一次传输的数据相同，就会返回浏览器中的内容；而POST不会。
+GET的请求参数会被保存在浏览器的历史记录中，而POST中的参数不会保留
+时间消耗：GET产生一个TCP数据包，浏览器会把header和data一起发送出去，服务器相应200；
+POST产生两个TCP数据包，浏览器先发送hader，服务器相应100（继续发送），浏览器再发送data，服务器相应200
+什么情况下会使用POST读取数据？ 当查询的数据量很多，GET方式的URL太长太大，GET方式大概是4KB，POST上限是8MB 当对数据的安全性有更高要求的时候，可以在POST的请求体中对数据进行加密 HTTP版本对比 HTTP/0.9 只支持GET方法 HTTP/1.0 支持多种请求方式 引入了请求头和响应头 引入状态码 不支持长连接
+HTTP/1.1 支持长连接 管道网络传输（可以同时发送A、B请求，不必等待A响应） 但是管道网络传输存在队头阻塞的问题
+头部冗余
+没有请求优先级
+请求只能通过客户端推送，服务器不能主动推送
+HTTP/2 使用HPACK进行头部压缩 把数据部分压缩成头信息帧和数据帧 并发传输：引入了stream的概念，多个Stream复用一条TCP连接，通过streamID识别，不同stream的帧可以乱序发送 支持服务器推送 HTTPS 和HTTP对比 优点
+安全性更高
+缺点
+HTTPS涉及到了加解密的过程，所以对服务器的负荷会高一些；
+握手阶段的延迟比较高，因为还有SSL/TLS握手;
+加密过程 HTTPS采用了对称加密+非对称加密的混合加密模式...</p></div><footer class=entry-footer><span title='2024-05-10 00:00:00 +0000 UTC'>May 10, 2024</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;987 words&nbsp;·&nbsp;sirius1y</footer><a class=entry-link aria-label="post link to 计算机基础知识" href=https://sirius1y.top/posts/notes/jobhunter/cs-basic-notes/></a></article></main><footer class=footer><span><a href=https://us.umami.is/websites/5e6ac0c1-e2b2-4d0f-9542-b79ac2cf89c4 rel="noopener noreferrer" target=_blank>Analysis</a>
+</span>|
+<script defer src=https://cloud.umami.is/script.js data-website-id=5e6ac0c1-e2b2-4d0f-9542-b79ac2cf89c4></script><span><a href=https://beian.miit.gov.cn/ target=_blank>渝ICP备2024018631号</a>
+</span>|
+<span>&copy; 2025 <a href=https://sirius1y.top/>Sirius' Blog</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

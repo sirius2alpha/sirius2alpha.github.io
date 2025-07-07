@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/</link>
+    <description>Recent content on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用 Thunderbird 同步 iCloud 日历与联系人</title>
+      <link>https://sirius1y.top/posts/notes/tools/thunderbird-icloud/</link>
+      <pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/tools/thunderbird-icloud/</guid>
+      <description>记录在Thunderbird上同步icloud日历与联系人</description>
+    </item>
+    <item>
+      <title>尝试在云服务器上部署 Flink 并提交计算任务</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-flink/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-flink/</guid>
+      <description>裸机 &amp;amp; K8S上部署flink，并提交计算任务</description>
+    </item>
+    <item>
+      <title>只让服务器流量走 VPN </title>
+      <link>https://sirius1y.top/posts/notes/network/split-tunneling/</link>
+      <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/split-tunneling/</guid>
+      <description>背景 服务器在学校的校园网中，然后平时需要使用 Easy Connect 连接学校的 VPN 之后，才能通过 SSH 连接到服务器。但是学校配置的 VPN 又很烦人，会接管本机上的所有流量走校园网，导致访问其他网站的速度很慢，并且连接不上外网用不了 GPT 之类的麻烦。
+学校提供的 VPN 服务有两种软件可以使用，一个是 Easy Connect，一种是 Open VPN 。两种我都尝试了，都是登陆的同样的账号，但是openvpn始终ssh连接不上学校内网中的服务器，但是 Easy Connect 却可以。所以之后我都是在 Easy Connect 上进行操作的。
+发现问题 发现启动 VPN 软件之后，运行ifconfig可以看到本地会多一个utun*的网络接口，然后运行netstat -rn查看电脑的路由表中可以看到，有大量的路由配置信息指向了这个utun*的网络接口。
+之前之所以连接上了 VPN 之后无法正常的访问外网，是因为学校的 VPN 服务器推送了很多的路由，几乎涵盖了从1.*.*.*到255.*.*.*中的所有路由，全部设置为走utun*。即使我的default路由走的是我正常的网口，但是具体的路由的优先级是要比default路由要高的，所以几乎全部都走了 VPN 。
+解决思路 有两个方法可以解决这个问题：
+1	在Docker上运行 VPN 软件进行转发 在本地启动一个Docker，然后让 VPN 运行在 Docker 内，将走服务器IP地址的流量走到 Docker 容器内，然后在容器内走 VPN 出去。这个方法肯定是可行的，不过感觉稍微麻烦了一点，采用了第二个idea
+2	删除多余的路由表 在 VPN 软件启动之后，他不是注册了很多具体的路由嘛，而我的需求只是让服务器流量走 VPN 就可以了，其他的流量不用他管。所以写了一个脚本，在 VPN 软件启动之后运行就行。
+脚本主要实现的功能是，在路由表中匹配 VPN 网口的所有路由，只保留我服务器那一条路由，其他的全部删除，就OK，简单又完美。
+#!/bin/bash # 示例 # 提示用户输入网络接口名称 read -p &amp;#34;请输入 VPN 网络接口名称（例如utun6）: &amp;#34; vpn_interface # 提示用户输入需要保留的服务器IP地址或网段 read -p &amp;#34;请输入需要保留的服务器IP地址或网段（例如192.</description>
+    </item>
+    <item>
+      <title>Docker run hello-world 超时</title>
+      <link>https://sirius1y.top/posts/notes/problems/docker-install/</link>
+      <pubDate>Wed, 25 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/problems/docker-install/</guid>
+      <description>Docker无法连接仓库</description>
+    </item>
+    <item>
+      <title>BLOG迁移之旅</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-blog-v2/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-blog-v2/</guid>
+      <description>时隔一年，云服务器到期，我的博客开始搬服务器了，一场遗忘How to do的危机正在悄无声息地到来...</description>
+    </item>
+    <item>
+      <title>垃圾邮件分类器——使用Transformer模型微调实现</title>
+      <link>https://sirius1y.top/posts/notes/mechine-learning/spamdetector/</link>
+      <pubDate>Sat, 05 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/mechine-learning/spamdetector/</guid>
+      <description>记录一次完整的模型训练的过程，比较简单</description>
+    </item>
+    <item>
+      <title>Wifi神秘消失排查经历</title>
+      <link>https://sirius1y.top/posts/notes/basic/acap/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/basic/acap/</guid>
+      <description>原来AC和AP是这样子的~</description>
+    </item>
+    <item>
+      <title>【go的源码阅读】context的实现：context.go</title>
+      <link>https://sirius1y.top/posts/notes/go-srccode/go-context/</link>
+      <pubDate>Fri, 26 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/go-srccode/go-context/</guid>
+      <description>理解Context 这篇文章介绍的很清楚：深入理解Go Context
+这个比较详细，但是层次不好：理解GO CONTEXT机制
+关于context的使用场景 context的主要使用场景在于：一个任务在处理的过程中可能会启动很多个协程来进行处理。在这个过程中，如果上游的任务想要取消，下游的任务也应当一起取消。context的任务就来了。
+内容介绍 context包的内容可以概括为：1个接口，4个实现，6个方法
+接口 context.Context 一个接口是指：context.Context
+type Context interface { Deadline() (deadline time.Time, ok bool) Done() &amp;lt;-chan struct{} Err() error Value(key interface{}) interface{} } Deadline( ) Deadline会返回一个超时时间，Goroutine获得了超时时间后，例如可以对某些io操作设定超时时间。
+函数签名 Deadline() (deadline time.Time, ok bool)
+Deadline 返回的时间 deadline time.Time 代表这个ctx应该被取消的时间。返回的 ok 如果是 false 表示这个context没有设置deadline。连续调用 Deadline 会返回相同的结果。
+// Deadline returns the time when work done on behalf of this context // should be canceled. Deadline returns ok==false when no deadline is // set.</description>
+    </item>
+    <item>
+      <title>gRPC调用坎坷历程记录</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-grpc/</link>
+      <pubDate>Tue, 23 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-grpc/</guid>
+      <description>protoc代码生成了哪些东西？RPC和RESTful有什么不同？</description>
+    </item>
+    <item>
+      <title>Auth微服务开发记录</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-auth/</link>
+      <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-auth/</guid>
+      <description>引入刷新令牌机制</description>
+    </item>
+    <item>
+      <title>Protobuf与gRPC初次使用</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-protorpc/</link>
+      <pubDate>Tue, 18 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-protorpc/</guid>
+      <description>protoc代码生成了哪些东西？RPC和RESTful有什么不同？</description>
+    </item>
+    <item>
+      <title>golang八股文</title>
+      <link>https://sirius1y.top/posts/notes/jobhunter/go8/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/jobhunter/go8/</guid>
+      <description>Golang goroutine内存泄漏 slice导致
+获取长字符串中的一段，导致字符串未释放；
+获取长slice中的一段导致长slice未释放；
+在长切片中新建sllice导致泄漏
+channel导致
+发送不接受，接收不发送，nil channel
+从 channel 里读，但是同时没有写入操作 向 无缓冲 channel 里写，但是同时没有读操作 向已满的 有缓冲 channel 里写，但是同时没有读操作 select操作在所有case上都阻塞() goroutine进入死循环，一直结束不了 向 nil channel 发送和接收数据都将会导致阻塞。这种情况可能在我们定义 channel 时忘记初始化的时候发生。 可见，很多都是因为channel使用不当造成阻塞，从而导致goroutine也一直阻塞无法退出导致的。
+传统同步方式sync.mutex，sync.waitgroup导致
+用了mutex加lock之后忘记unlock；
+在一开始设置了具体数目的wg.wait(n)，但是有没有写够足够数量n的wg.Done()，导致wg.Wait()一直等待下去。（正确方式可以使用wg.Add(1)配合wg.Done使用）
+Go调度器的GMP 在Go语言中，GPM通常指的是Goroutine、Processor和Machine，这是Go调度器（scheduler）的核心组成部分。下面是对每个部分的详细介绍：
+Goroutine (G):
+Goroutine是Go语言中的轻量级线程，由Go运行时管理。它们是并发的基本单位，可以被创建和销毁，而无需操作系统级别的线程开销。Goroutine的创建和销毁非常快速，因此可以轻松地创建成千上万个Goroutine。 Goroutine的调度是协作式的，这意味着一个Goroutine在执行时会自愿放弃CPU，让其他Goroutine有机会执行。这种协作式调度使得Go语言能够高效地利用多核处理器。 Processor (P):
+Processor是Go调度器中的一个抽象概念，代表一个逻辑处理器。每个P都有一个本地运行队列，用于存储待执行的Goroutine。P的数量可以通过环境变量或运行时设置来调整，通常设置为CPU的核心数。 P的主要作用是管理Goroutine的执行。当一个Goroutine被调度到P上时，P会将其分配给一个可用的Machine（M）来执行。 Machine (M):
+Machine代表一个操作系统线程。M与P关联，负责执行Goroutine。一个M可以与多个P关联，但在任何给定时间，一个M只能执行一个P的Goroutine。 M的主要作用是执行Goroutine的代码。当一个Goroutine被调度到M上时，M会执行该Goroutine的代码，直到该Goroutine自愿放弃CPU或被抢占。 Go调度器的工作原理是将Goroutine（G）分配到Processor（P）上，然后由Machine（M）执行。这种设计使得Go语言能够高效地利用多核处理器，并实现高并发。
+在 Go 语言的运行时系统中，Goroutine（简称 G）有多种状态，用于描述它在不同时间点的执行情况。这些状态在 Go 的调度器（GMP 模型）中扮演重要角色。GMP 模型由 Goroutine（G）、工作线程（M）和处理器（P）三部分组成。以下是 G 的主要状态及其转变过程，以及它们与 GMP 模型的关系。
+G 的状态 _Gidle：空闲状态。Goroutine 尚未被使用或已经完成执行，等待被分配新任务。 _Grunnable：可运行状态。Goroutine 已经准备好运行，等待被调度器选中运行。 _Grunning：运行状态。Goroutine 正在运行中。 _Gsyscall：系统调用状态。Goroutine 正在执行系统调用，处于阻塞状态，不会被调度器调度。 _Gwaiting：等待状态。Goroutine 在等待某个条件（例如通道操作、定时器、网络 I/O 等）完成。 _Gdead：死亡状态。Goroutine 已经完成执行，无法再被重新使用。 _Gcopystack：堆栈复制状态。Goroutine 的堆栈正在被复制，以调整其大小。 状态转变及其与 GMP 的关系 创建 Goroutine _Gidle -&amp;gt; _Grunnable 创建一个新的 Goroutine，并将其状态设置为 _Grunnable，表示该 Goroutine 准备好运行。 由 P 将新的 Goroutine 添加到其本地运行队列或全局运行队列中。 g := newGoroutine() g.</description>
+    </item>
+    <item>
+      <title>system-design-prime</title>
+      <link>https://sirius1y.top/posts/notes/jobhunter/system-design-prime/</link>
+      <pubDate>Wed, 12 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/jobhunter/system-design-prime/</guid>
+      <description>system-design-prime 可用性模式 有两种支持高可用性的模式: 故障切换（fail-over）和复制（replication）。
+故障切换 工作到备用切换（Active-passive） 关于工作到备用的故障切换流程是，工作服务器发送周期信号给待机中的备用服务器。如果周期信号中断，备用服务器切换成工作服务器的 IP 地址并恢复服务。
+宕机时间取决于备用服务器处于“热”待机状态还是需要从“冷”待机状态进行启动。只有工作服务器处理流量。
+工作到备用的故障切换也被称为主从切换。
+双工作切换（Active-active） 在双工作切换中，双方都在管控流量，在它们之间分散负载。
+如果是外网服务器，DNS 将需要对两方都了解。如果是内网服务器，应用程序逻辑将需要对两方都了解。
+双工作切换也可以称为主主切换。
+缺陷：故障切换 故障切换需要添加额外硬件并增加复杂性。 如果新写入数据在能被复制到备用系统之前，工作系统出现了故障，则有可能会丢失数据。 复制 主─从复制和主─主复制 这个主题进一步探讨了数据库部分:
+主─从复制 主─主复制 CDN 内容分发网络 内容分发网络 CDN（英语：Content Delivery Network或Content Distribution Network）是一个全球性的代理服务器分布式网络，它从靠近用户的位置提供内容。通常，HTML/CSS/JS，图片和视频等静态内容由 CDN 提供，虽然亚马逊 CloudFront 等也支持动态内容。CDN 的 DNS 解析会告知客户端连接哪台服务器。
+CDN 的分类 Pull CDN 当用户第一次访问CDN的时候，CDN上是没有资源的，这时候CDN会去向服务器拉取资源。之后的访问就直接在CDN服务器中返回就可以。
+push CDN 服务器可以在用户访问资源之前，把资源push给CDN服务器。
+如何选择哪种CDN？ 关于使用哪种 CDN 类型的决定在很大程度上取决于流量和下载量。从长远来看，托管视频和播客（又名大量下载）的旅游博客会发现推送 CDN 更便宜、更高效，因为在您主动将其推送到 CDN 之前，CDN 不会重新下载内容。拉式 CDN 可以通过在 CDN 服务器上保留最受欢迎的内容来帮助高流量小下载的网站。内容的后续更新（或“拉取”）频率不足以使成本超过推送 CDN 的成本。
+LoadBlancer 负载均衡器 负载均衡器将传入的请求分发到应用服务器和数据库等计算资源。无论哪种情况，负载均衡器将从计算资源来的响应返回给恰当的客户端。负载均衡器的效用在于:
+防止请求进入不好的服务器 防止资源过载 帮助消除单一的故障点 通常会设置采用工作─备用 或 双工作 模式的多个负载均衡器，以免发生故障。</description>
+    </item>
+    <item>
+      <title>MongoDB快速上手</title>
+      <link>https://sirius1y.top/posts/notes/database/use-mongodb/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/database/use-mongodb/</guid>
+      <description>MongoDB安装 MongoDB官方的安装指南
+Navicat客户端使用 可以在navicat上连上本地的mongodb使用，直观简单
+Easy use (Terminal) 在终端中启动mongodb终端：
+mongosh 以下是一些 MongoDB 的简单常用命令，可以帮助你快速上手并管理 MongoDB 数据库：
+启动 MongoDB shell mongo 基本数据库操作 列出所有数据库 show dbs 切换到指定数据库（如果数据库不存在则创建新数据库） use mydatabase 显示当前数据库 db 删除当前数据库 db.dropDatabase() 集合操作 创建集合 db.createCollection(&amp;#39;mycollection&amp;#39;) 列出所有集合 show collections 删除集合 db.mycollection.drop() 文档操作 插入文档 db.mycollection.insertOne({name: &amp;#34;John&amp;#34;, age: 30}) db.mycollection.insertMany([{name: &amp;#34;Alice&amp;#34;, age: 25}, {name: &amp;#34;Bob&amp;#34;, age: 27}]) 查找文档 db.mycollection.find() db.mycollection.find({name: &amp;#34;John&amp;#34;}) 查找并格式化输出 db.mycollection.find().pretty() 更新文档 db.mycollection.updateOne({name: &amp;#34;John&amp;#34;}, {$set: {age: 31}}) db.mycollection.updateMany({name: &amp;#34;Alice&amp;#34;}, {$set: {age: 26}}) 替换文档 db.mycollection.replaceOne({name: &amp;#34;John&amp;#34;}, {name: &amp;#34;John&amp;#34;, age: 32, city: &amp;#34;New York&amp;#34;}) 删除文档 db.</description>
+    </item>
+    <item>
+      <title>Flutter开发</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-aorb-flutter/</link>
+      <pubDate>Fri, 24 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-aorb-flutter/</guid>
+      <description>记录使用Flutter开发Aorb应用前端的过程</description>
+    </item>
+    <item>
+      <title>【go的源码阅读】channel的实现：chan.go</title>
+      <link>https://sirius1y.top/posts/notes/go-srccode/go-channel/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/go-srccode/go-channel/</guid>
+      <description>channel的简单使用 在Go语言中，通道（channel）是一种用于在goroutine之间进行通信和同步的机制。下面是一些简单的通道使用示例，以及它们对应的底层函数调用。
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;time&amp;#34; ) func main() { ch := make(chan int) // 创建通道 go func() { ch &amp;lt;- 42 // 发送数据到通道 }() go func() { value := &amp;lt;-ch // 从通道接收数据 fmt.Println(&amp;#34;Received:&amp;#34;, value) }() time.Sleep(1 * time.Second) // 等待goroutine完成 close(ch) // 关闭通道 } 底层函数调用 创建通道：
+ch := make(chan int) 底层调用：
+makechan(elemtype, size) 发送数据到通道：
+ch &amp;lt;- 42 底层调用：
+chansend(c *hchan, ep unsafe.Pointer, block bool, callerpc uintptr) bool 从通道接收数据：</description>
+    </item>
+    <item>
+      <title>计算机基础知识</title>
+      <link>https://sirius1y.top/posts/notes/jobhunter/cs-basic-notes/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/jobhunter/cs-basic-notes/</guid>
+      <description>计算机网络 TCP TCP为什么要进行三次握手？ 三次握手是建立网络连接的过程，确保双方能够正确地进行数据传输。
+第一次握手SYN：客户端向服务端发送SYN请求同步信号，并初始化客户端序列号；
+第二次握手SYN+ACK：服务端收到了客户端发送的SYN信号后回复ACK确认收到，同时也发送SYN，指定自己的初始序列号；
+第三次握手ACK：客户端收到服务端的ACK+SYN后，回复一个ACK，表示已经收到服务端的ACK+SYN。这个包的序列会加一，表示客户端已经准备好和服务端进行数据传输了。
+为什么是三次握手？不是两次或者四次 原因1：阻止重复的历史连接初始化
+如果是两次握手的话，因网络堵塞的问题，客户端发送了两次SYN给服务端，服务端收到了第一个SYN的时候，就回复SYN+ACK给客户端，并进入了ESTABLISHED状态。而客户端这边收到了服务端旧的ACK+SYN，会认为这是历史连接从而发送RST报文，使服务端断开连接。
+原因2：同步双方的序列号
+TCP协议的双方都必须要维护一个序列号。两次握手只能保证一方的序列号被接收。
+原因3：避免资源浪费
+如果是两次握手，那么服务端在收到SYN后回复ACK的时候就要主动建立连接，要是网络堵塞，对面发了好多个SYN来，那完蛋了，建立了好多个TCP连接，造成了资源浪费。
+TCP的四次挥手 四次挥手是指在TCP断开连接的过程中发生的，一般是由客户端发起，服务端完成最后的断开。
+因为TCP是全双工通信，所以需要两边都要通知对方停止数据传输，故需要四次挥手保证断开连接。
+具体流程：（刚开始双方都处于ESTABLISHED状态）
+1.客户端向服务端发起FIN报文，表示客户端不再发送数据；（客户端进入FIN_WAIT_1中状态）
+2.服务端收到FIN报文后，回复一个ACK表示收到；（服务端进入CLOSED_WAIT状态，客户端收到ACK后进入FIN_WAIT_2状态）
+3.服务端向客户端发起FIIN报文，表示服务端也不再发送数据；（服务端进入LAST_ACK状态）
+4.客户端收到服务端的FIN报文后，也回复一个ACK。（客户端进入TIME_WAIT状态）
+发送端在最后会进入到TIME_WAIT的状态，
+为什么有TIME_WAIT状态？ 原因1：保证历史连接中的数据不会干扰下一次连接。
+原因2：保证被动关闭连接。如果服务端没有TIME_WAIT状态直接close的话，要是服务端没有收到客户端最后一次发送的ACK会重发FIN，如果服务器已经处于CLOSE状态，就会返回RST报文，RST报文会被服务端认定为错误。
+为什么TIME_WAIT的时间是2MSL？ MSL是报文的最大生存时间，超过这个时间的报文都会被丢弃。两个MSL时间可以保证客户端发送的ACK报文可以到达服务端+服务端要是在第一个MSL中没有收到ACK可以重发一次FIN到客户端，并保证能够到达客户端。
+HTTP GET方法和POST方法有什么区别？ 用途：GET方法一般用于请求服务器上的数据；POST方法用于向服务器提交数据。
+请求参数：GET方法的请求参数一般放在URL中，POST的请求参数一般放在请求体中。
+幂等：多次执行相同的操作，结果都相同。
+幂等行：GET方法是安全幂等的，POST不是幂等的。
+缓存机制：GET请求会被浏览器主动cache，如果下一次传输的数据相同，就会返回浏览器中的内容；而POST不会。
+GET的请求参数会被保存在浏览器的历史记录中，而POST中的参数不会保留
+时间消耗：GET产生一个TCP数据包，浏览器会把header和data一起发送出去，服务器相应200；
+POST产生两个TCP数据包，浏览器先发送hader，服务器相应100（继续发送），浏览器再发送data，服务器相应200
+什么情况下会使用POST读取数据？ 当查询的数据量很多，GET方式的URL太长太大，GET方式大概是4KB，POST上限是8MB 当对数据的安全性有更高要求的时候，可以在POST的请求体中对数据进行加密 HTTP版本对比 HTTP/0.9 只支持GET方法 HTTP/1.0 支持多种请求方式 引入了请求头和响应头 引入状态码 不支持长连接
+HTTP/1.1 支持长连接 管道网络传输（可以同时发送A、B请求，不必等待A响应） 但是管道网络传输存在队头阻塞的问题
+头部冗余
+没有请求优先级
+请求只能通过客户端推送，服务器不能主动推送
+HTTP/2 使用HPACK进行头部压缩 把数据部分压缩成头信息帧和数据帧 并发传输：引入了stream的概念，多个Stream复用一条TCP连接，通过streamID识别，不同stream的帧可以乱序发送 支持服务器推送 HTTPS 和HTTP对比 优点
+安全性更高
+缺点
+HTTPS涉及到了加解密的过程，所以对服务器的负荷会高一些；
+握手阶段的延迟比较高，因为还有SSL/TLS握手;
+加密过程 HTTPS采用了对称加密+非对称加密的混合加密模式</description>
+    </item>
+    <item>
+      <title>知识复习：正则表达式</title>
+      <link>https://sirius1y.top/posts/notes/notes/regularexpressions/</link>
+      <pubDate>Sat, 30 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/regularexpressions/</guid>
+      <description>复习正则表达式的用法</description>
+    </item>
+    <item>
+      <title>全国大学生市场调研大赛-数据分析</title>
+      <link>https://sirius1y.top/posts/notes/data-analysis/wumengtrip/</link>
+      <pubDate>Thu, 21 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/data-analysis/wumengtrip/</guid>
+      <description>记录在正大杯中使用到的一些数据分析思路方法</description>
+    </item>
+    <item>
+      <title>使用LaTex制作中文简历</title>
+      <link>https://sirius1y.top/posts/notes/tools/latex_resume/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/tools/latex_resume/</guid>
+      <description>这篇文章记录了简单的LaTex语法，以及我修改模板的过程</description>
+    </item>
+    <item>
+      <title>使用Selenium库爬取网易云音乐和携程旅行评论</title>
+      <link>https://sirius1y.top/posts/notes/data-analysis/spider/</link>
+      <pubDate>Wed, 14 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/data-analysis/spider/</guid>
+      <description>记录使用Selenium爬取网易云和携程旅行评论的过程</description>
+    </item>
+    <item>
+      <title>点击排行榜scoreboard</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-scoreboard/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-scoreboard/</guid>
+      <description>本文记录使用vue&#43;gin&#43;redis搭建了一个简单的点击排行榜，虽然有点无聊，但是两个幼稚鬼玩好好笑hhh</description>
+    </item>
+    <item>
+      <title>在linux上配置clash，通过Dashboard控制</title>
+      <link>https://sirius1y.top/posts/notes/problems/problem-clash_for_linux/</link>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/problems/problem-clash_for_linux/</guid>
+      <description>记录配置clash的过程</description>
+    </item>
+    <item>
+      <title>在docker中安装redis</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-redis-ondocker/</link>
+      <pubDate>Thu, 04 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-redis-ondocker/</guid>
+      <description>记录部署在docker中部署redis的过程，并使用k8s进行容器编排管理</description>
+    </item>
+    <item>
+      <title>Ubuntu服务器命令小记</title>
+      <link>https://sirius1y.top/posts/notes/ubuntu/ubuntu-commands/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/ubuntu/ubuntu-commands/</guid>
+      <description>记录ubuntu用作服务器时候的一些常用命令</description>
+    </item>
+    <item>
+      <title>内网穿透——frp和花生壳实现从外部网络访问家中主机</title>
+      <link>https://sirius1y.top/posts/notes/network/net-frp/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-frp/</guid>
+      <description>记录分别使用花生壳和frp实现内网穿透</description>
+    </item>
+    <item>
+      <title>ubuntu输入法RIME中州韵配置ibus-rime</title>
+      <link>https://sirius1y.top/posts/notes/ubuntu/ibus-rime/</link>
+      <pubDate>Tue, 19 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/ubuntu/ibus-rime/</guid>
+      <description>记录安装配置RIME的过程</description>
+    </item>
+    <item>
+      <title>把blog部署到华为云nginx</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-blog/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-blog/</guid>
+      <description>这篇文章记录了把本地的博客部署到华为云ubuntu的nginx</description>
+    </item>
+    <item>
+      <title>Docker和K8S部署</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-dockerk8s/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-dockerk8s/</guid>
+      <description>这篇文章部署K8S的过程</description>
+    </item>
+    <item>
+      <title>hadoop部署</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-hadoophive/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-hadoophive/</guid>
+      <description>这篇文章记录了在三台云服务器上部署hadoop的过程</description>
+    </item>
+    <item>
+      <title>在云服务器上部署mysql</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-mysql-oncloud/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-mysql-oncloud/</guid>
+      <description>这篇文章记录了在两台主机上部署mysql</description>
+    </item>
+    <item>
+      <title>第一次全栈开发记录</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-coursesystem/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-coursesystem/</guid>
+      <description>记录第一次全栈开发，主要记录了前端部分所遇到的问题</description>
+    </item>
+    <item>
+      <title>人工智能期末复习</title>
+      <link>https://sirius1y.top/posts/notes/notes/artificial_intelligence/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/artificial_intelligence/</guid>
+      <description>基本概念 语义角色 指有关语言成分在语句所表达的事件中所扮演的参与者角色
+在自然语言处理中对自然语言进行划分处理称为各个语义角色，其中每个语义角色相互依赖，相互关联
+常见的语义角色类型有：施事、受事、与事、工具、方式、时间、处所、结果、目的、原因等 例如对于语句：小明昨天晚上在公园遇到了小红
+就可以分为Agent、Time、Location、Predicate、Patient等角色
+语义角色从一开始的6个扩充到了现在的13个，依据是美国语言学家查理斯·费尔莫尔提出的“格语法”
+机器学习 让计算机能够像人一样自动获取新知识，并且在实践中不断完善自我和增强能力 启发函数&amp;amp;估值函数 启发函数：对当前结点到大目标结点未来可能需要付出的代价的估计
+对于同一个问题，可能有不同的启发函数，不同的启发函数带来的效果良莠不齐，而各个节点的代价函数是统一确定的，因此选择和优化启发函数是至关重要的
+估值函数：为了防止在单独利用启发函数的时候误入歧途，会将启发函数和代价函数结合生成估值函数；即初始结点到达结点x处已经付出的代价与结点x到达目标结点的接近程度估计值的总和
+语义标注 在NLP领域中对于自然语言进行分割，并且对每个部分都判断是什么类型的语义角色
+语义角色标注是一种浅层的语义分析技术，它只标注谓词（谓语动词、名词、形容词）的语义角色
+例如：
+昨天张三在家吃苹果。
+谓语动词“吃”的语义角色有：施事-张三，受事-苹果，时间-昨天，处所-家
+博弈树 将双人完备的信息博弈过程用图表示出来，能得到一颗与或树，称为博弈树
+在博弈树中，下一步该MAX走步的结点称为MAX结点；下一步该MIN走步的结点称为MIN结点 博弈树特点： 初始状态为初始结点 博弈树中的或结点和与结点是逐层交替出现的 整个博弈过程都是站在某一方的立场上，所有能使自己获胜的都是本源问题，相应的结点都是可解结点；所有会使对方获胜的结点都是不可解结点 博弈树采用变对子结点进行估值函数计算，再扩展结点的方法，使用的是极大极小化分析，因此引申出了阿尔法-贝塔剪枝
+阿尔法-贝塔剪枝： 阿尔法剪枝： 对于一个MIN结点，如果能够推导出其上确界b，并且b不大于MIN结点的父节点下确界a（即a &amp;gt;= b），则不必再扩展MIN结点的其他子结点了，剪枝即可 贝塔剪枝： 对于一个MAX结点，如果能够推导出其下确界a，并且a不小于MAX结点的父节点上确界b（即a &amp;gt;= b），则不必再扩展MAX结点的其他子结点了，剪枝即可 专家系统 专家系统的概念：
+专家系统是一种智能的计算机程序，它运用知识和推理来解决只有专家才能解决的复杂问题
+专家系统的组成：
+专家&amp;mdash;-知识库&amp;mdash;-推理机&amp;mdash;-系统用户
+专家系统的特点：
+有专家水平的专业知识、能进行有效的推理、启发性、灵活性、透明性、交互性
+知识库与推理机分离、具有解释功能
+专家系统的类型：
+按照解决类型划分：解释、诊断、预测、设计、规划、控制&amp;hellip;&amp;hellip; 按照应用类型划分：化学、电子学、地质学&amp;hellip;&amp;hellip; 按照系统体系结构划分：集中式、分布式、云计算 按照知识表示形式划分：基于规则、基于一阶谓词、基于框架、基于语义网 按照采用技术划分：符号推断、神经网络 专家系统实例：
+医学专家系统——MYCIN 系统使用INTER LISP语言编写 推理策略：反向推理、深度优先的搜索 地质勘探专家系统——PROSPECTOR 推理方式：似然推理、逻辑推理、上下文推理 希望树 在启发式搜索与或树的过程中，有希望成为最优解树的部分结点所组成的树
+定义如下：
+初始结点S0一定在希望树中 如果结点x在希望树中，则一定有： 如果x是具有子结点的或结点，则其具有最小代价的子结点一定在希望树中 如果x是具有子结点的与结点，则其全部子结点都在希望树中 与或树的有序搜索过程本质上是寻找希望树的过程，因此随着搜索深度的增加，希望树也会随之变化
+Agent Agent的概念：
+一种能够在一定环境中自主运行和自主交互，以满足其设计目标的计算实体
+按照属性区分Agent：</description>
+    </item>
+    <item>
+      <title>操作系统学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/notes/operating_system/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/operating_system/</guid>
+      <description>操作系统 第一章 计算机系统概述 1.1 操作系统 1.1.1 操作系统的概念和功能 概念 操作系统（Operating System， OS）是指控制和管理整个计算机系统的硬件和软件资源，并合理地组织调度计算机的工作和资源的分配；以提供给用户和其他软件方便的接口和环境；它是计算机系统中最基本的系统软件。
+功能和目标 ①操作系统是系统资源的管理者 ②向上层提供方便易用的服务 封装思想：操作系统把一些丑陋的硬件功能封装成简单易用的服务，使用户能更方便地使用计算机，用户无需关心底层硬件的原理，只需要对操作系统发出命令即可。
+GUI：图形化用户接口（Graphical User Interface） 用户可以使用形象的图形界面进行操作，而不再需要记忆复杂的命令、参数。 例子：在Windows 操作系统中，删除一个文件只需要把文件“拖拽”到回收站即可。
+联机命令接口=交互式命令接口：用户说一句，系统跟着做一句
+脱机命令接口=批处理命令接口：用户说一堆，系统跟着做一堆
+程序接口：可以在程序中进行系统调用来使用程序接口。普通用户不能直接使用程序接口，只能通过程序代码间接使用。
+如：写C语言“Hello world”程序时，在printf 函数的底层就使用到了操作系统提供的显式相关的“系统调用”
+③是最接近硬件的一层软件 需要实现对硬件机器的拓展 没有任何软件支持的计算机称为裸机。在裸机上安装的操作系统， 可以提供资源管理功能和方便用户的服务功能，将裸机改造成功能 更强、使用更方便的机器 通常把覆盖了软件的机器成为扩充机器，又称之为虚拟机
+1.1.2 操作系统的特征 基本特征 并发、共享、虚拟、异步
+并发 两个或者多个事件在同一时间间隔内发生
+使得系统具有处理和调度多个程序同时执行的能力
+操作系统的并发是通过分时实现的
+注意：并发是指在一个时间段并行是指在同一个时刻并行是指系统具有同时执行或操作（硬件支持：多流水线或者多处理机）
+重要考点
+单核CPU同一时刻只能执行一个程序，各个程序只能并发地执行
+多核CPU同一时刻可以同时执行多个程序，多个程序可以并行地执行
+共享 互斥共享方式
+例如打印机、磁带，同一时刻只能供一个进程对资源进行访问
+这种资源称作：临界资源或者独占资源
+同时访问方式
+一段时间内允许多个进程对资源进行访问
+典型代表：磁盘设备重入码编写的文件
+虚拟 一个物理上的实体变为若干逻辑上的对应物，这种技术也被称为虚拟技术
+虚拟处理器：采用多道程序并发的方式，让每个终端用户感觉到有多个处理器 时分复用技术
+虚拟存储器：将物理存储变为虚拟存储器，逻辑上扩充存储器用 空分复用技术
+也可以将一台IO设备虚拟为多台逻辑上的IO设备，并允许每个用户占用一台逻辑上的IO设备
+异步 在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，
+多道程序走走停停，进程以不可预知的速度向前进
+并发和共享的关系 并发性指计算机系统中同时存在着多个运行着的程序。 共享性是指系统中的资源可供内存中多个并发执行的进程共同使用。
+互为存在条件
+并发和虚拟的关系 如果失去了并发性，则一个时间段内系统中只需运行一道程序，那么就失去了实现虚拟性的意义了。因此，没有并发性，就谈不上虚拟性
+并发和异步的关系 只有系统拥有并发性，才有可能导致异步性。</description>
+    </item>
+    <item>
+      <title>GNS3&#43;cisco 动态路由实验RIP/OSRF</title>
+      <link>https://sirius1y.top/posts/notes/network/net-riposrf-ongns3/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-riposrf-ongns3/</guid>
+      <description>这篇文章记录了使用GNS3软件进行动态路由实验。</description>
+    </item>
+    <item>
+      <title>GNS3静态路由实验</title>
+      <link>https://sirius1y.top/posts/notes/network/net-static_router-ongns3/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-static_router-ongns3/</guid>
+      <description>这篇文章记录了使用GNS3软件进行静态路由实验</description>
+    </item>
+    <item>
+      <title>常用的网络命令</title>
+      <link>https://sirius1y.top/posts/notes/network/network-commands/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/network-commands/</guid>
+      <description>ipconfig, ifconfig, ip ipconfig是windows中的命令，linux上是ifconfig，但ip命令比ifconfig更强大，旨在取代ifconfig命令。
+ping ping命令是DOS命令，一般用于检测网络是否通畅以及网络连接速度，结果只越大，说明速度越慢。它使用网络层的ICMP协议。
+ping [参数选项] [主机名或IP地址] linux 参数 含义 -c 设置完成要求回应的次数 -i 指定收发信息的间隔时间 -s 设置数据包的大小 -w 在设定的秒后退出 windows 参数 含义 -t 连续对IP地址执行ping命令，直到用户以&amp;lt;control+c&amp;gt;键强制中断 -l 指定ping命令的数据长度 -n 执行特定次数的ping命令 netstat netstat 用来查看当前操作系统的网络连接状态、路由表、接口统计等信息，来自于 net-tools 工具包，ss 是 netstat 的升级版。
+参数 含义 -a 显示主机中所有活动的网络连接信息 (包括监听、非监听状态的服务端口) -n 以数字的形式显示相关的主机地址、端口等信息 -p 显示与网络连接相关联的进程号、进程名称信息 (该选项需要 root 权限) -l 显示处于监听 (Listen) 状态的网络连接及端口信息 -t 查看 TCP (Transmission Control Protocol，传输控制协议) 相关的信息 -u 显示 UDP (User Datagram Protocol，用户数据报协议) 协议相关的信息 -r 显示路由表信息 -i 显示网卡列表 -g 显示组播组的关系 -s 显示网络统计信息 常用命令选项：</description>
+    </item>
+    <item>
+      <title>SQL学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/database/use-sql/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/database/use-sql/</guid>
+      <description>导出数据库为sql文件，在命令行中执行：
+mysqldump -u root -p course-system &amp;gt; course-system.sql DDL(Data Definition Language)数据定义语言 操作库 -- 创建库 create database db1; -- 创建库是否存在，不存在则创建 create database if not exists db1; -- 查看所有数据库 show databases; -- 查看某个数据库的定义信息 show create database db1; -- 修改数据库字符信息 alter database db1 character set utf8; -- 删除数据库 drop database db1; -- 使用某一数据库 use db1; 操作表 -- 创建表 create table student( id int, name varchar(32), age int , score double(4,1), birthday date, insert_time timestamp ); -- 查看表结构 desc 表名; -- 查看创建表的SQL语句 show create table 表名; -- 修改表名 alter table 表名 rename to 新的表名; -- 添加一列 alter table 表名 add 列名 数据类型; -- 删除列 alter table 表名 drop 列名; -- 删除表 drop table 表名; drop table if exists 表名 ; DML(Data Manipulation Language)数据操作语言 增加 insert into -- 写全所有列名 insert into 表名(列名1,列名2,.</description>
+    </item>
+    <item>
+      <title>计算机网络期末复习</title>
+      <link>https://sirius1y.top/posts/notes/network/school-network-review/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/school-network-review/</guid>
+      <description>https://www.yuque.com/docs/share/a0aff20d-44da-46c6-a65a-67e69dd0c6f3?# 《基于cch的计网复习》划了上次考点
+题型：判断 选择 填空 计算题
+复习课 拍照 中英文 英文缩写 英文全称 中文 TDM Time Division Multiplexing 时分复用 CDMA Code Division Multiple Access 码分多址 CSMA/CD Carrier Sense Multiple Access with Collision Detection 载波监听 多点接入 / 碰撞检测 MAC Medium Access Control 媒体接入控制 RTT Round Trip Time 往返时间 ARP Address Resolution Protocol 地址解析协议 IP Internet Protocol 网际协议 ICMP Internet Control Message Protocol 网际控制报文协议 TCP Transmission Control Protocol 传输控制协议 UDP User Datagram Protocol 用户数据报协议 RIP Routing Information Protocol 路由信息协议 BGP Border Gateway Protocol 边界网关协议 OSPF Open Shortest Path First 开放最短路径优先 VLAN Virtual Local Area Network 虚拟局域网 DNS Domain Name System 域名系统 知识点 语雀知识点链接：https://www.</description>
+    </item>
+    <item>
+      <title>mysql用户被锁定</title>
+      <link>https://sirius1y.top/posts/notes/problems/mysql-user-was-blocked/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/problems/mysql-user-was-blocked/</guid>
+      <description>突然发现root账户莫名其妙登不上去</description>
+    </item>
+    <item>
+      <title>Git正确使用姿势</title>
+      <link>https://sirius1y.top/posts/notes/tools/git-use/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/tools/git-use/</guid>
+      <description>记录使用git的常用命令，以及对git的工作模式进行简单讲解</description>
+    </item>
+    <item>
+      <title>在终端中合并PR</title>
+      <link>https://sirius1y.top/posts/notes/tools/git-pr/</link>
+      <pubDate>Sun, 27 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/tools/git-pr/</guid>
+      <description>关于如何在终端中合并团队成员的PR</description>
+    </item>
+    <item>
+      <title>使用GORM操作数据库</title>
+      <link>https://sirius1y.top/posts/notes/database/use-gorm/</link>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/database/use-gorm/</guid>
+      <description>记录第一次使用ORM框架，以及GORM的第一次</description>
+    </item>
+    <item>
+      <title>Kafka消息队列</title>
+      <link>https://sirius1y.top/posts/notes/basic/kafkainfo/</link>
+      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/basic/kafkainfo/</guid>
+      <description>消息队列的特性 卡夫卡(Kafka)作为消息队列的一种，拥有异步、削峰、解耦三种特性，并依靠这些特性，他经常在搜索、直播、订单和支付服务。
+**异步：**不同于同步通信的需要等待接收方响应，异步通信的发送方在发送消息到消息队列后，不等待接收方响应，而是继续进行其他操作。接收方仅需要从消息队列中拉取消息即可。 异步操作减少了流程长度，提高消息的吞吐量和效率。 **削峰：**对于突发的消息高峰，消息队列起到了存储请求的作用，使后台能以稳定的速率处理消息，从而减少了服务器的高峰负担，提高系统的稳定性。 解耦：解耦合即降低各个组件之间的依赖。使用消息队列，发送者和接收者各种把自己的消息发送给消息队列，从而实现解耦，方便各自开发部署，避免一方接口发生错误而影响多方，实现错误隔离。 卡夫卡的基本概念 **逻辑队列(Topic)：**可以建立不同的逻辑队列，存储于物理集群中。 **物理集群(Cluster)：**可建立多个逻辑队列。 **生产者(Producer)：**发送消息到逻辑队列。 **消费者(Consumer)&amp;amp;消费者组(Consumer Group)：**消费逻辑队列内的消息，各个消费者组互不干扰。 **Offset：**记录消息在有序序列Partition中的相对位置，每个Topic可分为多个Partition。Offset是消息的唯一ID，并在序列中严格递增。搜索Offset采用二分查找找到小于目标Offset的最大索引位置（时间戳索引类似）。 **Replica：**相当于副本，保证集群中节点上的 Partition 数据不因故障丢失。每个Partition有一个Replica-Leader，用于写入，同时拥有多个Follower用于记录Leader。如果Follower数据与Leader差距过大则踢出ISR。Replica又以log日志文件存储。 卡夫卡的消费模式 卡夫卡消息队列有两种最常见的消费模式。
+**一对一：**生产者将消息发送到消息队列后，由消费者从队列中拉取并消费，然后信息会被删除。
+一对多：即发布-订阅模式。生产者将消息发送到逻辑队列(Topic)（逻辑队列存储在Cluster物理集群中），可以被多个消费者订阅，从而实现每个消费者独立从该主题中拉取消息，值得注意的是该模式下消息并不会在消费后立刻删除，而是会在删除前保留一段时间。
+然而在实际业务中，这两种消费模式并不能覆盖所有常业务场景，因此也会衍生出如竞争消费和优先级消费等高级模式。
+卡夫卡消息分配 **手动分配：**通过手动分配完成哪个consumer消费哪个Partition。缺点是当Consumer节点故障后，Partition数据流受影响；当出现新的Consumer，需要重新分配Partition。 **Rebalance：**通过设立Coordinator，自动识别故障的consumer节点或新增的consumer，实现自动分配。Consumer端应用程序在提交位移时，其实是向 Coordinator 所在的 Broker 提交位移。同样地，当 Consumer 应用启动时，也是向 Coordinator 所在的 Broker 发送各种请求，然后由 Coordinator 负责执行消费者组的注册、成员管理记录等元数据管理操作。 提高卡夫卡吞吐量和稳定性的方法 **Producer：**批量发送（降低io次数）、数据压缩（降低带宽流量）。 **Broker：**顺序写（提高吸入速度），消息索引，零拷贝。 **Consumer：**Rebalance分配。 卡夫卡的缺点 **重启操作：**重启broker后，Leader切换。与此同时数据仍在写入，导致重启的broker和当前的Leader数据产生差异，需要重新追赶后才能回切（由于其他broker也有可能需要重启），导致需要大量时间。 **替换、扩容、缩容操作：**替换与重启操作类似，不过由于是重新写入，所以需要的时间更多。扩容和缩容都需要进行复制操作，因此也需要大量时间。 **负载不均衡问题：**为降低某个Partition的IO写入而进行迁移，但同时也会引入新的IO负载，陷入恶性循环，需要复杂的解决方案。 缺点总结：
+卡夫卡运维成本高。 负载不均衡问题严重。 没有缓存，依赖页缓存Page Cache。 Controller、Coordinator和Broker在同一进程中，IO性能下降。 </description>
+    </item>
+    <item>
+      <title>关于对象存储</title>
+      <link>https://sirius1y.top/posts/notes/basic/objectstore/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/basic/objectstore/</guid>
+      <description>在做短视频项目的时候，我总是有个疑问：用户上传的视频我要存储在哪里呢？作为开发小白，目前只知道要存放数据就到DB里面去，那我想“那我的视频文件也要存储到MySQL里面去嘛？”emm，这的确是一个大难题，不过在互联网技术发达的今天，感谢各大论坛的支持，让我了解到了视频、图像这类非结构化数据最好是对象存储。
+在此，你一定有一些疑惑：
+为什么视频不用mysql这类数据库进行存储呢？ 对象存储是什么，使用它存储非结构化数据有什么好处呢？ 为什么不用MySQL存储非结构化数据？ 首先哈，mysql人家本来就是用来存储结构化数据的，视频文件是一种非结构化数据。
+结构化数据/非结构化数据/半结构化数据 结构化数据： 结构化数据是以清晰、预定义格式存储的数据。它通常以表格、数据库或电子表格的形式存在，其中每一列都有明确的数据类型和定义，每一行代表一个记录。结构化数据非常适合使用关系型数据库管理系统（RDBMS）来存储和管理，因为数据的组织方式已经被预先定义好。例如，存储在数据库中的订单信息、员工工资表以及销售数据都属于结构化数据的示例。
+非结构化数据： 非结构化数据则没有固定的格式，它可能包含不同类型的信息，如文本、图像、音频、视频等。这种数据类型通常不适合传统的关系型数据库，因为它们缺乏统一的结构。非结构化数据的处理相对更为复杂，需要使用特定的技术和工具，如自然语言处理（NLP）技术用于处理文本数据，计算机视觉技术用于处理图像数据等。社交媒体帖子、电子邮件内容、图像文件以及语音记录都属于非结构化数据的例子。
+半结构化数据： 半结构化数据可能具有一定的格式，但不像完全结构化数据那样严格。常见的半结构化数据格式包括XML（可扩展标记语言）和JSON（JavaScript对象表示法）。这些数据通常具有一些层次结构，但字段可能不像传统数据库表中的列那样明确定义。
+MySQL是一种关系型数据库管理系统，通常用于存储和管理结构化数据，如文本、数字、日期等。虽然MySQL可以存储二进制数据，但它并不是设计用来直接存储大量大文件（如视频文件）的最佳工具。
+以下是为什么通常不使用MySQL存储视频文件的一些原因：
+性能问题：MySQL的查询引擎是设计用来处理字符串、数值和日期等类型的数据的，对于大文件的存储和检索并不是最有效的。当你存储大量大文件时，可能会导致数据库性能下降，尤其是当你需要从数据库中检索这些文件时。 存储效率：数据库通常使用磁盘空间来存储数据，而文件系统（如NFS、HDFS等）则更高效地存储大文件。使用数据库来存储大文件可能会导致不必要的磁盘空间浪费。 文件操作：视频文件通常需要进行一些文件级别的操作，如复制、移动、删除等。这些操作通常比数据级别的操作更消耗资源。如果这些操作在数据库中进行，可能会导致性能问题。 扩展性：当你的视频库变得非常大时，你可能需要扩展你的存储系统。数据库的扩展性通常比文件系统要复杂得多。 因此，对于存储和管理视频文件，通常建议使用专门的文件存储系统，如NFS、HDFS、S3等。这些系统更高效地处理大文件，并且通常提供更好的扩展性和更好的性能。如果你需要从你的视频文件中检索信息，你可以将这些信息存储在关系型数据库中，并使用数据库的功能来查询和管理这些信息。
+关于对象存储 对象存储是一种用于存储和管理大规模非结构化数据的存储架构。与传统的文件系统或块存储不同，对象存储将数据存储为&amp;quot;对象&amp;quot;，每个对象都包含数据本身以及与之相关的元数据（如文件名、创建日期、数据类型等）。这些对象被分布式地存储在多个服务器上，并通过唯一的标识符进行访问。
+对象存储的主要特点包括：
+扩展性： 对象存储设计用于应对海量数据的存储需求，可以轻松地扩展以适应不断增长的数据量，而无需大规模的基础架构变更。 分布式架构： 对象存储系统将数据分布在多个服务器上，提高了数据的可靠性和冗余性。即使某个服务器出现故障，数据仍然可以从其他服务器中恢复。 元数据： 每个对象都有丰富的元数据，这些元数据描述了对象的各种属性，包括文件名、大小、创建日期、数据类型等。这些元数据使得数据管理更加灵活和智能。 适应非结构化数据： 对象存储适用于存储各种类型的非结构化数据，如图像、音频、视频、日志文件、备份等。它不强制要求数据遵循特定的结构，因此非常适用于大多数现代应用生成的多样化数据。 数据访问和检索： 对象存储通常提供强大的数据访问和检索功能。您可以使用对象标识符进行数据检索，而不需要像传统文件系统那样的层次化文件路径。 云集成： 许多云平台提供对象存储服务，使得在云环境中存储和管理数据变得更加简单和经济。 三种存储形态 块存储（Block Storage） 块存储将数据分割成固定大小的块，通常以扇区（一般为512字节或更大）为单位。这些块可以被单独管理，读取和写入。块存储通常在底层使用了虚拟化技术，将块映射到物理存储设备上。块存储适用于需要随机读写的应用，如操作系统的磁盘，数据库，虚拟机镜像等。
+主要特点：
+低延迟的读写操作。 支持随机读写访问。 通常用于需要高性能、低延迟和数据管理控制的应用。 文件存储（File Storage） 文件存储模式以文件为单位进行存储和管理。文件存储模式通常使用网络协议（如NFS或SMB）提供共享文件系统，使多台计算机能够共享相同的文件。这种模式适用于需要多台计算机访问相同文件的应用，如共享文件夹、办公文档、媒体文件等。
+主要特点：
+以文件为单位进行管理和访问。 适用于多台计算机之间的文件共享和协作。 不适合大规模、高并发的访问。 对象存储（Object Storage） 对象存储是一种将数据以对象形式进行存储的方法。每个对象都包含数据本身、元数据（如文件名、创建日期等）以及一个唯一的标识符。对象存储通常在分布式环境中工作，可以自动扩展以适应大规模的数据。它适用于大规模的非结构化数据，如图像、音频、视频文件，以及需要长期保留和高可用性的数据。
+主要特点：
+以对象为单位存储，每个对象都有唯一的标识符。 可以存储海量非结构化数据。 高可扩展性和可用性。 适合数据归档、备份和云存储等场景。 区别 块存储以固定大小的块为单位进行读写，适用于随机读写的应用；
+文件存储以文件为单位共享，适用于多台计算机之间的文件共享和协作；
+对象存储以对象为单位存储，适用于海量非结构化数据的存储。
+块存储和文件存储通常在操作系统级别进行管理，而对象存储在应用程序级别进行管理。
+对象存储通常具有更高的可扩展性和冗余性，适合大规模和长期数据存储。
+块存储和文件存储在访问控制和数据管理方面更加灵活，而对象存储强调数据的元数据和可扩展性。
+常见的云平台的对象对象服务 腾讯云：对象存储 COS 阿里云：对象存储 OSS 火山引擎：对象存储TOS Azure：Azure Blob 存储 国内的各大云厂商的对象存储服务文档对他们的产品都介绍的挺详细的，我看了火山引擎TOS和Azure的存储服务，Azure的冗余服务在TOS中叫做多AZ冗余服务，大同小异，没有实际自己用过。国内云厂商对于学生的支持感觉还是不够，想要用还是得要自己掏钱，希望未来各大厂商还是能支持以下学生发展，积累一些企业口碑。</description>
+    </item>
+    <item>
+      <title>Redis常用指令</title>
+      <link>https://sirius1y.top/posts/notes/database/use-redis/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/database/use-redis/</guid>
+      <description>快速了解Redis Redis是什么？为什么要使用Redis？他有什么好处和优势？他的弊端又有哪些呢？他的基本模型和技术有哪些？
+Redis是什么？ Redis（Remote Dictionary Server）是一种开源的内存数据存储系统，它可以用作数据库、缓存和消息代理。它被设计用于快速访问、存储和分析数据，以及支持各种数据结构，如字符串、哈希表、列表、集合、有序集合等。Redis支持持久化，可以将数据保存在磁盘上，以便在重启后恢复数据。
+为什么要使用Redis？ Redis有许多优点，使其成为广泛使用的数据存储和缓存解决方案：
+优势 快速访问： Redis数据存储在内存中，因此具有非常快速的读写性能，适合用作缓存层，加速数据访问。 丰富的数据结构： Redis不仅支持简单的键值存储，还支持多种数据结构，如列表、集合、有序集合等，这使得它适用于更多不同类型的应用场景。 持久化： Redis支持数据的持久化，可以将数据保存在磁盘上，以便在服务器重启后恢复数据。 分布式架构： Redis支持分布式集群，可以将数据分散在多个节点上，提高数据的可用性和性能。 发布/订阅： Redis具有消息代理功能，可以用于发布和订阅消息，支持实时数据推送和通知。 事务支持： Redis支持事务，允许一系列操作以原子方式执行，保证数据的一致性。 弊端 内存消耗： Redis的数据存储在内存中，因此对于大规模数据集可能会占用大量内存。尽管有持久化选项，但内存仍然是其主要的存储介质。 单线程： Redis在单个进程中使用单线程处理所有的命令请求。这在某些高并发情况下可能成为性能瓶颈。 基本模型和技术 键值存储： Redis的基本模型是键值存储，您可以使用键来检索存储在Redis中的数据。 数据结构： Redis支持字符串、哈希表、列表、集合、有序集合等多种数据结构，使其非常灵活。 持久化： Redis支持两种持久化方式，分别是快照（snapshotting）和日志（append-only file）。 发布/订阅： Redis支持发布/订阅模式，允许客户端订阅特定的频道并接收实时消息。 分布式： Redis可以通过分片或复制来构建分布式架构，提高可用性和扩展性。 Redis vs. MySQL 性能比较 读写性能： Redis在内存中存储数据，因此具有非常快速的读写性能，尤其适合高并发读取和写入场景。与此相比，MySQL可能受到磁盘IO和索引的影响，其读写性能相对较低。 数据结构： Redis支持多种数据结构，使其适合用于更复杂的数据模型，如实时计数、排行榜、分布式锁等。MySQL虽然也支持多种数据类型，但通常用于结构化数据的存储。 缓存： Redis非常适合用作缓存层，可以减轻数据库的负载，提高数据访问速度。MySQL也可以用作缓存，但Redis的读取速度更快。 事务和持久化： Redis支持事务，但它的事务模型不如MySQL严格。MySQL提供强大的事务支持和多种持久化选项。 适用领域和场景 Redis适合场景 实时数据：例如实时计数、统计信息和分析。 缓存：用作高速缓存，提高数据访问速度。 实时消息：发布/订阅模式用于实时消息传递。 会话存储：存储用户会话数据，适用于分布式系统。 分布式锁：实现分布式锁以协调多个系统的并发操作。 MySQL适合场景 结构化数据：适用于关系型、事务性的结构化数据。 复杂查询：支持复杂的查询和连接操作。 大规模数据存储：适合大规模数据存储和管理。 强大事务：需要强大的事务支持和ACID特性。 Redis和MySQL有各自独特的优势和用途，它们并不是直接替代关系。Redis可以在某些情况下用来增强项目性能，或者作为辅助数据库来存储特定类型的数据，例如缓存、会话、排行榜等。然而，对于需要复杂查询、关联性和事务的应用，Redis并不是MySQL的替代品。对于大部分应用，两者可以共同使用，以发挥各自的优势，构建更高效的系统。
+Redis基本命令 现在很多大公司的后端服务都是基础存储服务+Redis缓存的形式，使用Redis进行缓存很大程度上提高了服务的效率，当然也存在缓存穿透、缓存雪崩的问题，但是在此之前还是要从Redis的基础命令开始学习掌握，所以在这里整理了Redis常用的命令。
+字符串 在Redis中，字符串可以存储以下3中类型的值：字节串（byte string），整数，浮点数。
+自增自减命令 INCR key-name：将键存储的值加上1</description>
+    </item>
+    <item>
+      <title>pycharm中找不到包的问题</title>
+      <link>https://sirius1y.top/posts/notes/problems/pycharm-not-found-packages/</link>
+      <pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/problems/pycharm-not-found-packages/</guid>
+      <description>VScode快捷键 快捷键 功能 Shift + Alt + F 格式化文档 Format document Ctrl+X 剪切行（空选定） Cut line (empty selection) Ctrl+C 复制行（空选定）Copy line (empty selection) Ctrl+Shift+K 删除行 Delete line Alt+ ↑ / ↓ 向上/向下移动行 Move line up/down Shift+Alt + ↓ / ↑ 向上/向下复制行 Copy line up/down Ctrl+Enter 在下面插入行 Insert line below Ctrl+Shift+Enter 在上面插入行 Insert line above F12 转到定义 Go to Definition Alt + F12 Peek定义 Peek Definition Ctrl + Shift + P，F1 显示命令面板 Show Command Palette pycharm中找不到包的问题 对于pycharm中虚拟环境，下面的目录没有在pycharm中终端安装上的包</description>
+    </item>
+    <item>
+      <title>网络安全——认证与加密</title>
+      <link>https://sirius1y.top/posts/notes/security/network-security/</link>
+      <pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/security/network-security/</guid>
+      <description>记录网络安全方向的一些实践：加密与认证、软件破解、常见攻击和预防（XSS, CSRF）等</description>
+    </item>
+    <item>
+      <title>ping github.com</title>
+      <link>https://sirius1y.top/posts/notes/problems/ping-github.com/</link>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/problems/ping-github.com/</guid>
+      <description>问题初现 在Windows上，挂了Clash，平时网页版的GitHub还是能正常跑的，因为平时开发主要是在Ubuntu上，所以git工具在Windows上用的不多。这次突发奇想，想把Windows和Ubuntu上的笔记整合到一个GitHub仓库上，并实现更新文件后自动拉取推送的功能，所以我现在Ubuntu上推送了一部分笔记到仓库中，再计划将Windows上的笔记也弄上去。
+然后在配置Windows上的笔记文件夹Git环境，发现git老是报错ssh22端口连接超时。
+我检查了：
+GitHub仓库上的SSH公钥配置，正常 Git的HTTP和HTTPS代理，正常 // 查看git有没有代理 git config --global -l // 配置git代理 git config --global http.proxy 127.0.0.1:7890 git config --global https.proxy 127.0.0.1:7890 // 取消git网络代理 git config --global --unset http.proxy git config --global --unset https.proxy 也想不通为啥，然后我就在博客园中看到了一篇文章：https://www.cnblogs.com/oldboyooxx/p/10387150.html
+主要就是说：1、检查IP配置问题；2、检查防火墙状态
+然后我就去ping github.com，发现ping不通，开代理不开代理都不行，怪！
+我想起来可以通过改主机hosts的方式访问，https://www.cnblogs.com/xuexianqi/p/13219719.html，改了之后github.com就能ping通了。
+再然后就发现SSH22端口超时的问题也解决了，然后就开始合并笔记了~
+脚本自动同步 对于笔记自动保存之后每次都要git手动提交未免也太麻烦了，然后我想试试通过一个git脚本来自动完成就好了。
+git pull origin master git add . git commit -m &amp;#34;update&amp;#34; git push origin master 脚本的内容很简单啊，就是基础的这几步命令。
+现在的问题就是怎么让他在保存文件的时候自动执行呢？而且希望如果同步的时候出错，能够把错误信息打印出来，可以是日志的方式。
+人工办法：在写笔记之前进行一次脚本运行，写笔记，写完笔记之后，再运行一次脚本。
+稍微聪明一点的办法：在打开和关闭文件夹/Typora的时候运行脚本。</description>
+    </item>
+    <item>
+      <title>Go log库，encoding/json</title>
+      <link>https://sirius1y.top/posts/notes/notes/note-go-lib/</link>
+      <pubDate>Thu, 22 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/note-go-lib/</guid>
+      <description>log Go语言内置的log包实现了简单的日志服务。本文介绍了标准库log的基本使用。
+Go内置的log库功能有限，例如无法满足记录不同级别日志的情况，我们在实际的项目中根据自己的需要选择使用第三方的日志库，如logrus、zap等。
+使用Logger log包定义了Logger类型，该类型提供了一些格式化输出的方法。本包也提供了一个预定义的“标准”logger，可以通过调用函数Print系列(Print|Printf|Println）、Fatal系列（Fatal|Fatalf|Fatalln）、和Panic系列（Panic|Panicf|Panicln）来使用，比自行创建一个logger对象更容易使用。
+例如，我们可以像下面的代码一样直接通过log包来调用上面提到的方法，默认它们会将日志信息打印到终端界面：
+package main import ( &amp;amp;quot;log&amp;amp;quot; ) func main() { log.Println(&amp;amp;quot;这是一条很普通的日志。&amp;amp;quot;) v := &amp;amp;quot;很普通的&amp;amp;quot; log.Printf(&amp;amp;quot;这是一条%s日志。\n&amp;amp;quot;, v) log.Fatalln(&amp;amp;quot;这是一条会触发fatal的日志。&amp;amp;quot;) log.Panicln(&amp;amp;quot;这是一条会触发panic的日志。&amp;amp;quot;) } 编译并执行上面的代码会得到如下输出：
+2017/06/19 14:04:17 这是一条很普通的日志。 2017/06/19 14:04:17 这是一条很普通的日志。 2017/06/19 14:04:17 这是一条会触发fatal的日志。 logger会打印每条日志信息的日期、时间，默认输出到系统的标准错误。Fatal系列函数会在写入日志信息后调用os.Exit(1)。Panic系列函数会在写入日志信息后panic。
+配置logger 标准logger的配置 默认情况下的logger只会提供日志的时间信息，但是很多情况下我们希望得到更多信息，比如记录该日志的文件名和行号等。log标准库中为我们提供了定制这些设置的方法。
+log标准库中的Flags函数会返回标准logger的输出配置，而SetFlags函数用来设置标准logger的输出配置。
+func Flags() int func SetFlags(flag int) flag选项 log标准库提供了如下的flag选项，它们是一系列定义好的常量。
+const ( // 控制输出日志信息的细节，不能控制输出的顺序和格式。 // 输出的日志在每一项后会有一个冒号分隔：例如2009/01/23 01:23:23.123123 /a/b/c/d.go:23: message Ldate = 1 &amp;lt;&amp;lt; iota // 日期：2009/01/23 Ltime // 时间：01:23:23 Lmicroseconds // 微秒级别的时间：01:23:23.123123（用于增强Ltime位） Llongfile // 文件全路径名+行号： /a/b/c/d.</description>
+    </item>
+    <item>
+      <title>Go学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/notes/note-go/</link>
+      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/note-go/</guid>
+      <description>配置 Go 工作区 继续之前，请务必仔细阅读此部分。
+Go 在组织项目文件方面与其他编程语言不同。 首先，Go 是在工作区的概念下工作的。 工作区就是应用程序源代码所在的位置。 所有 Go 项目共享同一个工作区。 不过，从版本 1.11 开始，Go 已开始更改此方法。 你尚且不必担心，因为我们将在下一个模块中介绍工作区。 现在，Go 工作区位于 $HOME/go，但如果需要，可以为所有项目设置其他位置。
+若要将工作区设置为其他位置，可以使用 $GOPATH 环境变量。 在处理更复杂的项目时，此环境变量有助于避免将来出现问题。
+Go 工作区文件夹 每个 Go 工作区都包含三个基本文件夹：
+bin：包含应用程序中的可执行文件。 src：包括位于工作站中的所有应用程序源代码。 pkg：包含可用库的已编译版本。 编译器可以链接这些库，而无需重新编译它们。 例如，工作站文件夹结构树可能与下面的示例类似：
+bin/ hello coolapp pkg/ github.com/gorilla/ mux.a src/ github.com/golang/example/ .git/ hello/ hello.go
+Go实战经验 在命令行中输入&amp;rsquo;code . &amp;lsquo;会唤起VS code编辑当前目录
+源码规范 可执行文件都要包含在package main中 import的包必须都要使用，否则报错不进行编译；vs code中保存文件就会自动调整文件格式，并且删除未使用的import 整个package main中只能有一个func main() 变量的声明和初始化 Go是强类型语言，声明的每个变量都绑定到特定的数据类型，并且只接受与此类型匹配的值。
+变量声明的方式有很多，格式和其他语言不太一样
+最普通的方式：var 变量名称 变量类型 Go也可以像Python那样自动推断变量的类型，有些时候可以不用加类型名称 最常用的方式（只适用于在函数内，声明并初始化一个新的变量）：使用冒号等号 age := 32 注意，在函数体外还是只能用var的方式声明和初始化变量 // 变量声明 // 变量声明了必须要使用，否则编译不通过 var first string var second, third string var age int = 1 var ( fisrtly int = 1 secondly string = 2 thirdly = &amp;#34;123&amp;#34; ) var firstName, secondName, agenumber = &amp;#34;123&amp;#34;, &amp;#34;456&amp;#34;, 32 // 最常见的声明方式 冒号等于号 := 用于声明并初始化变量，不能用于常量的声明 firstName_, secondName_, age_ := &amp;#34;123&amp;#34;, &amp;#34;456&amp;#34;, 32 // 常量声明f const HTTPstatusOK = 200 const ( StatusOK = 0 StatusConnectionReset = 1 StatusOtherError = 2 ) 数据类型 基本类型：数字、字符串、布尔值 聚合类型：数组、结构体 引用类型：指针、切片、映射、函数、通道 接口类型：接口 基本类型 在 Go 中，如果你不对变量初始化，所有数据类型都有默认值。</description>
+    </item>
+    <item>
+      <title>CSRF攻击</title>
+      <link>https://sirius1y.top/posts/notes/security/csrf-attack/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/security/csrf-attack/</guid>
+      <description>简介 CSRF攻击利用了受害者已经通过身份验证并且在一个网站上建立的有效会话，来执行未经授权的操作。当受害者在一个网站上登录并获得一个会话（例如通过使用用户名和密码进行身份验证），该网站会为其分配一个令牌或会话ID，以便在后续的请求中验证用户的身份。
+CSRF攻击者会通过诱使受害者访问一个恶意网站或点击恶意链接，来利用受害者的已验证会话。由于受害者在浏览器中仍然保持着有效会话，攻击者可以构造特制的请求，以利用该会话来执行恶意操作，而这些操作是受害者并不知情或未经授权的。
+例如，假设受害者在银行网站上登录并建立了一个有效的会话。攻击者可以通过电子邮件或社交媒体发送一个包含恶意链接的消息给受害者。如果受害者点击了该链接，他们的浏览器将自动向银行网站发送一个请求，而这个请求中包含了受害者的有效会话信息。银行网站在验证会话时会认为这个请求是合法的，因为会话是有效的，所以它执行了该请求所代表的操作，如转账、修改账户信息等，而受害者是毫不知情的。
+CSRF攻击的目标是利用受害者的已验证会话来执行攻击者所期望的未经授权操作，从而导致受害者的损失或者对系统的安全产生威胁。
+补充知识 cookie 一般情况下，cookie是以键值对进行表示的(key-value)，例如name=jack，这个就表示cookie的名字是name，cookie携带的值是jack。
+cookie有2种存储方式，一种是会话性，一种是持久性。
+会话性：如果cookie为会话性，那么cookie仅会保存在客户端的内存中，当我们关闭客服端时cookie也就失效了 持久性：如果cookie为持久性，那么cookie会保存在用户的硬盘中，直至生存期结束或者用户主动将其销毁。
+组成 （1）cookie名称 （2）cookie值 （3）Expires：过期时间。当过了过期时间后，浏览器会将该cookie删除。如果不设置Expires，则关闭浏览器后该cookie失效。 （4）Path：用来设置在路径下面的页面才可以访问该cookie，一般设为/，以表示同一站点的所有页面都可以访问该cookie。 （5）Domain：用来指定哪些子域才可以访问cookie，格式一般为“.XXX.com” （6）Secure:如果设置了secure没有值，则代表只有使用HTTPS协议才可以访问 （7）HttpOnly：如果在cookie中设置了HttpOnly属性，那么通过JavaScript脚本等将无法读取到cookie信息。
+URL URL（统一资源定位符）的一般格式如下：
+scheme://host:port/path?query_parameters#fragment_identifier 具体解释如下：
+Scheme（协议）：指定用于访问资源的协议，例如HTTP、HTTPS、FTP等。它是URL的开头部分，通常以双斜杠（//）结尾。 Host（主机）：指定目标资源所在的主机名或IP地址。主机名可以是域名（例如example.com）或IP地址（例如192.168.0.1）。 Port（端口）：指定用于访问目标资源的端口号（可选）。默认的端口号根据协议而不同，如HTTP默认端口是80，HTTPS默认端口是443。如果URL中没有指定端口，将使用默认端口。 Path（路径）：指定资源在服务器上的路径（可选）。路径部分是指服务器上资源的具体位置，可以是文件路径或目录路径。 Query Parameters（查询参数）：包含在URL中的键值对参数（可选）。查询参数通常用于向服务器传递额外的信息，多个参数之间使用&amp;quot;&amp;amp;&amp;ldquo;符号分隔。 Fragment Identifier（片段标识符）：用于标识文档中的特定片段（可选）。片段标识符通常由一个锚点或特定位置的标识符组成，用于在文档中导航到指定位置。 实验过程 使用Flask框架进行构建web应用。
+文件架构 ├── web-csrf/ │ ├── webA.py │ ├── webB.py │ ├── templates/ │ │ ├── home.html │ │ ├── login.html │ └── static/ │ └── style.css 源码 webA:
+# webA.py import hashlib import re import mysql.connector from flask import Flask, request, render_template, make_response app = Flask(__name__) db = mysql.</description>
+    </item>
+    <item>
+      <title>栈溢出攻击</title>
+      <link>https://sirius1y.top/posts/notes/security/stack_overflow-attack/</link>
+      <pubDate>Fri, 05 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/security/stack_overflow-attack/</guid>
+      <description>实验程序源代码：
+#include &amp;lt;stdio.h&amp;gt; #include &amp;lt;windows.h&amp;gt; #include &amp;lt;string.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; #define PASSWORD &amp;#34;1234567&amp;#34; int verify_password(char *password) { int authenticated; char buffer[44]; authenticated = strcmp(password, PASSWORD); strcpy(buffer, password); // over flowed here! return authenticated; } int main() { int valid_flag = 0; char password[1024];l FILE *fp; LoadLibrary(&amp;#34;user32.dll&amp;#34;); // prepare for messagebox if (!(fp = fopen(&amp;#34;password.txt&amp;#34;, &amp;#34;rw+&amp;#34;))) { exit(0); } fscanf(fp, &amp;#34;%s&amp;#34;, password); valid_flag = verify_password(password); if (valid_flag) { printf(&amp;#34;incorrect password!\n&amp;#34;); } else { printf(&amp;#34;Congratulation!</description>
+    </item>
+    <item>
+      <title>Ubuntu22.04 配置clash-for-linux</title>
+      <link>https://sirius1y.top/posts/notes/tools/clash-for-linux/</link>
+      <pubDate>Thu, 13 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/tools/clash-for-linux/</guid>
+      <description>记录从cfw换到clash-for-linux</description>
+    </item>
+    <item>
+      <title>加密与认证</title>
+      <link>https://sirius1y.top/posts/notes/security/encryption-authentication/</link>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/security/encryption-authentication/</guid>
+      <description>任务 采用Java/Python语言编写一个较为完整的加密与认证程序，要求具有：
+具有较完整的图形化界面； 使用MD5、SHA系列算法，实现消息摘要，确保消息的完整性； 使用DES、AES等算法实现对称加密，确保消息的机密性； 使用RSA算法，实现公钥加密，且用私钥解密，比较不对称加密和对称加密的性能； 实现基于数字证书的数字签名和验证（含证书的生成和创建）； 消息摘要 消息摘要的作用 在网络安全目标中，要求信息在生成、存储或传输过程中保证不被偶然或蓄意地删除、修改、伪造、乱序、重放、插入等破坏和丢失，因此需要一个较为安全的标准和算法，以保证数据的完整性。
+常见的消息摘要算法有： Ron Rivest设计的MD（Standard For Message Digest，消息摘要标准）算法 NIST设计的SHA（Secure Hash Algorithm，安全散列算法）
+单向散列函数 特点 不定长的输入和定长的输出；
+对于及其微小的变化，如1bit的变化，器哈希函数所产生的值也差异巨大；
+对于不同的原像都有不同的映像，从散列值不可能推导出消息M ，也很难通过伪造消息M’来生成相同的散列值。
+Hash函数的值称为作为自变量的消息的“散列值”或“消息摘要”、“数字指纹”
+哈希函数的分类 根据安全水平 弱无碰撞 强无碰撞 ​	注：强无碰撞自然含弱无碰撞！
+根据是否使用密钥 带秘密密钥的Hash函数：消息的散列值由只有通信双方知道的秘密密钥K来控制，此时散列值称作MAC(Message Authentication Code) 不带秘密密钥的Hash函数：消息的散列值的产生无需使用密钥，此时散列值称作MDC(Message Detection Code) 哈希函数的应用 由Hash函数产生消息的散列值 以消息的散列值来判别消息的完整性 用加密消息的散列值来产生数字签名 用口令的散列值来安全存储口令（认证系统中的口令列表中仅存储口令的Hash函数值，以避免口令被窃取。认证时用输入口令的Hash函数值与其比较） 安全哈希函数的实现 输入数据分成L个长度固定为r的分组：M=(M1,M2,…,ML) 末组附加消息的长度值并通过填充凑足r位 压缩函数 f使用n位的链接变量Hi ,其初值H0=IV可任意指定 压缩函数 f的最后n位输出HL取作散列值 哈希函数：生日攻击 当哈希函数的输入位数太短的时候，就容易产生哈希碰撞，即出现两个原像对应用一个映像的问题。
+生日问题 一个教室中至少有几个学生才能使有两个学生生日相同的概率不小于1/2； 等价于“球匣问题” 设J个球随机扔进N个匣子，存在一个匣子中至少有两个球的概率为p，则可以推导出: J2≈-2Nln(1-p)或 p≈ 1-e-J2/2/N 答案 将365个生日看作N=365个匣子，将学生看作球，p=0.5，则由上式可算出J≈23，即23个学生中有两个学生生日相同的概率不小于1/2；
+生日攻击实例：
+​	假设张三承诺支付李四100万，约定由李四负责起草合同，并通过8位的散列码H(M)实施信息认证。聪明而无德的李四先起草一个100万的版本，并通过变化其中3个无关紧要之处以得到23=8个不同的消息明文并计算它们的H(M)，形成集合A；然后再起草一个200万的版本，用同样方法又得到23=8 个不同的消息明文及其H(M)，形成集合B。 ​	由生日问题知：24个8位比特串中发生碰撞的概率不小于1/2，故在A和B共24 =16个H(M)中有可能存在相同的一对，并极有可能一个在A中而另一个在B中。假设与它们对应的明文为MA （100万版） 和MB （200万版） 。于是李四用MA让张三签署并公证，而在传送时偷偷地用MB替代MA 。由于H(MA)= H(MB)，故张三确信签署的文件未被篡改。当李四要求张三支付200万时，法院根据MB判李四胜诉，而张三因此损失100万。</description>
+    </item>
+    <item>
+      <title>k8s学习和实践:腾讯云轻量级服务器上搭建网站</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</guid>
+      <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
+    </item>
+    <item>
+      <title>数据结构学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/notes/data_structure/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/data_structure/</guid>
+      <description>一、绪论 数据（data）是信息的载体，是描述客观事物的数、字符、图形、图像、声音以及所有能输入计算机中并被计算机程序识别和处理的符号的集合。
+数据的最小单位的是数据项；
+数据的基本单位是数据元素，一个数据元素可由若干个数据项组成。
+数据结构分为两大类：线性结构和非线性结构
+两类结构通常分为四类基本结构：
+1）集合：结构中的数据元素之间同属于一个集合，此外没有其他关系；
+2）线性结构：结构中的数据元素之间存在一种线性关系，一对一的关系；
+3）树形结构：一对多的关系；
+4）图形结构或网状结构：多对多的关系。
+根据视点的不同又可分为：逻辑结构和物理结构：
+逻辑结构：面向问题，描述数据元素之间的逻辑关系；
+物理结构：又称存储结构，面向计算机，是数据结构在计算机中的表示（映像）
+算法的特性：输入性、输出性、确定性、有穷性、有效性（可行性）
+算法的标准：正确性（满足所要求界的问题的需求，最重要最基本）、可用性（便于用户使用，良好的界面、完备的用户文档）、可读性（易于理解）、效率（存储单元的开销和运行时间的耗费）、健壮性（对于非法数据的处理）
+算法复杂度：（渐进）时间复杂度和空间复杂度
+二、线性结构 1、线性表 1.1	顺序表示：顺序表 用顺序结构存储的线性表为顺序表（sequential list）。
+顺序表一般用数组进行存储
+类模板定义：T* elems，int length，int maxLength
+1.2	链表表示 1)	单链表 分为带头结点和不带头结点的单链表；
+带头结点的单链表相对不带头结点的单链表在涉及会更改头节点的任务时，操作会更加统一。
+类模板定义：
+（结点）T data，Node* next
+（单链表）Node* head，int length
+2)	双向循环链表 类模板定义：
+（结点）T data，Node* prior，Node* next
+（双向循环链表）Node* head，int length
+*带头结点的双向循环列表只有一个元素结点的条件：head-&amp;gt;next!=head &amp;amp;&amp;amp; head-&amp;gt;next-&amp;gt;next==head
+3)	静态链表 利用数组来模拟存储空间实现链表。
+类模板定义：
+（结点）T data，Node* next
+（静态链表）Node* head，Node* avail
+设数组a放置了一个静态链表，当链表未使用的时候，其中所有的结点都是形成了一个链表，用avail进行管理，代表未使用的结点。
+当进行插入操作的时候，就从avail中取出一个头节点，进行赋值，再放入head链表之中。
+在完成每一步操作之后，记得要将next域中更改
+插入元素操作：
+i=avail; avail=a[avail].next; a[i].next=a[head],next; a[head]。next=i; 当需要释放由j所指向的结点时，只需要把结点j放到avail表的最前端，并让avail指向它即可。</description>
+    </item>
+    <item>
+      <title>CPP学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/notes/note-cpp/</link>
+      <pubDate>Sat, 19 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/note-cpp/</guid>
+      <description>C++学习笔记 现在主流的编译型语言包括C、C++、Go、Rust等，它们的编译过程中需要将代码转换成机器语言，因此可以获得更高的执行效率和更好的性能。
+而主流的解释型语言包括Python、Ruby、JavaScript等，这些语言需要解释器将代码转换成机器语言并运行，因此相对于编译型语言，它们的执行效率和性能可能会稍低，但是它们通常具有更高的开发效率和更强的灵活性，因为它们可以在运行时动态修改代码。
+另外，还有一些语言是即时编译型语言（JIT），例如Java、C#和LuaJIT等，这些语言的编译器会在运行时将代码编译成机器语言，因此它们的执行效率和性能通常比解释型语言要高一些，但比编译型语言略低一些。
+函数的声明和定义中，
+不能重复定义一个参数的值；
+带有默认值的形式参数必须放在参数列表的最右侧;
+一、cin 函数的用法 使用cin从标准输入读取数据时，通常用到的方法有cin&amp;raquo;，cin.get，cin.getline。
+1.1 cin&amp;raquo;的用法 （1）cin&amp;raquo;等价于cin.operator&amp;raquo;()，即调用成员函数operator&amp;raquo;()进行读取数据。 （2）当cin&amp;raquo;从缓冲区中读取数据时，若缓冲区中第一个字符是空格、tab或换行这些分隔符时，cin&amp;raquo;会将其忽略并清除，继续读取下一个字符，若缓冲区为空，则继续等待。但是如果读取成功，字符后面的分隔符是残留在缓冲区的，cin&amp;raquo;不做处理。 （3）不想略过空白字符，那就使用 noskipws 流控制。比如cin&amp;raquo;noskipws&amp;raquo;input;
+1.2 cin.get的用法 1.2.1 cin.get读取一个字符 读取一个字符，可以使用cin.get或者cin.get(var)，示例代码如下：
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { char a; char b; a=cin.get(); cin.get(b); cout&amp;lt;&amp;lt;a&amp;lt;&amp;lt;b&amp;lt;&amp;lt;endl; system(&amp;#34;pause&amp;#34;); return 0; } 输入：e[回车]，输出： 注意： （1）从结果可以看出，cin.get()从输入缓冲区读取单个字符时不忽略分隔符，直接将其读取，就出现了如上情况，将换行符读入变量b，输出时打印两次。
+（2）cin.get()的返回值是int类型，成功：读取字符的ASCII码值，遇到文件结束符时，返回EOF，即-1，Windows下标准输入输入文件结束符为Ctrl+z，Linux为Ctrl+d。cin.get(char var)如果成功返回的是cin对象，因此可以支持链式操作，如cin.get(b).get(c)。
+1.2.2 cin.get读取一行 读取一行可以使用istream&amp;amp; get ( char* s, streamsize n )或者istream&amp;amp; get ( char* s, size_t n, streamsize delim )。二者的区别是前者默认以换行符结束，后者可指定结束符。n表示目标空间的大小。示例代码如下：
+#include &amp;lt;iostream&amp;gt; using namespace std; int main() { char a; char array[20]={NULL}; cin.</description>
+    </item>
+    <item>
+      <title>学长的计算机网络笔记</title>
+      <link>https://sirius1y.top/posts/notes/network/note-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/note-network/</guid>
+      <description>概述 互联网：专有名词
+互连网：通用网络
+互联网的组成 边缘部分 由所有连接在互联网上的主机组成。这部分是用户直接使用的，用来进行通信（传送数据、音频或视频）和资源共享。
+端系统之间的两种通信方式 客户-服务器方式（C/S）
+客户是服务的请求方，服务器是服务的提供方
+客户软件的特点 被用户调用后运行，在打算通信时主动向远地服务器发起通信（请求服务）。因此，客户程序必须知道服务器程序的地址 不需要特殊的硬件和很复杂的操作系统 服务器软件的特点 一种专门用来提供某种服务的程序，可同时处理多个远地或本地客户的请求 系统启动后即自动调用并一直不断地运行着，被动地等待并接受来自各地的客户的通信请求。因此，服务器程序不需要知道客户程序的地址 一般需要强大的硬件和高级的操作系统支持 对等方式（P2P）
+不区分客户和服务器。
+核心部分 由大量网络和连接这些网络的路由器组成。这部分是为边缘部分提供服务的（提供连通性和交换）
+在网络核心部分起特殊作用的是路由器 (router)。 at Shanghai University
+路由器是实现分组交换 (packet switching) 的关键构件，其任务是转发收到的分组，这是网络核心部分最重要的功能。
+分组交换是网络核心部分最重要的功能
+电路交换 $$N$$ 部电话机两两直接相连，需 $$N(N – 1)/2$$ 对电线。这种直接连接方法所需要的电线对的数量与电话机数量的平方（ $$N^2$$ ）成正比。
+当电话机的数量增多时，就要使用交换机来完成全网的分组任务，这就是电路交换
+特点 电路交换必定是面向连接的 电路交换分为三个阶段： 建立连接：建立一条专用的物理通路，以保证双方通话时所需的通信资源在通信时不会被其他用户占用； 通话：主叫和被叫双方一直占用通信资源； 释放连接：释放刚才使用的这条专用的物理通路（释放刚才占用的所有通信资源） 总结 电路交换用于电话通信系统，两个用户要通信之前需要建立一条专用的物理链路，并且在整个通信过程中始终占用该链路。由于通信的过程中不可能一直在使用传输线路，因此电路交换对线路的利用率很低，往往不到 10%
+分组交换 分组交换采用存储转发技术
+步骤 在发送端，先把较长的报文划分成较短的、固定长度的数据段 每一个数据段前面添加上首部构成分组 (packet) 分组交换网以“分组”（也称为“包”，首部也可称为“包头”）作为数据传输单元，依次把各分组发送到接收端（假定接收端在左边） 接收端收到分组后剥去首部还原成报文 最后，在接收端把收到的数据恢复成为原来的报文。 首部的重要性 每一个分组的首部都含有地址（诸如目的地址和源地址）等控制信息。 分组交换网中的结点交换机根据收到的分组首部中的地址信息，把分组转发到下一个结点交换机。 每个分组在互联网中独立地选择传输路径。（通过路由器） 用这样的存储转发方式，最后分组就能到达最终目的地。 路由器的作用 在路由器中的输入和输出端口之间没有直接连线。 路由器处理分组的过程是： 把收到的分组先放入缓存（暂时存储）； 查找转发表，找出到某个目的地址应从哪个端口转发； 把分组送到适当的端口转发出去。 优点 高效：在分组传输的过程中动态分配传输带宽，对通信链路是逐段占用 灵活：为每一个分组独立地选择最合适的转发路由 迅速：以分组作为传送单位，可以不先建立连接就能向其他主机发送分组。 可靠：保证可靠性的网络协议；分布式多路由的分组交换网，使网络有很好的生存性 缺点 分组在各结点存储转发时需要排队，这就会造成一定的时延。 分组必须携带的首部（里面有必不可少的控制信息）也造成了一定的开销 总结 每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。</description>
+    </item>
+  </channel>
+</rss>

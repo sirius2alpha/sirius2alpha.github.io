@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>School on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/categories/school/</link>
+    <description>Recent content in School on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/categories/school/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>尝试在云服务器上部署 Flink 并提交计算任务</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-flink/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-flink/</guid>
+      <description>裸机 &amp;amp; K8S上部署flink，并提交计算任务</description>
+    </item>
+    <item>
+      <title>Docker和K8S部署</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-dockerk8s/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-dockerk8s/</guid>
+      <description>这篇文章部署K8S的过程</description>
+    </item>
+    <item>
+      <title>hadoop部署</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-hadoophive/</link>
+      <pubDate>Thu, 14 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-hadoophive/</guid>
+      <description>这篇文章记录了在三台云服务器上部署hadoop的过程</description>
+    </item>
+    <item>
+      <title>在云服务器上部署mysql</title>
+      <link>https://sirius1y.top/posts/notes/deployment/deploy-mysql-oncloud/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/deployment/deploy-mysql-oncloud/</guid>
+      <description>这篇文章记录了在两台主机上部署mysql</description>
+    </item>
+    <item>
+      <title>第一次全栈开发记录</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-coursesystem/</link>
+      <pubDate>Tue, 14 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-coursesystem/</guid>
+      <description>记录第一次全栈开发，主要记录了前端部分所遇到的问题</description>
+    </item>
+    <item>
+      <title>人工智能期末复习</title>
+      <link>https://sirius1y.top/posts/notes/notes/artificial_intelligence/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/artificial_intelligence/</guid>
+      <description>基本概念 语义角色 指有关语言成分在语句所表达的事件中所扮演的参与者角色
+在自然语言处理中对自然语言进行划分处理称为各个语义角色，其中每个语义角色相互依赖，相互关联
+常见的语义角色类型有：施事、受事、与事、工具、方式、时间、处所、结果、目的、原因等 例如对于语句：小明昨天晚上在公园遇到了小红
+就可以分为Agent、Time、Location、Predicate、Patient等角色
+语义角色从一开始的6个扩充到了现在的13个，依据是美国语言学家查理斯·费尔莫尔提出的“格语法”
+机器学习 让计算机能够像人一样自动获取新知识，并且在实践中不断完善自我和增强能力 启发函数&amp;amp;估值函数 启发函数：对当前结点到大目标结点未来可能需要付出的代价的估计
+对于同一个问题，可能有不同的启发函数，不同的启发函数带来的效果良莠不齐，而各个节点的代价函数是统一确定的，因此选择和优化启发函数是至关重要的
+估值函数：为了防止在单独利用启发函数的时候误入歧途，会将启发函数和代价函数结合生成估值函数；即初始结点到达结点x处已经付出的代价与结点x到达目标结点的接近程度估计值的总和
+语义标注 在NLP领域中对于自然语言进行分割，并且对每个部分都判断是什么类型的语义角色
+语义角色标注是一种浅层的语义分析技术，它只标注谓词（谓语动词、名词、形容词）的语义角色
+例如：
+昨天张三在家吃苹果。
+谓语动词“吃”的语义角色有：施事-张三，受事-苹果，时间-昨天，处所-家
+博弈树 将双人完备的信息博弈过程用图表示出来，能得到一颗与或树，称为博弈树
+在博弈树中，下一步该MAX走步的结点称为MAX结点；下一步该MIN走步的结点称为MIN结点 博弈树特点： 初始状态为初始结点 博弈树中的或结点和与结点是逐层交替出现的 整个博弈过程都是站在某一方的立场上，所有能使自己获胜的都是本源问题，相应的结点都是可解结点；所有会使对方获胜的结点都是不可解结点 博弈树采用变对子结点进行估值函数计算，再扩展结点的方法，使用的是极大极小化分析，因此引申出了阿尔法-贝塔剪枝
+阿尔法-贝塔剪枝： 阿尔法剪枝： 对于一个MIN结点，如果能够推导出其上确界b，并且b不大于MIN结点的父节点下确界a（即a &amp;gt;= b），则不必再扩展MIN结点的其他子结点了，剪枝即可 贝塔剪枝： 对于一个MAX结点，如果能够推导出其下确界a，并且a不小于MAX结点的父节点上确界b（即a &amp;gt;= b），则不必再扩展MAX结点的其他子结点了，剪枝即可 专家系统 专家系统的概念：
+专家系统是一种智能的计算机程序，它运用知识和推理来解决只有专家才能解决的复杂问题
+专家系统的组成：
+专家&amp;mdash;-知识库&amp;mdash;-推理机&amp;mdash;-系统用户
+专家系统的特点：
+有专家水平的专业知识、能进行有效的推理、启发性、灵活性、透明性、交互性
+知识库与推理机分离、具有解释功能
+专家系统的类型：
+按照解决类型划分：解释、诊断、预测、设计、规划、控制&amp;hellip;&amp;hellip; 按照应用类型划分：化学、电子学、地质学&amp;hellip;&amp;hellip; 按照系统体系结构划分：集中式、分布式、云计算 按照知识表示形式划分：基于规则、基于一阶谓词、基于框架、基于语义网 按照采用技术划分：符号推断、神经网络 专家系统实例：
+医学专家系统——MYCIN 系统使用INTER LISP语言编写 推理策略：反向推理、深度优先的搜索 地质勘探专家系统——PROSPECTOR 推理方式：似然推理、逻辑推理、上下文推理 希望树 在启发式搜索与或树的过程中，有希望成为最优解树的部分结点所组成的树
+定义如下：
+初始结点S0一定在希望树中 如果结点x在希望树中，则一定有： 如果x是具有子结点的或结点，则其具有最小代价的子结点一定在希望树中 如果x是具有子结点的与结点，则其全部子结点都在希望树中 与或树的有序搜索过程本质上是寻找希望树的过程，因此随着搜索深度的增加，希望树也会随之变化
+Agent Agent的概念：
+一种能够在一定环境中自主运行和自主交互，以满足其设计目标的计算实体
+按照属性区分Agent：</description>
+    </item>
+    <item>
+      <title>操作系统学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/notes/operating_system/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/operating_system/</guid>
+      <description>操作系统 第一章 计算机系统概述 1.1 操作系统 1.1.1 操作系统的概念和功能 概念 操作系统（Operating System， OS）是指控制和管理整个计算机系统的硬件和软件资源，并合理地组织调度计算机的工作和资源的分配；以提供给用户和其他软件方便的接口和环境；它是计算机系统中最基本的系统软件。
+功能和目标 ①操作系统是系统资源的管理者 ②向上层提供方便易用的服务 封装思想：操作系统把一些丑陋的硬件功能封装成简单易用的服务，使用户能更方便地使用计算机，用户无需关心底层硬件的原理，只需要对操作系统发出命令即可。
+GUI：图形化用户接口（Graphical User Interface） 用户可以使用形象的图形界面进行操作，而不再需要记忆复杂的命令、参数。 例子：在Windows 操作系统中，删除一个文件只需要把文件“拖拽”到回收站即可。
+联机命令接口=交互式命令接口：用户说一句，系统跟着做一句
+脱机命令接口=批处理命令接口：用户说一堆，系统跟着做一堆
+程序接口：可以在程序中进行系统调用来使用程序接口。普通用户不能直接使用程序接口，只能通过程序代码间接使用。
+如：写C语言“Hello world”程序时，在printf 函数的底层就使用到了操作系统提供的显式相关的“系统调用”
+③是最接近硬件的一层软件 需要实现对硬件机器的拓展 没有任何软件支持的计算机称为裸机。在裸机上安装的操作系统， 可以提供资源管理功能和方便用户的服务功能，将裸机改造成功能 更强、使用更方便的机器 通常把覆盖了软件的机器成为扩充机器，又称之为虚拟机
+1.1.2 操作系统的特征 基本特征 并发、共享、虚拟、异步
+并发 两个或者多个事件在同一时间间隔内发生
+使得系统具有处理和调度多个程序同时执行的能力
+操作系统的并发是通过分时实现的
+注意：并发是指在一个时间段并行是指在同一个时刻并行是指系统具有同时执行或操作（硬件支持：多流水线或者多处理机）
+重要考点
+单核CPU同一时刻只能执行一个程序，各个程序只能并发地执行
+多核CPU同一时刻可以同时执行多个程序，多个程序可以并行地执行
+共享 互斥共享方式
+例如打印机、磁带，同一时刻只能供一个进程对资源进行访问
+这种资源称作：临界资源或者独占资源
+同时访问方式
+一段时间内允许多个进程对资源进行访问
+典型代表：磁盘设备重入码编写的文件
+虚拟 一个物理上的实体变为若干逻辑上的对应物，这种技术也被称为虚拟技术
+虚拟处理器：采用多道程序并发的方式，让每个终端用户感觉到有多个处理器 时分复用技术
+虚拟存储器：将物理存储变为虚拟存储器，逻辑上扩充存储器用 空分复用技术
+也可以将一台IO设备虚拟为多台逻辑上的IO设备，并允许每个用户占用一台逻辑上的IO设备
+异步 在多道程序环境下，允许多个程序并发执行，但由于资源有限，进程的执行不是一贯到底的，
+多道程序走走停停，进程以不可预知的速度向前进
+并发和共享的关系 并发性指计算机系统中同时存在着多个运行着的程序。 共享性是指系统中的资源可供内存中多个并发执行的进程共同使用。
+互为存在条件
+并发和虚拟的关系 如果失去了并发性，则一个时间段内系统中只需运行一道程序，那么就失去了实现虚拟性的意义了。因此，没有并发性，就谈不上虚拟性
+并发和异步的关系 只有系统拥有并发性，才有可能导致异步性。</description>
+    </item>
+    <item>
+      <title>GNS3&#43;cisco 动态路由实验RIP/OSRF</title>
+      <link>https://sirius1y.top/posts/notes/network/net-riposrf-ongns3/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-riposrf-ongns3/</guid>
+      <description>这篇文章记录了使用GNS3软件进行动态路由实验。</description>
+    </item>
+    <item>
+      <title>GNS3静态路由实验</title>
+      <link>https://sirius1y.top/posts/notes/network/net-static_router-ongns3/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-static_router-ongns3/</guid>
+      <description>这篇文章记录了使用GNS3软件进行静态路由实验</description>
+    </item>
+    <item>
+      <title>计算机网络期末复习</title>
+      <link>https://sirius1y.top/posts/notes/network/school-network-review/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/school-network-review/</guid>
+      <description>https://www.yuque.com/docs/share/a0aff20d-44da-46c6-a65a-67e69dd0c6f3?# 《基于cch的计网复习》划了上次考点
+题型：判断 选择 填空 计算题
+复习课 拍照 中英文 英文缩写 英文全称 中文 TDM Time Division Multiplexing 时分复用 CDMA Code Division Multiple Access 码分多址 CSMA/CD Carrier Sense Multiple Access with Collision Detection 载波监听 多点接入 / 碰撞检测 MAC Medium Access Control 媒体接入控制 RTT Round Trip Time 往返时间 ARP Address Resolution Protocol 地址解析协议 IP Internet Protocol 网际协议 ICMP Internet Control Message Protocol 网际控制报文协议 TCP Transmission Control Protocol 传输控制协议 UDP User Datagram Protocol 用户数据报协议 RIP Routing Information Protocol 路由信息协议 BGP Border Gateway Protocol 边界网关协议 OSPF Open Shortest Path First 开放最短路径优先 VLAN Virtual Local Area Network 虚拟局域网 DNS Domain Name System 域名系统 知识点 语雀知识点链接：https://www.</description>
+    </item>
+    <item>
+      <title>网络安全——认证与加密</title>
+      <link>https://sirius1y.top/posts/notes/security/network-security/</link>
+      <pubDate>Mon, 31 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/security/network-security/</guid>
+      <description>记录网络安全方向的一些实践：加密与认证、软件破解、常见攻击和预防（XSS, CSRF）等</description>
+    </item>
+    <item>
+      <title>CSRF攻击</title>
+      <link>https://sirius1y.top/posts/notes/security/csrf-attack/</link>
+      <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/security/csrf-attack/</guid>
+      <description>简介 CSRF攻击利用了受害者已经通过身份验证并且在一个网站上建立的有效会话，来执行未经授权的操作。当受害者在一个网站上登录并获得一个会话（例如通过使用用户名和密码进行身份验证），该网站会为其分配一个令牌或会话ID，以便在后续的请求中验证用户的身份。
+CSRF攻击者会通过诱使受害者访问一个恶意网站或点击恶意链接，来利用受害者的已验证会话。由于受害者在浏览器中仍然保持着有效会话，攻击者可以构造特制的请求，以利用该会话来执行恶意操作，而这些操作是受害者并不知情或未经授权的。
+例如，假设受害者在银行网站上登录并建立了一个有效的会话。攻击者可以通过电子邮件或社交媒体发送一个包含恶意链接的消息给受害者。如果受害者点击了该链接，他们的浏览器将自动向银行网站发送一个请求，而这个请求中包含了受害者的有效会话信息。银行网站在验证会话时会认为这个请求是合法的，因为会话是有效的，所以它执行了该请求所代表的操作，如转账、修改账户信息等，而受害者是毫不知情的。
+CSRF攻击的目标是利用受害者的已验证会话来执行攻击者所期望的未经授权操作，从而导致受害者的损失或者对系统的安全产生威胁。
+补充知识 cookie 一般情况下，cookie是以键值对进行表示的(key-value)，例如name=jack，这个就表示cookie的名字是name，cookie携带的值是jack。
+cookie有2种存储方式，一种是会话性，一种是持久性。
+会话性：如果cookie为会话性，那么cookie仅会保存在客户端的内存中，当我们关闭客服端时cookie也就失效了 持久性：如果cookie为持久性，那么cookie会保存在用户的硬盘中，直至生存期结束或者用户主动将其销毁。
+组成 （1）cookie名称 （2）cookie值 （3）Expires：过期时间。当过了过期时间后，浏览器会将该cookie删除。如果不设置Expires，则关闭浏览器后该cookie失效。 （4）Path：用来设置在路径下面的页面才可以访问该cookie，一般设为/，以表示同一站点的所有页面都可以访问该cookie。 （5）Domain：用来指定哪些子域才可以访问cookie，格式一般为“.XXX.com” （6）Secure:如果设置了secure没有值，则代表只有使用HTTPS协议才可以访问 （7）HttpOnly：如果在cookie中设置了HttpOnly属性，那么通过JavaScript脚本等将无法读取到cookie信息。
+URL URL（统一资源定位符）的一般格式如下：
+scheme://host:port/path?query_parameters#fragment_identifier 具体解释如下：
+Scheme（协议）：指定用于访问资源的协议，例如HTTP、HTTPS、FTP等。它是URL的开头部分，通常以双斜杠（//）结尾。 Host（主机）：指定目标资源所在的主机名或IP地址。主机名可以是域名（例如example.com）或IP地址（例如192.168.0.1）。 Port（端口）：指定用于访问目标资源的端口号（可选）。默认的端口号根据协议而不同，如HTTP默认端口是80，HTTPS默认端口是443。如果URL中没有指定端口，将使用默认端口。 Path（路径）：指定资源在服务器上的路径（可选）。路径部分是指服务器上资源的具体位置，可以是文件路径或目录路径。 Query Parameters（查询参数）：包含在URL中的键值对参数（可选）。查询参数通常用于向服务器传递额外的信息，多个参数之间使用&amp;quot;&amp;amp;&amp;ldquo;符号分隔。 Fragment Identifier（片段标识符）：用于标识文档中的特定片段（可选）。片段标识符通常由一个锚点或特定位置的标识符组成，用于在文档中导航到指定位置。 实验过程 使用Flask框架进行构建web应用。
+文件架构 ├── web-csrf/ │ ├── webA.py │ ├── webB.py │ ├── templates/ │ │ ├── home.html │ │ ├── login.html │ └── static/ │ └── style.css 源码 webA:
+# webA.py import hashlib import re import mysql.connector from flask import Flask, request, render_template, make_response app = Flask(__name__) db = mysql.</description>
+    </item>
+    <item>
+      <title>k8s学习和实践:腾讯云轻量级服务器上搭建网站</title>
+      <link>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</link>
+      <pubDate>Sun, 30 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/dev/dev-k8s-webserver/</guid>
+      <description>这篇文章记录了阅读Kubernetes inAction的学习记录，以及使用k8s进行一些实战的过程</description>
+    </item>
+    <item>
+      <title>数据结构学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/notes/data_structure/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/data_structure/</guid>
+      <description>一、绪论 数据（data）是信息的载体，是描述客观事物的数、字符、图形、图像、声音以及所有能输入计算机中并被计算机程序识别和处理的符号的集合。
+数据的最小单位的是数据项；
+数据的基本单位是数据元素，一个数据元素可由若干个数据项组成。
+数据结构分为两大类：线性结构和非线性结构
+两类结构通常分为四类基本结构：
+1）集合：结构中的数据元素之间同属于一个集合，此外没有其他关系；
+2）线性结构：结构中的数据元素之间存在一种线性关系，一对一的关系；
+3）树形结构：一对多的关系；
+4）图形结构或网状结构：多对多的关系。
+根据视点的不同又可分为：逻辑结构和物理结构：
+逻辑结构：面向问题，描述数据元素之间的逻辑关系；
+物理结构：又称存储结构，面向计算机，是数据结构在计算机中的表示（映像）
+算法的特性：输入性、输出性、确定性、有穷性、有效性（可行性）
+算法的标准：正确性（满足所要求界的问题的需求，最重要最基本）、可用性（便于用户使用，良好的界面、完备的用户文档）、可读性（易于理解）、效率（存储单元的开销和运行时间的耗费）、健壮性（对于非法数据的处理）
+算法复杂度：（渐进）时间复杂度和空间复杂度
+二、线性结构 1、线性表 1.1	顺序表示：顺序表 用顺序结构存储的线性表为顺序表（sequential list）。
+顺序表一般用数组进行存储
+类模板定义：T* elems，int length，int maxLength
+1.2	链表表示 1)	单链表 分为带头结点和不带头结点的单链表；
+带头结点的单链表相对不带头结点的单链表在涉及会更改头节点的任务时，操作会更加统一。
+类模板定义：
+（结点）T data，Node* next
+（单链表）Node* head，int length
+2)	双向循环链表 类模板定义：
+（结点）T data，Node* prior，Node* next
+（双向循环链表）Node* head，int length
+*带头结点的双向循环列表只有一个元素结点的条件：head-&amp;gt;next!=head &amp;amp;&amp;amp; head-&amp;gt;next-&amp;gt;next==head
+3)	静态链表 利用数组来模拟存储空间实现链表。
+类模板定义：
+（结点）T data，Node* next
+（静态链表）Node* head，Node* avail
+设数组a放置了一个静态链表，当链表未使用的时候，其中所有的结点都是形成了一个链表，用avail进行管理，代表未使用的结点。
+当进行插入操作的时候，就从avail中取出一个头节点，进行赋值，再放入head链表之中。
+在完成每一步操作之后，记得要将next域中更改
+插入元素操作：
+i=avail; avail=a[avail].next; a[i].next=a[head],next; a[head]。next=i; 当需要释放由j所指向的结点时，只需要把结点j放到avail表的最前端，并让avail指向它即可。</description>
+    </item>
+  </channel>
+</rss>

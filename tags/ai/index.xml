@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/ai/</link>
+    <description>Recent content in AI on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>人工智能期末复习</title>
+      <link>https://sirius1y.top/posts/notes/notes/artificial_intelligence/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/artificial_intelligence/</guid>
+      <description>基本概念 语义角色 指有关语言成分在语句所表达的事件中所扮演的参与者角色
+在自然语言处理中对自然语言进行划分处理称为各个语义角色，其中每个语义角色相互依赖，相互关联
+常见的语义角色类型有：施事、受事、与事、工具、方式、时间、处所、结果、目的、原因等 例如对于语句：小明昨天晚上在公园遇到了小红
+就可以分为Agent、Time、Location、Predicate、Patient等角色
+语义角色从一开始的6个扩充到了现在的13个，依据是美国语言学家查理斯·费尔莫尔提出的“格语法”
+机器学习 让计算机能够像人一样自动获取新知识，并且在实践中不断完善自我和增强能力 启发函数&amp;amp;估值函数 启发函数：对当前结点到大目标结点未来可能需要付出的代价的估计
+对于同一个问题，可能有不同的启发函数，不同的启发函数带来的效果良莠不齐，而各个节点的代价函数是统一确定的，因此选择和优化启发函数是至关重要的
+估值函数：为了防止在单独利用启发函数的时候误入歧途，会将启发函数和代价函数结合生成估值函数；即初始结点到达结点x处已经付出的代价与结点x到达目标结点的接近程度估计值的总和
+语义标注 在NLP领域中对于自然语言进行分割，并且对每个部分都判断是什么类型的语义角色
+语义角色标注是一种浅层的语义分析技术，它只标注谓词（谓语动词、名词、形容词）的语义角色
+例如：
+昨天张三在家吃苹果。
+谓语动词“吃”的语义角色有：施事-张三，受事-苹果，时间-昨天，处所-家
+博弈树 将双人完备的信息博弈过程用图表示出来，能得到一颗与或树，称为博弈树
+在博弈树中，下一步该MAX走步的结点称为MAX结点；下一步该MIN走步的结点称为MIN结点 博弈树特点： 初始状态为初始结点 博弈树中的或结点和与结点是逐层交替出现的 整个博弈过程都是站在某一方的立场上，所有能使自己获胜的都是本源问题，相应的结点都是可解结点；所有会使对方获胜的结点都是不可解结点 博弈树采用变对子结点进行估值函数计算，再扩展结点的方法，使用的是极大极小化分析，因此引申出了阿尔法-贝塔剪枝
+阿尔法-贝塔剪枝： 阿尔法剪枝： 对于一个MIN结点，如果能够推导出其上确界b，并且b不大于MIN结点的父节点下确界a（即a &amp;gt;= b），则不必再扩展MIN结点的其他子结点了，剪枝即可 贝塔剪枝： 对于一个MAX结点，如果能够推导出其下确界a，并且a不小于MAX结点的父节点上确界b（即a &amp;gt;= b），则不必再扩展MAX结点的其他子结点了，剪枝即可 专家系统 专家系统的概念：
+专家系统是一种智能的计算机程序，它运用知识和推理来解决只有专家才能解决的复杂问题
+专家系统的组成：
+专家&amp;mdash;-知识库&amp;mdash;-推理机&amp;mdash;-系统用户
+专家系统的特点：
+有专家水平的专业知识、能进行有效的推理、启发性、灵活性、透明性、交互性
+知识库与推理机分离、具有解释功能
+专家系统的类型：
+按照解决类型划分：解释、诊断、预测、设计、规划、控制&amp;hellip;&amp;hellip; 按照应用类型划分：化学、电子学、地质学&amp;hellip;&amp;hellip; 按照系统体系结构划分：集中式、分布式、云计算 按照知识表示形式划分：基于规则、基于一阶谓词、基于框架、基于语义网 按照采用技术划分：符号推断、神经网络 专家系统实例：
+医学专家系统——MYCIN 系统使用INTER LISP语言编写 推理策略：反向推理、深度优先的搜索 地质勘探专家系统——PROSPECTOR 推理方式：似然推理、逻辑推理、上下文推理 希望树 在启发式搜索与或树的过程中，有希望成为最优解树的部分结点所组成的树
+定义如下：
+初始结点S0一定在希望树中 如果结点x在希望树中，则一定有： 如果x是具有子结点的或结点，则其具有最小代价的子结点一定在希望树中 如果x是具有子结点的与结点，则其全部子结点都在希望树中 与或树的有序搜索过程本质上是寻找希望树的过程，因此随着搜索深度的增加，希望树也会随之变化
+Agent Agent的概念：
+一种能够在一定环境中自主运行和自主交互，以满足其设计目标的计算实体
+按照属性区分Agent：</description>
+    </item>
+  </channel>
+</rss>

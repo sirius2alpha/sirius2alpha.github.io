@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://sirius1y.top/sitemap.xml

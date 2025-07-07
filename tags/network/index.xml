@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Network on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/network/</link>
+    <description>Recent content in Network on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>只让服务器流量走 VPN </title>
+      <link>https://sirius1y.top/posts/notes/network/split-tunneling/</link>
+      <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/split-tunneling/</guid>
+      <description>背景 服务器在学校的校园网中，然后平时需要使用 Easy Connect 连接学校的 VPN 之后，才能通过 SSH 连接到服务器。但是学校配置的 VPN 又很烦人，会接管本机上的所有流量走校园网，导致访问其他网站的速度很慢，并且连接不上外网用不了 GPT 之类的麻烦。
+学校提供的 VPN 服务有两种软件可以使用，一个是 Easy Connect，一种是 Open VPN 。两种我都尝试了，都是登陆的同样的账号，但是openvpn始终ssh连接不上学校内网中的服务器，但是 Easy Connect 却可以。所以之后我都是在 Easy Connect 上进行操作的。
+发现问题 发现启动 VPN 软件之后，运行ifconfig可以看到本地会多一个utun*的网络接口，然后运行netstat -rn查看电脑的路由表中可以看到，有大量的路由配置信息指向了这个utun*的网络接口。
+之前之所以连接上了 VPN 之后无法正常的访问外网，是因为学校的 VPN 服务器推送了很多的路由，几乎涵盖了从1.*.*.*到255.*.*.*中的所有路由，全部设置为走utun*。即使我的default路由走的是我正常的网口，但是具体的路由的优先级是要比default路由要高的，所以几乎全部都走了 VPN 。
+解决思路 有两个方法可以解决这个问题：
+1	在Docker上运行 VPN 软件进行转发 在本地启动一个Docker，然后让 VPN 运行在 Docker 内，将走服务器IP地址的流量走到 Docker 容器内，然后在容器内走 VPN 出去。这个方法肯定是可行的，不过感觉稍微麻烦了一点，采用了第二个idea
+2	删除多余的路由表 在 VPN 软件启动之后，他不是注册了很多具体的路由嘛，而我的需求只是让服务器流量走 VPN 就可以了，其他的流量不用他管。所以写了一个脚本，在 VPN 软件启动之后运行就行。
+脚本主要实现的功能是，在路由表中匹配 VPN 网口的所有路由，只保留我服务器那一条路由，其他的全部删除，就OK，简单又完美。
+#!/bin/bash # 示例 # 提示用户输入网络接口名称 read -p &amp;#34;请输入 VPN 网络接口名称（例如utun6）: &amp;#34; vpn_interface # 提示用户输入需要保留的服务器IP地址或网段 read -p &amp;#34;请输入需要保留的服务器IP地址或网段（例如192.</description>
+    </item>
+    <item>
+      <title>Wifi神秘消失排查经历</title>
+      <link>https://sirius1y.top/posts/notes/basic/acap/</link>
+      <pubDate>Sun, 04 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/basic/acap/</guid>
+      <description>原来AC和AP是这样子的~</description>
+    </item>
+    <item>
+      <title>内网穿透——frp和花生壳实现从外部网络访问家中主机</title>
+      <link>https://sirius1y.top/posts/notes/network/net-frp/</link>
+      <pubDate>Wed, 20 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-frp/</guid>
+      <description>记录分别使用花生壳和frp实现内网穿透</description>
+    </item>
+    <item>
+      <title>GNS3&#43;cisco 动态路由实验RIP/OSRF</title>
+      <link>https://sirius1y.top/posts/notes/network/net-riposrf-ongns3/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-riposrf-ongns3/</guid>
+      <description>这篇文章记录了使用GNS3软件进行动态路由实验。</description>
+    </item>
+    <item>
+      <title>GNS3静态路由实验</title>
+      <link>https://sirius1y.top/posts/notes/network/net-static_router-ongns3/</link>
+      <pubDate>Mon, 30 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/net-static_router-ongns3/</guid>
+      <description>这篇文章记录了使用GNS3软件进行静态路由实验</description>
+    </item>
+    <item>
+      <title>常用的网络命令</title>
+      <link>https://sirius1y.top/posts/notes/network/network-commands/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/network-commands/</guid>
+      <description>ipconfig, ifconfig, ip ipconfig是windows中的命令，linux上是ifconfig，但ip命令比ifconfig更强大，旨在取代ifconfig命令。
+ping ping命令是DOS命令，一般用于检测网络是否通畅以及网络连接速度，结果只越大，说明速度越慢。它使用网络层的ICMP协议。
+ping [参数选项] [主机名或IP地址] linux 参数 含义 -c 设置完成要求回应的次数 -i 指定收发信息的间隔时间 -s 设置数据包的大小 -w 在设定的秒后退出 windows 参数 含义 -t 连续对IP地址执行ping命令，直到用户以&amp;lt;control+c&amp;gt;键强制中断 -l 指定ping命令的数据长度 -n 执行特定次数的ping命令 netstat netstat 用来查看当前操作系统的网络连接状态、路由表、接口统计等信息，来自于 net-tools 工具包，ss 是 netstat 的升级版。
+参数 含义 -a 显示主机中所有活动的网络连接信息 (包括监听、非监听状态的服务端口) -n 以数字的形式显示相关的主机地址、端口等信息 -p 显示与网络连接相关联的进程号、进程名称信息 (该选项需要 root 权限) -l 显示处于监听 (Listen) 状态的网络连接及端口信息 -t 查看 TCP (Transmission Control Protocol，传输控制协议) 相关的信息 -u 显示 UDP (User Datagram Protocol，用户数据报协议) 协议相关的信息 -r 显示路由表信息 -i 显示网卡列表 -g 显示组播组的关系 -s 显示网络统计信息 常用命令选项：</description>
+    </item>
+    <item>
+      <title>计算机网络期末复习</title>
+      <link>https://sirius1y.top/posts/notes/network/school-network-review/</link>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/school-network-review/</guid>
+      <description>https://www.yuque.com/docs/share/a0aff20d-44da-46c6-a65a-67e69dd0c6f3?# 《基于cch的计网复习》划了上次考点
+题型：判断 选择 填空 计算题
+复习课 拍照 中英文 英文缩写 英文全称 中文 TDM Time Division Multiplexing 时分复用 CDMA Code Division Multiple Access 码分多址 CSMA/CD Carrier Sense Multiple Access with Collision Detection 载波监听 多点接入 / 碰撞检测 MAC Medium Access Control 媒体接入控制 RTT Round Trip Time 往返时间 ARP Address Resolution Protocol 地址解析协议 IP Internet Protocol 网际协议 ICMP Internet Control Message Protocol 网际控制报文协议 TCP Transmission Control Protocol 传输控制协议 UDP User Datagram Protocol 用户数据报协议 RIP Routing Information Protocol 路由信息协议 BGP Border Gateway Protocol 边界网关协议 OSPF Open Shortest Path First 开放最短路径优先 VLAN Virtual Local Area Network 虚拟局域网 DNS Domain Name System 域名系统 知识点 语雀知识点链接：https://www.</description>
+    </item>
+    <item>
+      <title>学长的计算机网络笔记</title>
+      <link>https://sirius1y.top/posts/notes/network/note-network/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/note-network/</guid>
+      <description>概述 互联网：专有名词
+互连网：通用网络
+互联网的组成 边缘部分 由所有连接在互联网上的主机组成。这部分是用户直接使用的，用来进行通信（传送数据、音频或视频）和资源共享。
+端系统之间的两种通信方式 客户-服务器方式（C/S）
+客户是服务的请求方，服务器是服务的提供方
+客户软件的特点 被用户调用后运行，在打算通信时主动向远地服务器发起通信（请求服务）。因此，客户程序必须知道服务器程序的地址 不需要特殊的硬件和很复杂的操作系统 服务器软件的特点 一种专门用来提供某种服务的程序，可同时处理多个远地或本地客户的请求 系统启动后即自动调用并一直不断地运行着，被动地等待并接受来自各地的客户的通信请求。因此，服务器程序不需要知道客户程序的地址 一般需要强大的硬件和高级的操作系统支持 对等方式（P2P）
+不区分客户和服务器。
+核心部分 由大量网络和连接这些网络的路由器组成。这部分是为边缘部分提供服务的（提供连通性和交换）
+在网络核心部分起特殊作用的是路由器 (router)。 at Shanghai University
+路由器是实现分组交换 (packet switching) 的关键构件，其任务是转发收到的分组，这是网络核心部分最重要的功能。
+分组交换是网络核心部分最重要的功能
+电路交换 $$N$$ 部电话机两两直接相连，需 $$N(N – 1)/2$$ 对电线。这种直接连接方法所需要的电线对的数量与电话机数量的平方（ $$N^2$$ ）成正比。
+当电话机的数量增多时，就要使用交换机来完成全网的分组任务，这就是电路交换
+特点 电路交换必定是面向连接的 电路交换分为三个阶段： 建立连接：建立一条专用的物理通路，以保证双方通话时所需的通信资源在通信时不会被其他用户占用； 通话：主叫和被叫双方一直占用通信资源； 释放连接：释放刚才使用的这条专用的物理通路（释放刚才占用的所有通信资源） 总结 电路交换用于电话通信系统，两个用户要通信之前需要建立一条专用的物理链路，并且在整个通信过程中始终占用该链路。由于通信的过程中不可能一直在使用传输线路，因此电路交换对线路的利用率很低，往往不到 10%
+分组交换 分组交换采用存储转发技术
+步骤 在发送端，先把较长的报文划分成较短的、固定长度的数据段 每一个数据段前面添加上首部构成分组 (packet) 分组交换网以“分组”（也称为“包”，首部也可称为“包头”）作为数据传输单元，依次把各分组发送到接收端（假定接收端在左边） 接收端收到分组后剥去首部还原成报文 最后，在接收端把收到的数据恢复成为原来的报文。 首部的重要性 每一个分组的首部都含有地址（诸如目的地址和源地址）等控制信息。 分组交换网中的结点交换机根据收到的分组首部中的地址信息，把分组转发到下一个结点交换机。 每个分组在互联网中独立地选择传输路径。（通过路由器） 用这样的存储转发方式，最后分组就能到达最终目的地。 路由器的作用 在路由器中的输入和输出端口之间没有直接连线。 路由器处理分组的过程是： 把收到的分组先放入缓存（暂时存储）； 查找转发表，找出到某个目的地址应从哪个端口转发； 把分组送到适当的端口转发出去。 优点 高效：在分组传输的过程中动态分配传输带宽，对通信链路是逐段占用 灵活：为每一个分组独立地选择最合适的转发路由 迅速：以分组作为传送单位，可以不先建立连接就能向其他主机发送分组。 可靠：保证可靠性的网络协议；分布式多路由的分组交换网，使网络有很好的生存性 缺点 分组在各结点存储转发时需要排队，这就会造成一定的时延。 分组必须携带的首部（里面有必不可少的控制信息）也造成了一定的开销 总结 每个分组都有首部和尾部，包含了源地址和目的地址等控制信息，在同一个传输线路上同时传输多个分组互相不会影响，因此在同一条传输线路上允许同时传输多个分组，也就是说分组交换不需要占用传输线路。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Easyconnet on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/easyconnet/</link>
+    <description>Recent content in Easyconnet on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 04 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/easyconnet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>只让服务器流量走 VPN </title>
+      <link>https://sirius1y.top/posts/notes/network/split-tunneling/</link>
+      <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/network/split-tunneling/</guid>
+      <description>背景 服务器在学校的校园网中，然后平时需要使用 Easy Connect 连接学校的 VPN 之后，才能通过 SSH 连接到服务器。但是学校配置的 VPN 又很烦人，会接管本机上的所有流量走校园网，导致访问其他网站的速度很慢，并且连接不上外网用不了 GPT 之类的麻烦。
+学校提供的 VPN 服务有两种软件可以使用，一个是 Easy Connect，一种是 Open VPN 。两种我都尝试了，都是登陆的同样的账号，但是openvpn始终ssh连接不上学校内网中的服务器，但是 Easy Connect 却可以。所以之后我都是在 Easy Connect 上进行操作的。
+发现问题 发现启动 VPN 软件之后，运行ifconfig可以看到本地会多一个utun*的网络接口，然后运行netstat -rn查看电脑的路由表中可以看到，有大量的路由配置信息指向了这个utun*的网络接口。
+之前之所以连接上了 VPN 之后无法正常的访问外网，是因为学校的 VPN 服务器推送了很多的路由，几乎涵盖了从1.*.*.*到255.*.*.*中的所有路由，全部设置为走utun*。即使我的default路由走的是我正常的网口，但是具体的路由的优先级是要比default路由要高的，所以几乎全部都走了 VPN 。
+解决思路 有两个方法可以解决这个问题：
+1	在Docker上运行 VPN 软件进行转发 在本地启动一个Docker，然后让 VPN 运行在 Docker 内，将走服务器IP地址的流量走到 Docker 容器内，然后在容器内走 VPN 出去。这个方法肯定是可行的，不过感觉稍微麻烦了一点，采用了第二个idea
+2	删除多余的路由表 在 VPN 软件启动之后，他不是注册了很多具体的路由嘛，而我的需求只是让服务器流量走 VPN 就可以了，其他的流量不用他管。所以写了一个脚本，在 VPN 软件启动之后运行就行。
+脚本主要实现的功能是，在路由表中匹配 VPN 网口的所有路由，只保留我服务器那一条路由，其他的全部删除，就OK，简单又完美。
+#!/bin/bash # 示例 # 提示用户输入网络接口名称 read -p &amp;#34;请输入 VPN 网络接口名称（例如utun6）: &amp;#34; vpn_interface # 提示用户输入需要保留的服务器IP地址或网段 read -p &amp;#34;请输入需要保留的服务器IP地址或网段（例如192.</description>
+    </item>
+  </channel>
+</rss>

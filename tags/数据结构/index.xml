@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>数据结构 on Sirius&#39; Blog</title>
+    <link>https://sirius1y.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <description>Recent content in 数据结构 on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius1y.top/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius1y.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算机基础知识</title>
+      <link>https://sirius1y.top/posts/notes/jobhunter/cs-basic-notes/</link>
+      <pubDate>Fri, 10 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/jobhunter/cs-basic-notes/</guid>
+      <description>计算机网络 TCP TCP为什么要进行三次握手？ 三次握手是建立网络连接的过程，确保双方能够正确地进行数据传输。
+第一次握手SYN：客户端向服务端发送SYN请求同步信号，并初始化客户端序列号；
+第二次握手SYN+ACK：服务端收到了客户端发送的SYN信号后回复ACK确认收到，同时也发送SYN，指定自己的初始序列号；
+第三次握手ACK：客户端收到服务端的ACK+SYN后，回复一个ACK，表示已经收到服务端的ACK+SYN。这个包的序列会加一，表示客户端已经准备好和服务端进行数据传输了。
+为什么是三次握手？不是两次或者四次 原因1：阻止重复的历史连接初始化
+如果是两次握手的话，因网络堵塞的问题，客户端发送了两次SYN给服务端，服务端收到了第一个SYN的时候，就回复SYN+ACK给客户端，并进入了ESTABLISHED状态。而客户端这边收到了服务端旧的ACK+SYN，会认为这是历史连接从而发送RST报文，使服务端断开连接。
+原因2：同步双方的序列号
+TCP协议的双方都必须要维护一个序列号。两次握手只能保证一方的序列号被接收。
+原因3：避免资源浪费
+如果是两次握手，那么服务端在收到SYN后回复ACK的时候就要主动建立连接，要是网络堵塞，对面发了好多个SYN来，那完蛋了，建立了好多个TCP连接，造成了资源浪费。
+TCP的四次挥手 四次挥手是指在TCP断开连接的过程中发生的，一般是由客户端发起，服务端完成最后的断开。
+因为TCP是全双工通信，所以需要两边都要通知对方停止数据传输，故需要四次挥手保证断开连接。
+具体流程：（刚开始双方都处于ESTABLISHED状态）
+1.客户端向服务端发起FIN报文，表示客户端不再发送数据；（客户端进入FIN_WAIT_1中状态）
+2.服务端收到FIN报文后，回复一个ACK表示收到；（服务端进入CLOSED_WAIT状态，客户端收到ACK后进入FIN_WAIT_2状态）
+3.服务端向客户端发起FIIN报文，表示服务端也不再发送数据；（服务端进入LAST_ACK状态）
+4.客户端收到服务端的FIN报文后，也回复一个ACK。（客户端进入TIME_WAIT状态）
+发送端在最后会进入到TIME_WAIT的状态，
+为什么有TIME_WAIT状态？ 原因1：保证历史连接中的数据不会干扰下一次连接。
+原因2：保证被动关闭连接。如果服务端没有TIME_WAIT状态直接close的话，要是服务端没有收到客户端最后一次发送的ACK会重发FIN，如果服务器已经处于CLOSE状态，就会返回RST报文，RST报文会被服务端认定为错误。
+为什么TIME_WAIT的时间是2MSL？ MSL是报文的最大生存时间，超过这个时间的报文都会被丢弃。两个MSL时间可以保证客户端发送的ACK报文可以到达服务端+服务端要是在第一个MSL中没有收到ACK可以重发一次FIN到客户端，并保证能够到达客户端。
+HTTP GET方法和POST方法有什么区别？ 用途：GET方法一般用于请求服务器上的数据；POST方法用于向服务器提交数据。
+请求参数：GET方法的请求参数一般放在URL中，POST的请求参数一般放在请求体中。
+幂等：多次执行相同的操作，结果都相同。
+幂等行：GET方法是安全幂等的，POST不是幂等的。
+缓存机制：GET请求会被浏览器主动cache，如果下一次传输的数据相同，就会返回浏览器中的内容；而POST不会。
+GET的请求参数会被保存在浏览器的历史记录中，而POST中的参数不会保留
+时间消耗：GET产生一个TCP数据包，浏览器会把header和data一起发送出去，服务器相应200；
+POST产生两个TCP数据包，浏览器先发送hader，服务器相应100（继续发送），浏览器再发送data，服务器相应200
+什么情况下会使用POST读取数据？ 当查询的数据量很多，GET方式的URL太长太大，GET方式大概是4KB，POST上限是8MB 当对数据的安全性有更高要求的时候，可以在POST的请求体中对数据进行加密 HTTP版本对比 HTTP/0.9 只支持GET方法 HTTP/1.0 支持多种请求方式 引入了请求头和响应头 引入状态码 不支持长连接
+HTTP/1.1 支持长连接 管道网络传输（可以同时发送A、B请求，不必等待A响应） 但是管道网络传输存在队头阻塞的问题
+头部冗余
+没有请求优先级
+请求只能通过客户端推送，服务器不能主动推送
+HTTP/2 使用HPACK进行头部压缩 把数据部分压缩成头信息帧和数据帧 并发传输：引入了stream的概念，多个Stream复用一条TCP连接，通过streamID识别，不同stream的帧可以乱序发送 支持服务器推送 HTTPS 和HTTP对比 优点
+安全性更高
+缺点
+HTTPS涉及到了加解密的过程，所以对服务器的负荷会高一些；
+握手阶段的延迟比较高，因为还有SSL/TLS握手;
+加密过程 HTTPS采用了对称加密+非对称加密的混合加密模式</description>
+    </item>
+    <item>
+      <title>数据结构学习笔记</title>
+      <link>https://sirius1y.top/posts/notes/notes/data_structure/</link>
+      <pubDate>Wed, 26 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://sirius1y.top/posts/notes/notes/data_structure/</guid>
+      <description>一、绪论 数据（data）是信息的载体，是描述客观事物的数、字符、图形、图像、声音以及所有能输入计算机中并被计算机程序识别和处理的符号的集合。
+数据的最小单位的是数据项；
+数据的基本单位是数据元素，一个数据元素可由若干个数据项组成。
+数据结构分为两大类：线性结构和非线性结构
+两类结构通常分为四类基本结构：
+1）集合：结构中的数据元素之间同属于一个集合，此外没有其他关系；
+2）线性结构：结构中的数据元素之间存在一种线性关系，一对一的关系；
+3）树形结构：一对多的关系；
+4）图形结构或网状结构：多对多的关系。
+根据视点的不同又可分为：逻辑结构和物理结构：
+逻辑结构：面向问题，描述数据元素之间的逻辑关系；
+物理结构：又称存储结构，面向计算机，是数据结构在计算机中的表示（映像）
+算法的特性：输入性、输出性、确定性、有穷性、有效性（可行性）
+算法的标准：正确性（满足所要求界的问题的需求，最重要最基本）、可用性（便于用户使用，良好的界面、完备的用户文档）、可读性（易于理解）、效率（存储单元的开销和运行时间的耗费）、健壮性（对于非法数据的处理）
+算法复杂度：（渐进）时间复杂度和空间复杂度
+二、线性结构 1、线性表 1.1	顺序表示：顺序表 用顺序结构存储的线性表为顺序表（sequential list）。
+顺序表一般用数组进行存储
+类模板定义：T* elems，int length，int maxLength
+1.2	链表表示 1)	单链表 分为带头结点和不带头结点的单链表；
+带头结点的单链表相对不带头结点的单链表在涉及会更改头节点的任务时，操作会更加统一。
+类模板定义：
+（结点）T data，Node* next
+（单链表）Node* head，int length
+2)	双向循环链表 类模板定义：
+（结点）T data，Node* prior，Node* next
+（双向循环链表）Node* head，int length
+*带头结点的双向循环列表只有一个元素结点的条件：head-&amp;gt;next!=head &amp;amp;&amp;amp; head-&amp;gt;next-&amp;gt;next==head
+3)	静态链表 利用数组来模拟存储空间实现链表。
+类模板定义：
+（结点）T data，Node* next
+（静态链表）Node* head，Node* avail
+设数组a放置了一个静态链表，当链表未使用的时候，其中所有的结点都是形成了一个链表，用avail进行管理，代表未使用的结点。
+当进行插入操作的时候，就从avail中取出一个头节点，进行赋值，再放入head链表之中。
+在完成每一步操作之后，记得要将next域中更改
+插入元素操作：
+i=avail; avail=a[avail].next; a[i].next=a[head],next; a[head]。next=i; 当需要释放由j所指向的结点时，只需要把结点j放到avail表的最前端，并让avail指向它即可。</description>
+    </item>
+  </channel>
+</rss>
