@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mysql on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/tags/mysql/</link>
+    <description>Recent content in Mysql on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius2alpha.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在云服务器上部署mysql</title>
+      <link>https://sirius2alpha.github.io/posts/notes/2-areas/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/deploy-mysql-oncloud/</link>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius2alpha.github.io/posts/notes/2-areas/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/deploy-mysql-oncloud/</guid>
+      <description>这篇文章记录了在两台主机上部署mysql</description>
+    </item>
+    <item>
+      <title>mysql用户被锁定</title>
+      <link>https://sirius2alpha.github.io/posts/notes/3-resources/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/mysql-user-was-blocked/</link>
+      <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius2alpha.github.io/posts/notes/3-resources/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/mysql-user-was-blocked/</guid>
+      <description>突然发现root账户莫名其妙登不上去</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://sirius2alpha.github.io/sitemap.xml

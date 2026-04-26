@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nnsight on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/tags/nnsight/</link>
+    <description>Recent content in Nnsight on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius2alpha.github.io/tags/nnsight/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本地 LLM 研究环境指南</title>
+      <link>https://sirius2alpha.github.io/posts/notes/2-areas/%E6%8A%80%E6%9C%AF%E6%A0%88/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%AC%E5%9C%B0llm%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Sun, 26 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://sirius2alpha.github.io/posts/notes/2-areas/%E6%8A%80%E6%9C%AF%E6%A0%88/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E6%9C%AC%E5%9C%B0llm%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83%E6%8C%87%E5%8D%97/</guid>
+      <description>环境：Mac mini M4 + 16GB，uv 管理 Python 包，VSCode 开发 外接盘：/Volumes/CyberDisk，大文件/模型/开发目录统一放这里
+1. 环境激活 venv 路径：~/model-research
+source ~/model-research/bin/activate VSCode 中：按 Cmd+Shift+P → Python: Select Interpreter → 选 ~/model-research/bin/python
+2. 工具链速查 包 用途 什么时候用 torch 张量运算 + MPS GPU 加速 所有操作的基础 transformers 加载 HuggingFace 模型，查看权重 入门第一步，理解模型结构 nnsight Hook 进 Transformer 前向传播，读/改激活值 Abliteration、激活干预 mlx-lm Apple M 系列最快推理框架 快速验证、跑 benchmark jupyter 交互式实验 一步一步看张量变化 bitsandbytes 4-bit/8-bit 量化加载 省显存，16GB 跑大模型必备 safetensors 安全加载权重文件 transformers 默认用它 accelerate 多设备自动分配 device_map=&amp;ldquo;auto&amp;rdquo; 时用到 3.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blog on Sirius&#39; Blog</title>
+    <link>https://sirius2alpha.github.io/tags/blog/</link>
+    <description>Recent content in Blog on Sirius&#39; Blog</description>
+    <image>
+      <title>Sirius&#39; Blog</title>
+      <url>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://sirius2alpha.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.127.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://sirius2alpha.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BLOG迁移之旅</title>
+      <link>https://sirius2alpha.github.io/posts/notes/2-areas/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/deploy-blog-v2/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://sirius2alpha.github.io/posts/notes/2-areas/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/deploy-blog-v2/</guid>
+      <description>时隔一年，云服务器到期，我的博客开始搬服务器了，一场遗忘How to do的危机正在悄无声息地到来...</description>
+    </item>
+    <item>
+      <title>把blog部署到华为云nginx</title>
+      <link>https://sirius2alpha.github.io/posts/notes/2-areas/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/deploy-blog/</link>
+      <pubDate>Sat, 16 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://sirius2alpha.github.io/posts/notes/2-areas/%E5%B7%A5%E4%BD%9C/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91/deploy-blog/</guid>
+      <description>这篇文章记录了把本地的博客部署到华为云ubuntu的nginx</description>
+    </item>
+  </channel>
+</rss>
